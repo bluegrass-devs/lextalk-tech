@@ -15,7 +15,7 @@ params:
   City:  "Lexington"
   State: "KY"
   Images: ["/img/background.png"]
-  GoogleMapsKey: "AIzaSyAR3-wrHdxAS5P8ESI8S_IssOCpuxlf_Co"
+  # GoogleMapsKey: "AIzaSyAR3-wrHdxAS5P8ESI8S_IssOCpuxlf_Co"
 
   # Active sections on the website to deactivate comment out with '#'
   # you can also change order here and it will reflect on page
