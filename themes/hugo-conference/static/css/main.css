@@ -716,7 +716,7 @@ nav {
    HEADER
    ========================================================================== */
 .header {
-  background-image: url('../img/cover.jpg');
+  background-image: url('../img/background.png');
   background-color: #2b2b2b;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -786,7 +786,7 @@ nav {
 /* =============================================================================
    SPEAKER
    ========================================================================== */
-.speaker-photo .photo {
+/* .speaker-photo .photo {
   border-radius: 50%;
   box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.07);
   -webkit-transition: all 0.3s ease-out;
@@ -794,7 +794,7 @@ nav {
   -ms-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-}
+} */
 .speakers-item:hover .speaker-photo .photo {
   box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.3);
 }
