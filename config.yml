@@ -9,24 +9,24 @@ params:
   # Conference info
   Name: "LexTalk - Tech"
   Description: "Conference description"
-  # Date: ""
-  # Venue: ""
-  # Address: ""
+  Date: "Date TBD"
+  Venue: "Venue TBD"
+  Address: ""
   City:  "Lexington"
   State: "KY"
-  Images: ["/img/badge.jpg"]
-  # GoogleMapsKey: "my-secret-maps-key"
+  Images: ["/img/background.png"]
+  GoogleMapsKey: "AIzaSyAR3-wrHdxAS5P8ESI8S_IssOCpuxlf_Co"
 
   # Active sections on the website to deactivate comment out with '#'
   # you can also change order here and it will reflect on page
   Sections:
     - about
     # - location
+    - schedule
     # - speakers
-    # - schedule
     # - sponsors
     # - partners
-    #- contact
+    # - contact
 
   # Titles which you can translate to other languages
   Titles:
@@ -65,83 +65,80 @@ params:
 
   # The entire schedule
   Schedule:
-    - name: "Check-in / Breakfast"
-      time: "9h00"
+    - name: "Check-in"
+      time: "5:15pm"
 
-    - name: "Linus Torvalds"
-      photo: "/img/speaker.jpg"
+    - name: "first speaker"
+      photo: "/img/image.png"
       bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
-      company: "Linux Foundation"
+      company: ""
       link:
-        href: "http://twitter.com/linus"
-        text: "@linus"
+        href: "http://twitter.com/"
+        text: "@Lorem"
       presentation:
-        title: "Digging into a Linux Kernel"
+        title: "First talk"
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
-        time: "10h00"
+        time: "5:30pm"
 
-    - name: "Bill Gates"
+    - name: "Second Speaker"
       photo: "/img/speaker.jpg"
       bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
-      company: "Microsoft"
+      company: ""
       link:
         href: "http://github.com/billy95"
         text: "@billy95"
       presentation:
-        title: "Introducing Windows 12"
+        title: "Second talk"
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
-        time: "11h00"
+        time: "5:45pm"
 
-    - name: "Lunch"
-      time: "12h00"
-
-    - name: "Chuck Norris"
+    - name: "Third Speaker"
       photo: "/img/speaker.jpg"
       bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
-      company: "Delta Command"
+      company: ""
       link:
         href: "http://twitter.com/littlechuck"
         text: "@littlechuck"
       presentation:
-        title: "How to kill a elephant with one finger"
+        title: "Third talk"
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
-        time: "13h00"
+        time: "6:00pm"
 
-    - name: "Steve Jobs"
+    - name: "Fourth Speaker"
       photo: "/img/speaker.jpg"
       bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
-      company: "Apple, Inc."
+      company: ""
       link:
         href: "http://github.com/stevie"
         text: "@stevie"
       presentation:
-        title: "Presenting iPad"
+        title: "Fourth talk"
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
-        time: "14h00"
+        time: "6:15pm"
 
-    - name: "Coffee-break"
-      time: "15h00"
-
-    - name: "Mark Zuckerberg"
+    - name: "Fith Speaker"
       photo: "/img/speaker.jpg"
       bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
-      company: "Facebook"
+      company: ""
       link:
         href: "http://twitter.com/zuck"
         text: "@zuck"
       presentation:
-        title: "Revealing Facebook Secrets"
+        title: "Fith talk"
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
-        time: "16h00"
+        time: "6:30pm"
 
-    - name: "Steve Wozniak"
+    - name: "Sixth Speaker"
       photo: "/img/speaker.jpg"
       bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
-      company: "Apple, Inc."
+      company: ""
       link:
         href: "http://twitter.com/woz"
         text: "@woz"
       presentation:
-        title: "Why do I prefer Android over iPhone"
+        title: "A Panel or Q&A"
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
-        time: "17h00"
+        time: "7:00pm"
+
+    - name: "Wrap up"
+      time: "7:30pm"

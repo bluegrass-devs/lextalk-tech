@@ -11,11 +11,12 @@
     </h1>
     <h2 class="tagline">
         {{ with .date }}
-            {{ .date }},
+            {{ . }},
         {{ end }}
         {{ with .venue }}
-            {{ .venue }},
-        {{ end }} {{ .city }} {{ .state }}</h2>
+            {{ . }},
+        {{ end }} 
+        {{ .city }} {{ .state }}</h2>
 
     <div class="call-action-area">
       {{ with .price }}
