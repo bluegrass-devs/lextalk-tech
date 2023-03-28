@@ -9,13 +9,12 @@
     <h1 class="logo-name">
       <a class="logo-link" href="#" title="{{ .name }}" itemprop="name">{{ .name }}</a>
     </h1>
-    <h2 class="tagline">
+    <h2 class="tagline">        
         {{ with .date }}
-            {{ . }},
+            {{ . }}
         {{ end }}
-        {{ with .venue }}
-            {{ . }},
-        {{ end }} 
+        <br/>
+        <a href="{{ .venueurl }}">{{ .venue }}</a><br/>
         {{ .city }} {{ .state }}</h2>
 
     <div class="call-action-area">

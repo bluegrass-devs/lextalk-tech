@@ -9,9 +9,10 @@ params:
   # Conference info
   Name: "LexTalk - Tech"
   Description: "A quarterly technology conference held in Lexington KY"
-  Date: "Date TBD"
-  Venue: "Venue TBD"
-  Address: ""
+  Date: "May 18th 2023"
+  Venue: "The Cornerstone"
+  VenueURL: "https://cornerstone.uky.edu/"
+  Address: "401 S Limestone"
   City:  "Lexington"
   State: "KY"
   Images: ["/img/background.png"]
