@@ -69,16 +69,16 @@ params:
     - name: "Check-in"
       time: "5:15pm"
 
-    - name: "first speaker"
-      photo: "/img/image.png"
-      bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+    - name: "Joe Kratzat"
+      photo: "/img/joe_k.jpg"
+      bio: "Just a guy who plays on computers."
       company: ""
       link:
         href: "http://twitter.com/"
         text: "@Lorem"
       presentation:
-        title: "First talk"
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+        title: "What is LexTalk.Tech"
+        description: "This will be a welcome and introduction to what LexTalk Tech is and what we hope to bring to the community."
         time: "5:30pm"
 
     - name: "Second Speaker"
@@ -137,7 +137,7 @@ params:
         href: "http://twitter.com/woz"
         text: "@woz"
       presentation:
-        title: "A Panel or Q&A"
+        title: "Sixth talk"
         description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
         time: "7:00pm"
 
