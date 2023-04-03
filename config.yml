@@ -70,7 +70,7 @@ params:
       time: "5:15pm"
 
     - name: "Joe Kratzat"
-      photo: "/img/joe_k.jpg"
+      photo: "/img/speaker.jpg"
       bio: "Just a guy who plays on computers."
       company: ""
       link:
@@ -81,28 +81,28 @@ params:
         description: "This will be a welcome and introduction to what LexTalk Tech is and what we hope to bring to the community."
         time: "5:30pm"
 
-    - name: "Second Speaker"
+    - name: "Ember Borja"
       photo: "/img/speaker.jpg"
       bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
       company: ""
       link:
-        href: "http://github.com/billy95"
-        text: "@billy95"
+        href: "http://github.com/Lorem"
+        text: "@Lorem"
       presentation:
-        title: "Second talk"
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+        title: "Accessibility on the Web"
+        description: "The web is for everyone. That means we must accommodate all forms of human interaction on the web. We will talk about physical and mental disabilities, adaptive technologies, and cultural differences that affect how we design and test our applications."
         time: "5:45pm"
 
-    - name: "Third Speaker"
+    - name: "Justin Hall"
       photo: "/img/speaker.jpg"
       bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
       company: ""
       link:
-        href: "http://twitter.com/littlechuck"
-        text: "@littlechuck"
+        href: "http://twitter.com/Lorem"
+        text: "@Lorem"
       presentation:
-        title: "Third talk"
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+        title: "How to freelance as a Developer"
+        description: "Self-employed and not necessarily committed to a particular employer long-term. Freelance workers are sometimes represented by a company or a temporary agency that resells freelance labor to clients; others work independently or use professional associations or websites to get work."
         time: "6:00pm"
 
     - name: "Fourth Speaker"
