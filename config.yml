@@ -105,7 +105,7 @@ params:
         description: "Self-employed and not necessarily committed to a particular employer long-term. Freelance workers are sometimes represented by a company or a temporary agency that resells freelance labor to clients; others work independently or use professional associations or websites to get work."
         time: "6:00pm"
 
-    - name: "Fourth Speaker"
+    - name: "John Flynn"
       photo: "/img/speaker.jpg"
       bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
       company: ""
@@ -113,11 +113,11 @@ params:
         href: "http://github.com/stevie"
         text: "@stevie"
       presentation:
-        title: "Fourth talk"
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+        title: "To be determined"
+        description: "More details will be provided later."
         time: "6:15pm"
 
-    - name: "Fith Speaker"
+    - name: "Ron Northrip"
       photo: "/img/speaker.jpg"
       bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
       company: ""
@@ -125,11 +125,11 @@ params:
         href: "http://twitter.com/zuck"
         text: "@zuck"
       presentation:
-        title: "Fith talk"
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+        title: "To be determined"
+        description: "More details will be provided later."
         time: "6:30pm"
 
-    - name: "Sixth Speaker"
+    - name: "Joe Blankenship"
       photo: "/img/speaker.jpg"
       bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
       company: ""
@@ -137,8 +137,8 @@ params:
         href: "http://twitter.com/woz"
         text: "@woz"
       presentation:
-        title: "Sixth talk"
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+        title: "knowledge engineering lessons-learned"
+        description: "Will draft some full adult sentences with details soon."
         time: "7:00pm"
 
     - name: "Wrap up"
