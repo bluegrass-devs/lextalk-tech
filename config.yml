@@ -125,7 +125,7 @@ params:
         href: "http://twitter.com/zuck"
         text: "@zuck"
       presentation:
-        title: "To be determined"
+        title: "Mastering Git Merges"
         description: "More details will be provided later."
         time: "6:30pm"
 
