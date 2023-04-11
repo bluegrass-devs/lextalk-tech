@@ -126,7 +126,7 @@ params:
         text: "@zuck"
       presentation:
         title: "Mastering Git Merges"
-        description: "More details will be provided later."
+        description: "Git makes teams mighty! And as long as you're not working on the same parts of the repo at the same time then merging your code together is clean and simple. But then one day you're both working on the same bits and your git merge barfs and you're stuck in limbo! WHAT NOW?!?! You’ve got to master your merges. We’ll talk about different approaches to your workflows, including cli commands and gui tools, to help you make magical merges!"
         time: "6:30pm"
 
     - name: "Joe Blankenship"
