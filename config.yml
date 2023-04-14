@@ -137,7 +137,7 @@ params:
         href: "http://twitter.com/woz"
         text: "@woz"
       presentation:
-        title: "knowledge engineering lessons-learned"
+        title: "Lessons Learned in Knowledge Engineering"
         description: "Lessons Learned in Knowledge Engineering
 Have you ever been so disappointed with data systems and knowledge practices that you started a company with co-conspirators to build a knowledge-based system? Join me in an examination of lessons learned from addressing data and knowledge challenges as a data scientist to building a knowledge-based system as a data engineer and CDO."
         time: "7:00pm"
