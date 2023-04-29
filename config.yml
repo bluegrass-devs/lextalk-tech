@@ -143,3 +143,6 @@ params:
 
     - name: "Wrap up"
       time: "7:30pm"
+    
+    - name: "Pizza and beer afterward"
+      time: "7:30pm - 10pm"
