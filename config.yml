@@ -145,4 +145,6 @@ params:
       time: "7:30pm"
     
     - name: "Pizza and beer afterward"
-      time: "7:30pm - 10pm"
+      presentation:
+        description: "Within Cornerstone there is Ethereal brewing and Rolling oven Pizza."
+        time: "7:30pm - 10pm"
