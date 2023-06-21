@@ -9,7 +9,7 @@ params:
   # Conference info
   Name: "LexTalk - Tech"
   Description: "A quarterly technology conference held in Lexington KY"
-  Date: "May 18th 2023"
+  Date: "Oct 12th 2023"
   Venue: "The Cornerstone"
   VenueURL: "https://cornerstone.uky.edu/"
   Address: "401 S Limestone"
@@ -23,7 +23,7 @@ params:
   Sections:
     - about
     # - location
-    - schedule
+    # - schedule
     # - speakers
     # - sponsors
     # - partners
@@ -41,9 +41,9 @@ params:
 
   # The Call To Action button at the header,
   # If you don't want this, just remove the callToAction property.
-  CallToAction:
-    text: "Get tickets now!"
-    link: "https://www.eventbrite.com/e/lextalktech-tickets-602882817737"
+  # CallToAction:
+    # text: "Get tickets now!"
+    # link: "https://www.eventbrite.com/e/lextalktech-tickets-602882817737"
 
   # Fork me on GitHub, if you don't want this, just remove the forkButton property
   # ForkButton:
