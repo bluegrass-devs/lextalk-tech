@@ -1,5 +1,5 @@
-import Nav from "./Nav"
-import Image from "next/image"
+import Nav from "./Nav";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -7,8 +7,6 @@ export default function Home() {
       <header>
         <Nav />
       </header>
-      
-
     </>
-  )
+  );
 }
