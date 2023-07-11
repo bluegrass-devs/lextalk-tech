@@ -3,7 +3,7 @@ import { Montserrat, Cabin } from 'next/font/google'
 
 const montserrat = Montserrat({ 
   subsets: ['latin'],
-  weight: ['400'],
+  weight: ['200', '400'],
   variable: '--font-montserrat'
 })
 
@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${cabin.variable}`}>
+    <html lang="en" className={`bg-background text-text ${montserrat.variable} ${cabin.variable}`}>
       <body>{children}</body>
     </html>
   )
