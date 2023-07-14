@@ -13,7 +13,7 @@ export default function Nav () {
     }
 
     return (
-        <nav className='bg-accent'>
+        <nav className='bg-accent z-20'>
                 <div className='h-24 flex flex-col md:flex-row md:items-center text-3xl font-montserrat font-thin'>
                     {/* Left Side  */}
                     <div className="flex h-full">
@@ -32,7 +32,7 @@ export default function Nav () {
                         </Link>
                     </div>
                     {/* Mobile */}
-                    <div className={`${menu ? '' : 'hidden'} md:hidden bg-accent/50 block flex flex-col w-full items-center`}>
+                    <div className={`${menu ? '' : 'hidden'} md:hidden z-20 bg-accent/50 block flex flex-col w-full items-center`}>
                         <Link href='/' className='my-4'>Home</Link>
                         <Link href='/about' className='my-4'>About</Link>
                         <Link href='/speakers' className='my-4'>Speakers</Link>

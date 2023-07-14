@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import "./globals.css";
 import { Montserrat, Cabin } from "next/font/google";
+=======
+import Nav from './Nav'
+import './globals.css'
+import { Montserrat, Cabin } from 'next/font/google'
+>>>>>>> 32bddc0 (added a hero section to the main page and a utility class)
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -24,11 +30,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
+<<<<<<< HEAD
     <html
       lang="en"
       className={`bg-background text-text ${montserrat.variable} ${cabin.variable}`}
     >
       <body>{children}</body>
+=======
+    <html lang="en" className={`bg-background text-text ${montserrat.variable} ${cabin.variable}`}>
+      <body>
+          {children}
+      </body>
+>>>>>>> 32bddc0 (added a hero section to the main page and a utility class)
     </html>
   );
 }
