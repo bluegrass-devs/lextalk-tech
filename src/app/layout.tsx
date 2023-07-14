@@ -1,3 +1,4 @@
+import Nav from './Nav'
 import './globals.css'
 import { Montserrat, Cabin } from 'next/font/google'
 
@@ -25,7 +26,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`bg-background text-text ${montserrat.variable} ${cabin.variable}`}>
-      <body>{children}</body>
+      <body>
+          {children}
+      </body>
     </html>
   )
 }
