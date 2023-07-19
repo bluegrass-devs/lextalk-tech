@@ -3,6 +3,7 @@ import "./globals.css";
 import { Montserrat, Cabin } from "next/font/google";
 =======
 import Nav from './Nav'
+import Footer from './Footer'
 import './globals.css'
 import { Montserrat, Cabin } from 'next/font/google'
 >>>>>>> 32bddc0 (added a hero section to the main page and a utility class)
@@ -39,7 +40,9 @@ export default function RootLayout({
 =======
     <html lang="en" className={`bg-background text-text ${montserrat.variable} ${cabin.variable}`}>
       <body>
+          <Nav />
           {children}
+          <Footer />
       </body>
 >>>>>>> 32bddc0 (added a hero section to the main page and a utility class)
     </html>
