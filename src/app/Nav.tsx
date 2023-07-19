@@ -32,7 +32,7 @@ export default function Nav () {
                         </Link>
                     </div>
                     {/* Mobile */}
-                    <div className={`${menu ? '' : 'hidden'} md:hidden z-20 bg-accent/50 block flex flex-col w-full items-center`}>
+                    <div className={`${menu ? '' : 'hidden'} md:hidden z-20 bg-accent/75 block flex flex-col w-full items-center`}>
                         <Link href='/' className='my-4'>Home</Link>
                         <Link href='/about' className='my-4'>About</Link>
                         <Link href='/speakers' className='my-4'>Speakers</Link>
