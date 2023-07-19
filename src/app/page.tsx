@@ -5,7 +5,6 @@ import Link from "next/link"
 export default function Home() {
   return (
     <>
-      <Nav />
       <main className="font-montserrat text-text">
         {/* Made the h-screen-minus-nav utility class in the tailwind config */}
         <div className="w-screen h-screen-minus-nav">
