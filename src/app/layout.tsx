@@ -17,7 +17,7 @@ const cabin = Cabin({
 
 export const metadata = {
   title: 'LexTalk Tech',
-  description: 'A semi-annual tech conference in the bluegrass',
+  description: 'A quarterly tech conference in the bluegrass',
 }
 
 export default function RootLayout({
