@@ -1,12 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export',
-    images: {
-        domains: [
-            "placekitten.com"
-        ]
-    }
+  images: {
+    domains: ["placekitten.com"],
+    unoptimized: true,
+  },
+};
 
-}
-
-module.exports = nextConfig
+module.exports = nextConfig;
