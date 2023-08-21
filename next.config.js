@@ -3,7 +3,7 @@ const nextConfig = {
   images: {
     domains: ["placekitten.com"],
   },
-  ouput: "export",
+  output: "export",
 };
 
 module.exports = nextConfig;
