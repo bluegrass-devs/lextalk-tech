@@ -21,7 +21,7 @@ export default function Nav() {
           <Link href="/">
             <Image
               className="relative w-44 mx-8"
-              src="./images/logoTransparent.png"
+              src="/images/logoTransparent.png"
               alt="LexTalk Logo"
               width={1009}
               height={568}

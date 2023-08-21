@@ -2,7 +2,6 @@
 const nextConfig = {
   images: {
     domains: ["placekitten.com"],
-    unoptimized: true,
   },
 };
 
