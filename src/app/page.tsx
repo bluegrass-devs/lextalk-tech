@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Landing from "./components/Landing";
+import joeTalk from "../../public/images/joeTalk.jpg";
 
 export default function Home() {
   const data = {
@@ -69,7 +70,7 @@ export default function Home() {
           <Image
             className="-z-20 absolute"
             alt="Presentation at Lex Talk Tech conference"
-            src="/images/joeTalk.jpg"
+            src={joeTalk}
             layout="fill"
             objectFit="cover"
           />
