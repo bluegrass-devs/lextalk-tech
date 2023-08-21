@@ -11,14 +11,16 @@ type LandingProps = {
 
 export default function Landing({ date }: LandingProps) {
   const [disabled, setDisabled] = useState(false);
+  const [loading, setLoading] = useState(true);
   const windowSize = useRef<number | null>(null); // Initialize to null
 
   useEffect(() => {
-    // Ensure window object exists before using it
     if (typeof window !== "undefined") {
       windowSize.current = window.innerHeight;
       screenSize();
       window.addEventListener("resize", screenSize);
+
+      setLoading(false);
 
       return () => {
         window.removeEventListener("resize", screenSize);
@@ -40,7 +42,9 @@ export default function Landing({ date }: LandingProps) {
     }
   };
 
-  return (
+  return loading ? (
+    <></>
+  ) : (
     <ParallaxProvider isDisabled={disabled}>
       <div className="w-screen h-screen-minus-nav ">
         <Image
