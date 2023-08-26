@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
+import conferenceTalk from "./../../../public/images/conferenceTalk.jpg";
 
 type LandingProps = {
   date: Date;
@@ -50,7 +51,7 @@ export default function Landing({ date }: LandingProps) {
         <Image
           className="-z-20 absolute"
           alt="Presentation at Lex Talk Tech conference"
-          src="/images/conferenceTalk.jpg"
+          src={conferenceTalk}
           layout="fill"
           objectFit="cover"
           objectPosition="right center"
