@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/lextalk-tech",
+  basePath: "",
   images: {
     domains: ["placekitten.com", "res.cloudinary.com"],
     unoptimized: true,
