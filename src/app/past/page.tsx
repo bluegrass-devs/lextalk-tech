@@ -1,11 +1,12 @@
-import Nav from "../Nav"
+import Nav from "../Nav";
 
 export default function Past() {
   return (
     <>
-      <Nav />
-      <h1 className="text-2xl font-cabin">This is a big ol placeholder</h1>
-      <span className="font-montserrat">This is a test for fonts 🥲</span>
+      <h1 className="text-2xl font-cabin">
+        Hi! This will be a page where you can view our past events. Currently,
+        it&apos;s just a placeholder!
+      </h1>
     </>
-  )
+  );
 }

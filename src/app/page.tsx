@@ -1,32 +1,96 @@
-import Nav from "./Nav"
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
+import joeTalk from "../../public/images/joeTalk.jpg";
+import { AddressMap } from "./components/AddressMap";
+import { Landing } from "./components/Landing";
+import { ScheduleTable } from "./components/ScheduleTable";
 
 export default function Home() {
+  const data = {
+    schedule: [
+      {
+        topic: "Building Community",
+        time: "6:00 EST",
+        presenter: "Ember Borja",
+      },
+      {
+        topic: "Freelancing 101",
+        time: "6:30 EST",
+        presenter: "Neal Grindstaff",
+      },
+      {
+        topic: "Fun with Figma",
+        time: "7:00 EST",
+        presenter: "Mariola Hullings",
+      },
+      {
+        topic: "Another example",
+        time: "8:00 EST",
+        presenter: "Some person",
+      },
+    ],
+    // Dates are 0 indexed in JavaScript, so October = 9
+    date: new Date(2023, 9, 12),
+  };
+
   return (
     <>
       <main className="font-montserrat text-text">
-        {/* Made the h-screen-minus-nav utility class in the tailwind config */}
-        <div className="w-screen h-screen-minus-nav">
-            <Image
-            className="-z-20 absolute" 
-            alt="a placeholder image of a cat"
-            src="http://placekitten.com/600/400"
+        <Landing date={data.date} />
+        <div className="my-12 mx-auto max-w-screen-xl px-4">
+          <div className="flex items-center w-1/3 justify-between my-8">
+            <h2 className="text-3xl">Schedule</h2>
+            <Link
+              href="/speakers"
+              className="text-3xl bg-primary/50 py-3 px-6 rounded-full border border-white/25 backdrop-blur-sm border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2"
+            >
+              Speakers
+            </Link>
+          </div>
+          <ScheduleTable data={data.schedule} />
+        </div>
+        <div className="w-screen h-screen relative">
+          <Image
+            className="-z-20 absolute"
+            alt="Presentation at Lex Talk Tech conference"
+            src={joeTalk}
             layout="fill"
             objectFit="cover"
-            />
-          <div className="absolute w-full h-full bg-black/50 -z-10"></div>
-          <div className="h-full flex flex-col items-center justify-center">
-            <h1 className="text-8xl tracking-tight leading my-4 text-center">Lex Talk Tech</h1>
-            <div className="flex flex-col text-3xl my-8 text-center">
-              <span>A quarterly tech conference in the bluegrass</span>
-              <span className="font-thin my-4">October 12th, 2023</span>
-            </div>
-            <Link className="text-3xl bg-primary/50 py-3 px-6 rounded-full border border-white/25 shadow-xl backdrop-blur-sm border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2" href='/tickets'>Tickets</Link>
-          </div>
+          />
         </div>
-        <h2>This is the next section</h2>
+        {/* <div className="my-12 mx-auto max-w-screen-xl px-8">
+          <h1 className="text-3xl">Event Organizers:</h1>
+          <div className="flex flex-col md:flex-row justify-evenly items-center w-full">
+            <div className="flex flex-col items-center w-fit my-8">
+              <div className="w-96 h-96 relative flex flex-col items-center">
+                <Image
+                  className="absolute rounded-full"
+                  alt="Joe Krazat"
+                  src="http://placekitten.com/600/400"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="right center"
+                />
+              </div>
+              <div className="text-2xl">Joe Krazat</div>
+            </div>
+            <div className="flex flex-col items-center w-fit my-8">
+              <div className="w-96 h-96 relative flex flex-col items-center">
+                <Image
+                  className="absolute rounded-full"
+                  alt="This other person"
+                  src="http://placekitten.com/600/400"
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="right center"
+                />
+              </div>
+              <div className="text-2xl">This other person</div>
+            </div>
+          </div>
+        </div> */}
+        <AddressMap date={data.date} />
       </main>
     </>
-  )
+  );
 }
