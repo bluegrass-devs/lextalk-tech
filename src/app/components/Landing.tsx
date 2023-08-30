@@ -10,7 +10,7 @@ type LandingProps = {
   date: Date;
 };
 
-export default function Landing({ date }: LandingProps) {
+export const Landing: React.FC<LandingProps> = ({ date }: LandingProps) => {
   const [disabled, setDisabled] = useState(false);
   const [loading, setLoading] = useState(true);
   const windowSize = useRef<number | null>(null); // Initialize to null
@@ -78,4 +78,4 @@ export default function Landing({ date }: LandingProps) {
       </div>
     </ParallaxProvider>
   );
-}
+};

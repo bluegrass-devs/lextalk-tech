@@ -8,7 +8,7 @@ interface ScheduleTableProps {
   data: ScheduleEntry[];
 }
 
-const ScheduleTable: React.FC<ScheduleTableProps> = ({ data }) => {
+export const ScheduleTable: React.FC<ScheduleTableProps> = ({ data }) => {
   return (
     <table className="w-full text-xl md:text-3xl">
       <thead className="">
@@ -48,5 +48,3 @@ const ScheduleTable: React.FC<ScheduleTableProps> = ({ data }) => {
     </table>
   );
 };
-
-export default ScheduleTable;
