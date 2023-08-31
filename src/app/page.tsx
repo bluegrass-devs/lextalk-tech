@@ -41,10 +41,10 @@ export default function Home() {
           <div className="flex items-center w-1/3 justify-between my-8">
             <h2 className="text-3xl">Schedule</h2>
             <Link
-              href="/speakers"
-              className="text-3xl bg-primary/50 py-3 px-6 rounded-full border border-white/25 backdrop-blur-sm border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2"
+              href="/talks"
+              className="text-3xl bg-primary/50 py-3 px-6 rounded-full border border-white/25 backdrop-blur-sm border-b-2 duration-150 hover:scale-110 hover:border-text hover:-translate-y-2"
             >
-              Speakers
+              Talks
             </Link>
           </div>
           <ScheduleTable data={data.schedule} />

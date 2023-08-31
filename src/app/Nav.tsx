@@ -3,7 +3,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import logoTransparent from "./../../public/images/logoTransparent.png";
-import { FaGithub, FaMeetup, FaBars } from "react-icons/fa6";
+import {
+  FaGithub,
+  FaMeetup,
+  FaBars,
+  FaArrowUpRightFromSquare,
+} from "react-icons/fa6";
 import { useState } from "react";
 
 export default function Nav() {
@@ -41,8 +46,9 @@ export default function Nav() {
           <Link href="/about" className="my-4">
             About
           </Link>
-          <Link href="/speakers" className="my-4">
-            Speakers
+          <Link href="/talks" className="my-4 flex gap-2">
+            <FaArrowUpRightFromSquare className="text-xl" />
+            Talks
           </Link>
           <Link href="/tickets" className="my-4">
             Tickets
@@ -66,15 +72,16 @@ export default function Nav() {
             About
           </Link>
           <Link
-            href="/speakers"
+            href="/talks"
             className="border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2"
           >
-            Speakers
+            Talks
           </Link>
           <Link
             href="/tickets"
-            className="border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2"
+            className="flex gap-2 border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2"
           >
+            <FaArrowUpRightFromSquare className="text-xl" />
             Tickets
           </Link>
           <Link
