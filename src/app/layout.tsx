@@ -28,9 +28,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`bg-background text-text ${montserrat.variable} ${cabin.variable}`}
+      className={`bg-accent text-text ${montserrat.variable} ${cabin.variable}`}
     >
-      <body>
+      <body className="bg-background">
         <Nav />
         {children}
         <Footer />
