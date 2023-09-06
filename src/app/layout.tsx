@@ -30,7 +30,7 @@ export default function RootLayout({
       lang="en"
       className={`bg-accent text-text ${montserrat.variable} ${cabin.variable}`}
     >
-      <body className="bg-background">
+      <body className="bg-background flex flex-col">
         <Nav />
         {children}
         <Footer />

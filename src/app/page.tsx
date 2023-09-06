@@ -51,7 +51,7 @@ export default function Home() {
         </div>
         <div className="w-screen h-screen relative">
           <Image
-            className="-z-20 absolute"
+            className="absolute"
             alt="Presentation at Lex Talk Tech conference"
             src={joeTalk}
             layout="fill"

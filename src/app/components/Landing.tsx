@@ -4,7 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
-import conferenceTalk from "./../../../public/images/conferenceTalk.jpg";
+import conferenceTalk from "../../../public/images/conferenceTalk.jpg";
 
 type LandingProps = {
   date: Date;
@@ -49,7 +49,7 @@ export const Landing: React.FC<LandingProps> = ({ date }: LandingProps) => {
     <ParallaxProvider isDisabled={disabled}>
       <div className="w-screen h-screen-minus-nav ">
         <Image
-          className="-z-20 absolute"
+          className="absolute"
           alt="Presentation at Lex Talk Tech conference"
           src={conferenceTalk}
           layout="fill"
@@ -57,7 +57,7 @@ export const Landing: React.FC<LandingProps> = ({ date }: LandingProps) => {
           objectPosition="right center"
         />
         <Parallax speed={-20}>
-          <div className="h-screen-minus-nav flex flex-col items-center justify-center -z-10">
+          <div className="h-screen-minus-nav flex flex-col items-center justify-center z-20">
             <div className="flex flex-col items-center h-fit bg-black/50 w-fit px-8 py-4 mx-auto">
               <h1 className="text-5xl lg:text-8xl tracking-tight leading my-4 text-center">
                 Lex Talk Tech
