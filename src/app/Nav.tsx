@@ -43,18 +43,12 @@ export default function Nav() {
           <Link href="/" className="my-4">
             Home
           </Link>
-          <Link href="/about" className="my-4">
-            About
-          </Link>
           <Link href="/talks" className="my-4 flex gap-2">
             <FaArrowUpRightFromSquare className="text-xl" />
             Talks
           </Link>
           <Link href="/tickets" className="my-4">
             Tickets
-          </Link>
-          <Link href="/past" className="my-4">
-            Past LexTalk
           </Link>
         </div>
         {/* Desktop */}
