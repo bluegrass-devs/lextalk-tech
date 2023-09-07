@@ -30,7 +30,7 @@ export default function Home() {
       },
     ],
     // Dates are 0 indexed in JavaScript, so October = 9
-    date: new Date(2023, 9, 12),
+    date: new Date(2023, 9, 12, 18),
   };
 
   return (

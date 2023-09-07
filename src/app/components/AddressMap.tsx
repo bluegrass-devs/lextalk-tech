@@ -7,7 +7,7 @@ export const AddressMap: React.FC<DateProps> = ({ date }) => {
   return (
     <div className="my-12 mx-auto max-w-screen-xl px-4">
       <h2 className="text-3xl">Location:</h2>
-      <div className="flex-row justify-center items-center max-w-screen-xl mx-auto my-12 md:flex">
+      <div className="flex flex-col md:flex-row justify-center items-center max-w-screen-xl mx-auto my-12">
         <div className="w-full md:w-1/2 h-96">
           <iframe
             className="w-full h-full"
