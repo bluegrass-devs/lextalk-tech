@@ -17,7 +17,7 @@ export default function Nav() {
     <nav className="bg-accent z-20">
       <div className="h-24 flex flex-col lg:flex-row lg:items-center lg:justify-end text-3xl font-montserrat font-thin">
         {/* Left Side  */}
-        <div className="flex h-full w-full items-center mx-8">
+        <div className="flex h-full items-center ml-8 w-3/4">
           <FaBars className="lg:hidden" onClick={toggleMenu} />
           <Link href="/">
             <Image

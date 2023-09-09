@@ -1,7 +1,6 @@
 import { Developer } from "./components/Developer";
 
 export default function Team() {
-  // The relative path must be for one more folder in.
   const devData = {
     dev: [
       {
