@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/",
+  basePath: "",
   images: {
     domains: ["placekitten.com", "res.cloudinary.com"],
     unoptimized: true,
