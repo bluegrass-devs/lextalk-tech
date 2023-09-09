@@ -37,7 +37,7 @@ export default function Speakers() {
 
   return (
     <>
-      <div className="text-center my-10 bg-primary w-fit mx-auto p-5 ring ring-secondary rounded-lg drop-shadow-2xl">
+      <div className="text-center my-10 bg-accent w-fit mx-auto p-5 ring ring-primary rounded-lg drop-shadow-2xl">
         <h1 className="text-5xl font-bold font-montserrat text-center">
           Talks
         </h1>

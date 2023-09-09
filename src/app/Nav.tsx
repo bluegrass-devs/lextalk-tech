@@ -20,10 +20,10 @@ export default function Nav() {
 
   return (
     <nav className="bg-accent z-20">
-      <div className="h-24 flex flex-col lg:flex-row lg:items-center text-3xl font-montserrat font-thin">
+      <div className="h-24 flex flex-col lg:flex-row lg:items-center lg:justify-end text-3xl font-montserrat font-thin">
         {/* Left Side  */}
-        <div className="flex h-full">
-          <FaBars className="mx-10 my-auto lg:hidden" onClick={toggleMenu} />
+        <div className="flex h-full w-full items-center mx-8">
+          <FaBars className="lg:hidden" onClick={toggleMenu} />
           <Link href="/">
             <Image
               className="relative w-44 mx-8"
@@ -34,70 +34,73 @@ export default function Nav() {
             />
           </Link>
         </div>
+
         {/* Mobile */}
         <div
           className={`${
             menu ? "" : "hidden"
-          } lg:hidden z-20 bg-accent/75 block flex flex-col w-full items-center`}
+          } lg:hidden z-20 bg-accent/75 flex flex-col w-full items-center`}
         >
           <Link href="/" className="my-4">
             Home
           </Link>
-          <Link href="/talks" className="my-4 flex gap-2">
-            <FaArrowUpRightFromSquare className="text-xl" />
+          {/* <Link href="/about" className="my-4">
+            About
+          </Link> */}
+          <Link href="/talks" className="my-4">
             Talks
           </Link>
-          <Link href="/tickets" className="my-4">
+          <a href="https://www.google.com/" className="my-4 flex gap-2">
+            <FaArrowUpRightFromSquare className="text-xl" />
             Tickets
+          </a>
+          <Link href="/team" className="my-4">
+            Team
           </Link>
+          {/* <Link href="/past" className="my-4">
+            Past LexTalk
+          </Link> */}
         </div>
+
         {/* Desktop */}
-        <div className="lg:flex w-full justify-evenly hidden">
+        <div className="lg:flex w-1/2 justify-evenly hidden">
           <Link
             href="/"
-            className="border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2"
+            className="mx-4 border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2"
           >
             Home
           </Link>
-          <Link
+          {/* <Link
             href="/about"
-            className="border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2"
+            className="mx-4 border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2"
           >
             About
-          </Link>
+          </Link> */}
           <Link
             href="/talks"
-            className="border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2"
+            className="mx-4 border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2"
           >
             Talks
           </Link>
-          <Link
-            href="/tickets"
-            className="flex gap-2 border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2"
+          <a
+            href="https://www.google.com"
+            className="mx-4 flex gap-2 border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2"
           >
             <FaArrowUpRightFromSquare className="text-xl" />
             Tickets
-          </Link>
+          </a>
           <Link
+            href="/team"
+            className="mx-4 border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2"
+          >
+            Team
+          </Link>
+          {/* <Link
             href="/past"
-            className="border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2"
+            className="mx-4 border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2"
           >
             Past LexTalk
-          </Link>
-        </div>
-        <div className="flex mx-4 hidden">
-          <a
-            href="https://www.meetup.com/The-Bluegrass-Developers-Guild/"
-            className="mx-4 duration-150 hover:scale-110"
-          >
-            <FaMeetup />
-          </a>
-          <a
-            href="https://github.com/bluegrass-devs"
-            className="mx-4 duration-150 hover:scale-110"
-          >
-            <FaGithub />
-          </a>
+          </Link> */}
         </div>
       </div>
     </nav>

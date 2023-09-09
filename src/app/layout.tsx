@@ -1,5 +1,6 @@
 import Nav from "./Nav";
 import Footer from "./Footer";
+import Head from "next/head";
 import "./globals.css";
 import { Montserrat, Cabin } from "next/font/google";
 
@@ -30,6 +31,9 @@ export default function RootLayout({
       lang="en"
       className={`bg-accent text-text ${montserrat.variable} ${cabin.variable}`}
     >
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className="bg-background flex flex-col">
         <Nav />
         {children}

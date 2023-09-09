@@ -3,7 +3,13 @@ interface DateProps {
 }
 
 export const AddressMap: React.FC<DateProps> = ({ date }) => {
-  let dateLong = date.toLocaleString("en-US");
+  let dateLong = date.toLocaleString("en-US", {
+    year: "2-digit",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "numeric",
+    minute: "2-digit",
+  });
   return (
     <div className="my-12 mx-auto max-w-screen-xl px-4">
       <h2 className="text-3xl">Location:</h2>

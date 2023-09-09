@@ -13,12 +13,12 @@ export default function Footer() {
             >
               Home
             </Link>
-            <Link
+            {/* <Link
               href="/about"
               className="my-2 w-48 text-center transition duration-150 hover:text-white hover:scale-110"
             >
               About
-            </Link>
+            </Link> */}
             <Link
               href="/speakers"
               className="my-2 w-48 text-center transition duration-150 hover:text-white hover:scale-110"
@@ -26,17 +26,17 @@ export default function Footer() {
               Speakers
             </Link>
             <Link
-              href="/tickets"
+              href="https://www.google.com"
               className="my-2 w-48 text-center transition duration-150 hover:text-white hover:scale-110"
             >
               Tickets
             </Link>
-            <Link
+            {/* <Link
               href="/past"
               className="my-2 w-48 text-center whitespace-nowrap transition duration-150 hover:text-white hover:scale-110"
             >
               Past Events
-            </Link>
+            </Link> */}
           </div>
           <div className="flex flex-col items-center">
             <div className="flex w-1/2 md:w-1/4 justify-center text-2xl my-2 gap-4">
