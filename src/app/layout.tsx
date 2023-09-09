@@ -32,7 +32,7 @@ export default function RootLayout({
       className={`bg-accent text-text ${montserrat.variable} ${cabin.variable}`}
     >
       <head>
-        <link rel="icon" href="./favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </head>
       <body className="bg-background flex flex-col">
         <Nav />
