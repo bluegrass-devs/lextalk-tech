@@ -1,18 +1,18 @@
 import { Developer } from "./components/Developer";
 
 export default function Team() {
-  // Unfortunately, I could only get relative paths to work.
+  // The relative path must be for one more folder in.
   const devData = {
     dev: [
       {
         name: "Ember Borja",
-        image: "../../../../public/images/conferenceTalk.jpg",
+        image: "/images/conferenceTalk.jpg",
         alt: "placeholder image",
         bio: "My name is Ember Borja. I'm a developer from Lexington, Kentucky with varied background in music and photography. I love building things that get used and ",
       },
       {
         name: "Neal Powers",
-        image: "../../../../public/images/Neal.JPG",
+        image: "/images/Neal.JPG",
         alt: "Neal over the Seattle skyline",
         bio: "My name is Neal Powers. I'm a freelance developer from Lexington, Kentucky looking for my first role at a company! I have a varied background in music and photography and love all things JavaScript!",
       },
