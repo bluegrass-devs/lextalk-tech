@@ -4,6 +4,7 @@ interface DevProps {
   devData: {
     name: string;
     image: string;
+    alt: string;
     bio: string;
   };
 }
@@ -17,7 +18,7 @@ export const Developer: React.FC<DevProps> = ({ devData }) => {
             src={devData.image}
             width="500"
             height="500"
-            alt="dev"
+            alt={devData.alt}
             className="rounded-full"
           />
         </div>
