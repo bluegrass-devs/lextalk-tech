@@ -78,7 +78,7 @@ export default function Nav() {
             Talks
           </Link>
           <a
-            href="https://www.google.com"
+            href="https://www.eventbrite.com/e/lextalktech-oct-12-2023-tickets-716404403857"
             className="mx-4 flex gap-2 border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2"
           >
             <FaArrowUpRightFromSquare className="text-xl" />

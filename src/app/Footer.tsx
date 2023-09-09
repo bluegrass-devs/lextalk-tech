@@ -20,16 +20,22 @@ export default function Footer() {
               About
             </Link> */}
             <Link
-              href="/speakers"
+              href="/talks"
               className="my-2 w-48 text-center transition duration-150 hover:text-white hover:scale-110"
             >
-              Speakers
+              Talks
             </Link>
             <Link
-              href="https://www.google.com"
+              href="https://www.eventbrite.com/e/lextalktech-oct-12-2023-tickets-716404403857"
               className="my-2 w-48 text-center transition duration-150 hover:text-white hover:scale-110"
             >
               Tickets
+            </Link>
+            <Link
+              href="/team"
+              className="my-2 w-48 text-center transition duration-150 hover:text-white hover:scale-110"
+            >
+              Team
             </Link>
             {/* <Link
               href="/past"
