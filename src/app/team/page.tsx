@@ -10,7 +10,7 @@ export default function Team() {
       },
       {
         name: "Neal Powers",
-        image: "/images/joeTalk.jpg",
+        image: "/images/Neal.JPG",
         bio: "My name is Neal Powers. I'm a freelance developer from Lexington, Kentucky looking for my first role at a company! I have a varied background in music and photography and love all things JavaScript!",
       },
     ],

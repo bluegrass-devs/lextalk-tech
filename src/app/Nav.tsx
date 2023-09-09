@@ -3,12 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import logoTransparent from "./../../public/images/logoTransparent.png";
-import {
-  FaGithub,
-  FaMeetup,
-  FaBars,
-  FaArrowUpRightFromSquare,
-} from "react-icons/fa6";
+import { FaBars, FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { useState } from "react";
 
 export default function Nav() {
