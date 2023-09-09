@@ -1,4 +1,4 @@
-import { Developer } from "./components/developer";
+import { Developer } from "./components/Developer";
 
 export default function Team() {
   const devData = {
