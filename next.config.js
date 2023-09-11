@@ -15,7 +15,7 @@ const nextConfig = {
   basePath:
     process.env.PRODUCTION === "true"
       ? "https://mywebsite.com/"
-      : "https://nealium104.github.io/lextalk-tech/",
+      : "/lextalk-tech/",
   images: {
     domains: ["placekitten.com", "res.cloudinary.com"],
     unoptimized: process.env.PRODUCTION !== "true",
