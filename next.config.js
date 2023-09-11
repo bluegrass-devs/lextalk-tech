@@ -15,11 +15,12 @@ const nextConfig = {
   basePath:
     process.env.PRODUCTION === "true"
       ? "https://mywebsite.com/"
-      : "/lextalk-tech",
+      : "/lextalk-tech/",
   images: {
     domains: ["placekitten.com", "res.cloudinary.com"],
     unoptimized: process.env.PRODUCTION !== "true",
   },
+  trailingSlash: true,
   output: "export",
 };
 
