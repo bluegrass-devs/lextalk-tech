@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-import "./globals.css";
 import { Montserrat, Cabin } from "next/font/google";
-=======
-import Nav from './Nav'
-import Footer from './Footer'
-import './globals.css'
-import { Montserrat, Cabin } from 'next/font/google'
->>>>>>> 32bddc0 (added a hero section to the main page and a utility class)
+import Nav from "./Nav";
+import Footer from "./Footer";
+import "./globals.css";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -22,7 +17,7 @@ const cabin = Cabin({
 
 export const metadata = {
   title: "LexTalk Tech",
-  description: "A semi-annual tech conference in the bluegrass",
+  description: "A quarterly tech conference in the bluegrass",
 };
 
 export default function RootLayout({
@@ -31,20 +26,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-<<<<<<< HEAD
     <html
       lang="en"
       className={`bg-background text-text ${montserrat.variable} ${cabin.variable}`}
     >
-      <body>{children}</body>
-=======
-    <html lang="en" className={`bg-background text-text ${montserrat.variable} ${cabin.variable}`}>
       <body>
-          <Nav />
-          {children}
-          <Footer />
+        <Nav />
+        {children}
+        <Footer />
       </body>
->>>>>>> 32bddc0 (added a hero section to the main page and a utility class)
+      <body>
+        <Nav />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

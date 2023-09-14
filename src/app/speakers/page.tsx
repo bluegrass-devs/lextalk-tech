@@ -1,4 +1,4 @@
-import Nav from "../Nav"
+import Nav from "../Nav";
 
 export default function Speakers() {
   return (
@@ -7,5 +7,5 @@ export default function Speakers() {
       <h1 className="text-2xl font-cabin">This is a big ol placeholder</h1>
       <span className="font-montserrat">This is a test for fonts 🥲</span>
     </>
-  )
+  );
 }
