@@ -28,9 +28,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`bg-background text-text ${montserrat.variable} ${cabin.variable}`}
+      className={`bg-accent text-text ${montserrat.variable} ${cabin.variable}`}
     >
-      <body>
+      <head>
+        <link rel="icon" href="./favicon.ico" />
+      </head>
+      <body className="bg-background flex flex-col">
         <Nav />
         {children}
         <Footer />
