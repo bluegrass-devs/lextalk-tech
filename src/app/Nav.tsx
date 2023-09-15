@@ -29,7 +29,6 @@ export default function Nav() {
             />
           </Link>
         </div>
-
         {/* Mobile */}
         <div
           className={`${

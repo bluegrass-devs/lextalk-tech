@@ -6,7 +6,6 @@ export default function Footer() {
     <>
       <footer className="text-text bg-accent font-montserrat text-sm">
         <div className="md:w-1/3 mx-auto flex flex-col flex-shrink">
-          <span className="text-center">© Copyright 2023</span>
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 my-2">
             <Link
               href="/"
@@ -15,6 +14,7 @@ export default function Footer() {
               Home
             </Link>
             {/* <Link
+            <Link
               href="/about"
               className="my-2 w-48 text-center transition duration-150 hover:text-white hover:scale-110"
             >
@@ -61,6 +61,7 @@ export default function Footer() {
               </a>
             </div>
           </div>
+          <span className="text-center">© Copyright 2023</span>
         </div>
       </footer>
     </>
