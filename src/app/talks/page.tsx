@@ -4,7 +4,7 @@ export default function Talks() {
   const talkData = {
     schedule: [
       {
-        time: "5:00pm",
+        time: "5:30pm",
         title: "Check-in",
         info: "",
         presenter: "",

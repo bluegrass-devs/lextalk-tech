@@ -9,7 +9,7 @@ export default function Home() {
   const data = {
     schedule: [
       {
-        time: "5:00pm",
+        time: "5:30pm",
         topic: "Check-in",
       },
       {
