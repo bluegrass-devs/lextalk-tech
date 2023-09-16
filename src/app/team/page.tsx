@@ -7,7 +7,7 @@ export default function Team() {
         name: "Ember Borja",
         image: "/images/conferenceTalk.jpg",
         alt: "placeholder image",
-        bio: "My name is Ember Borja. I'm a developer from Lexington, Kentucky with varied background in music and photography. I love building things that get used and ",
+        bio: "Hi! I'm Ember. I'm a developer in Lexington, Kentucky, a trans woman, and an organizer for several community groups in town. Please reach out and chat! :)",
       },
       {
         name: "Neal Powers",
