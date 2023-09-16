@@ -23,7 +23,7 @@ params:
   Sections:
     - about
     # - location
-    # - schedule
+    - schedule
     # - speakers
     # - sponsors
     # - partners
@@ -41,9 +41,9 @@ params:
 
   # The Call To Action button at the header,
   # If you don't want this, just remove the callToAction property.
-  # CallToAction:
-    # text: "Get tickets now!"
-    # link: "https://www.eventbrite.com/e/lextalktech-tickets-602882817737"
+  CallToAction:
+    text: "Get tickets now!"
+    link: "https://www.eventbrite.com/e/716404403857?aff=oddtdtcreator"
 
   # Fork me on GitHub, if you don't want this, just remove the forkButton property
   # ForkButton:
@@ -67,7 +67,7 @@ params:
   # The entire schedule
   Schedule:
     - name: "Check-in"
-      time: "5:15pm"
+      time: "5:30pm"
 
     - name: "Joe Kratzat"
       photo: "/img/speaker.jpg"
@@ -77,11 +77,11 @@ params:
         href: "http://twitter.com/"
         text: "@Lorem"
       presentation:
-        title: "What is LexTalk.Tech"
+        title: "LexTalk.Tech Intro"
         description: "This will be a welcome and introduction to what LexTalk Tech is and what we hope to bring to the community."
-        time: "5:30pm"
+        time: "6:00"
 
-    - name: "Ember Borja"
+    - name: "Todd Willey"
       photo: "/img/speaker.jpg"
       bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
       company: ""
@@ -89,11 +89,11 @@ params:
         href: "http://github.com/Lorem"
         text: "@Lorem"
       presentation:
-        title: "Accessibility on the Web"
-        description: "The web is for everyone. That means we must accommodate all forms of human interaction on the web. We will talk about physical and mental disabilities, adaptive technologies, and cultural differences that affect how we design and test our applications."
-        time: "5:45pm"
+        title: "Ham Radio: Where Even Experts are Amateurs"
+        description: "A brief introduction into the Amateur Radio Service and how hams operate."
+        time: "6:15pm"
 
-    - name: "Justin Hall"
+    - name: "Davis St. Aubin"
       photo: "/img/speaker.jpg"
       bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
       company: ""
@@ -101,11 +101,11 @@ params:
         href: "http://twitter.com/Lorem"
         text: "@Lorem"
       presentation:
-        title: "How to freelance as a Developer"
-        description: "Self-employed and not necessarily committed to a particular employer long-term. Freelance workers are sometimes represented by a company or a temporary agency that resells freelance labor to clients; others work independently or use professional associations or websites to get work."
-        time: "6:00pm"
+        title: "Things I hate about developers"
+        description: ""
+        time: "6:30pm"
 
-    - name: "John Flynn"
+    - name: "Craig Geil"
       photo: "/img/speaker.jpg"
       bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
       company: ""
@@ -113,11 +113,11 @@ params:
         href: "http://github.com/stevie"
         text: "@stevie"
       presentation:
-        title: "The Power of Being Social: Building Your Network for Success"
-        description: "We are going explore the importance of being social and building your network in today's world. We discuss the numerous benefits of socializing, including increased confidence, expanded skills, and new opportunities. We also provide practical tips and strategies for building and maintaining a strong network. Join us as we explore the power of being social and how it can lead to success in both personal and professional aspects of life. We will look at some of the opportunities locally with Google Developer Group and Grow with Google, regionally with Code Kentucky, and nationally with Toastmaster and others to expand your network and grow your career."
-        time: "6:15pm"
+        title: "Introduction to Vue.js"
+        description: ""
+        time: "6:45pm"
 
-    - name: "Ron Northrip"
+    - name: "John Martinez"
       photo: "/img/speaker.jpg"
       bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
       company: ""
@@ -125,11 +125,11 @@ params:
         href: "http://twitter.com/zuck"
         text: "@zuck"
       presentation:
-        title: "Mastering Git Merges"
-        description: "Git makes teams mighty! And as long as you're not working on the same parts of the repo at the same time then merging your code together is clean and simple. But then one day you're both working on the same bits and your git merge barfs and you're stuck in limbo! WHAT NOW?!?! You’ve got to master your merges. We’ll talk about different approaches to your workflows, including cli commands and gui tools, to help you make magical merges!"
-        time: "6:30pm"
+        title: "ASM R you serious"
+        description: ""
+        time: "7:00pm"
 
-    - name: "Joe Blankenship"
+    - name: "Lee Park"
       photo: "/img/speaker.jpg"
       bio: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
       company: ""
@@ -137,14 +137,14 @@ params:
         href: "http://twitter.com/woz"
         text: "@woz"
       presentation:
-        title: "Lessons Learned in Knowledge Engineering"
-        description: "Have you ever been so disappointed with data systems and knowledge practices that you started a company with co-conspirators to build a knowledge-based system? Join me in an examination of lessons learned from addressing data and knowledge challenges as a data scientist to building a knowledge-based system as a data engineer and CDO."
-        time: "7:00pm"
+        title: "LLMs throughout the lifecycle of Generative AI Projects"
+        description: "Focused more on demystifying some keywords people vaguely understand about customizing language models for specific use cases."
+        time: "7:30pm"
 
     - name: "Wrap up"
-      time: "7:30pm"
+      time: "8:00pm"
     
     - name: "Pizza and beer afterward"
       presentation:
         description: "Within Cornerstone there is Ethereal brewing and Rolling oven Pizza."
-        time: "7:30pm - 10pm"
+        time: "8:00pm - 10pm"
