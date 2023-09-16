@@ -13,30 +13,31 @@ export default function Footer() {
             >
               Home
             </Link>
+            {/* <Link
             <Link
               href="/about"
               className="my-2 w-48 text-center transition duration-150 hover:text-white hover:scale-110"
             >
               About
-            </Link>
+            </Link> */}
             <Link
-              href="/speakers"
+              href="/Talks"
               className="my-2 w-48 text-center transition duration-150 hover:text-white hover:scale-110"
             >
-              Speakers
+              Talks
             </Link>
-            <Link
-              href="/tickets"
+            <a
+              href="https://www.eventbrite.com/e/lextalktech-oct-12-2023-tickets-716404403857"
               className="my-2 w-48 text-center transition duration-150 hover:text-white hover:scale-110"
             >
               Tickets
-            </Link>
-            <Link
+            </a>
+            {/* <Link
               href="/past"
               className="my-2 w-48 text-center whitespace-nowrap transition duration-150 hover:text-white hover:scale-110"
             >
               Past Events
-            </Link>
+            </Link> */}
           </div>
           <div className="flex flex-col items-center">
             <div className="flex w-1/2 md:w-1/4 justify-center text-2xl my-2 gap-4">

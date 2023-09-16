@@ -1,7 +1,7 @@
+import { Montserrat, Cabin } from "next/font/google";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import "./globals.css";
-import { Montserrat, Cabin } from "next/font/google";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -28,9 +28,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`bg-background text-text ${montserrat.variable} ${cabin.variable}`}
+      className={`bg-accent text-text ${montserrat.variable} ${cabin.variable}`}
     >
-      <body>
+      <head>
+        <link rel="icon" href="./favicon.ico" />
+      </head>
+      <body className="bg-background flex flex-col">
         <Nav />
         {children}
         <Footer />
