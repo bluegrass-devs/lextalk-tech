@@ -25,7 +25,7 @@ export const AddressMap: React.FC<DateProps> = ({ date }) => {
           <h3 className="text-3xl font-bold py-2">The Cornerstone</h3>
           <div>401 South Limestone</div>
           <div>Lexington, KY 40508</div>
-          <div>6PM - 9PM EST</div>
+          <div>6PM - 8PM</div>
           <div>{dateLong}</div>
         </div>
       </div>
