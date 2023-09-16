@@ -9,24 +9,48 @@ export default function Home() {
   const data = {
     schedule: [
       {
-        topic: "Building Community",
-        time: "6:00 EST",
-        presenter: "Ember Borja",
+        time: "5:00pm",
+        topic: "Check-in",
       },
       {
-        topic: "Freelancing 101",
-        time: "6:30 EST",
-        presenter: "Neal Grindstaff",
+        time: "6:00pm",
+        topic: "LexTalk - Tech Intro",
+        presenter: "Joe Kratzat",
       },
       {
-        topic: "Fun with Figma",
-        time: "7:00 EST",
-        presenter: "Mariola Hullings",
+        time: "6:15pm",
+        topic: "Ham Radio",
+        presenter: "Todd Willey",
       },
       {
-        topic: "Another example",
-        time: "8:00 EST",
-        presenter: "Some person",
+        time: "6:30pm",
+        topic: "Development",
+        presenter: "Davis St. Aubin",
+      },
+      {
+        time: "6:45pm",
+        topic: "Vue.js",
+        presenter: "Craig Geil",
+      },
+      {
+        time: "7:00pm",
+        topic: "Assumbly",
+        presenter: "John Martinez",
+      },
+      {
+        time: "7:30pm",
+        topic: "Generative AI",
+        presenter: "Lee Park",
+      },
+      {
+        time: "8:00pm",
+        topic: "Wrap up",
+        presenter: "",
+      },
+      {
+        time: "8:00pm - 10:00pm",
+        topic: "Pizza and beer afterward",
+        presenter: "",
       },
     ],
     // Dates are 0 indexed in JavaScript, so October = 9

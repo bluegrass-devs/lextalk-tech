@@ -1,7 +1,7 @@
 interface ScheduleEntry {
   topic: string;
   time: string;
-  presenter: string;
+  presenter?: string;
 }
 
 interface ScheduleTableProps {
