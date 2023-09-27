@@ -34,7 +34,7 @@ export default function Home() {
       },
       {
         time: "7:00pm",
-        topic: "Assumbly",
+        topic: "Assembly",
         presenter: "John Martinez",
       },
       {
