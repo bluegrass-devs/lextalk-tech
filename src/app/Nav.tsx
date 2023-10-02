@@ -89,12 +89,12 @@ export default function Nav() {
           >
             Team
           </Link>
-          {/* <Link
+          <Link
             href="/past"
             className="mx-4 border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2"
           >
-            Past LexTalk
-          </Link> */}
+            Past Talks
+          </Link>
         </div>
       </div>
     </nav>
