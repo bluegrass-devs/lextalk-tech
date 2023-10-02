@@ -35,7 +35,7 @@ export default function RootLayout({
       </head>
       <body className="bg-background flex flex-col">
         <Nav />
-        {children}
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>
