@@ -76,15 +76,13 @@ export default function Talks() {
 
   return (
     <>
-      <div className="mx-auto">
-        <div className="text-center my-10 bg-accent w-fit mx-4 p-5 ring ring-primary rounded-lg drop-shadow-2xl">
-          <h1 className="text-5xl font-bold font-montserrat text-center">
-            Talks
-          </h1>
-          <span className="text-xl">
-            This is the schedule for LexTalk on {formattedDate}
-          </span>
-        </div>
+      <div className="text-center my-10 bg-accent w-fit p-4 ring ring-primary rounded-lg drop-shadow-2xl mx-auto">
+        <h1 className="text-5xl font-bold font-montserrat text-center">
+          Talks
+        </h1>
+        <span className="text-xl">
+          This is the schedule for LexTalk on {formattedDate}
+        </span>
       </div>
 
       {talkData.schedule.map((talk, index) => (

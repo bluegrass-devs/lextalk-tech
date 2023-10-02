@@ -59,7 +59,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="font-montserrat text-text">
+      <div className="font-montserrat text-text">
         <Landing date={data.date} />
         <div className="my-12 mx-auto max-w-screen-xl px-4">
           <div className="flex items-center w-1/3 justify-between my-8">
@@ -83,7 +83,7 @@ export default function Home() {
           />
         </div>
         <AddressMap date={data.date} />
-      </main>
+      </div>
     </>
   );
 }
