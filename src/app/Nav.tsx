@@ -51,9 +51,9 @@ export default function Nav() {
           <Link href="/team" className="my-4">
             Team
           </Link>
-          {/* <Link href="/past" className="my-4">
-            Past LexTalk
-          </Link> */}
+          <Link href="/past" className="my-4">
+            Past Talks
+          </Link>
         </div>
 
         {/* Desktop */}
