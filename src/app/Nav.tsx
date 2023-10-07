@@ -44,7 +44,10 @@ export default function Nav() {
           <Link href="/talks" className="my-4">
             Talks
           </Link>
-          <a href="https://www.google.com/" className="my-4 flex gap-2">
+          <a
+            href="https://www.eventbrite.com/e/lextalktech-oct-12-2023-tickets-716404403857"
+            className="my-4 flex gap-2"
+          >
             <FaArrowUpRightFromSquare className="text-xl" />
             Tickets
           </a>
