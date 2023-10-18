@@ -1,10 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
-import Nav from "../Nav";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import "aos/dist/aos.css";
 
 export default function Past() {
   useEffect(() => {
