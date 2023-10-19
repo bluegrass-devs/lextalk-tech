@@ -9,7 +9,10 @@ export default function Past() {
         <tbody>
           <tr key="1" className="">
             <td className="m-3 font-bold">
-              <a href="/past/2023-05-18">2023-05-18</a>
+              <ul className="list-disc">
+                <li><a href="/past/2023-05-18">2023-05-18</a></li>
+                <li><a href="/past/2023-10-12">2023-10-12</a></li>
+              </ul>
             </td>
           </tr>
         </tbody>

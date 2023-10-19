@@ -14,33 +14,33 @@ export default function Home() {
       },
       {
         time: "6:00pm",
-        topic: "LexTalk - Tech Intro",
+        topic: "LexTalk - Tech Welcome 👋🤠",
         presenter: "Joe Kratzat",
       },
       {
         time: "6:15pm",
-        topic: "Ham Radio",
-        presenter: "Todd Willey",
+        topic: "TBD",
+        presenter: "TBD",
       },
       {
         time: "6:30pm",
-        topic: "Development",
-        presenter: "Davis St. Aubin",
+        topic: "TBD",
+        presenter: "TBD",
       },
       {
         time: "6:45pm",
-        topic: "Vue.js",
-        presenter: "Craig Geil",
+        topic: "TBD",
+        presenter: "TBD",
       },
       {
         time: "7:00pm",
-        topic: "Assembly",
-        presenter: "John Martinez",
+        topic: "TBD",
+        presenter: "TBD",
       },
       {
         time: "7:30pm",
-        topic: "Generative AI",
-        presenter: "Lee Park",
+        topic: "TBD",
+        presenter: "TBD",
       },
       {
         time: "8:00pm",
@@ -49,12 +49,12 @@ export default function Home() {
       },
       {
         time: "8:00pm - 10:00pm",
-        topic: "Pizza and beer afterward",
+        topic: "Food and drinks afterward",
         presenter: "",
       },
     ],
     // Dates are 0 indexed in JavaScript, so October = 9
-    date: new Date(2023, 9, 12, 18),
+    date: new Date(2024, 0, 25, 18),
   };
 
   return (

@@ -13,6 +13,9 @@ export default function Nav() {
     setMenu(!menu);
   };
 
+  // having this blank hides the link
+  const ticketURL = "";
+
   return (
     <nav className="bg-accent z-20">
       <div className="h-24 flex flex-col lg:flex-row lg:items-center lg:justify-end text-3xl font-montserrat font-thin">
@@ -44,13 +47,12 @@ export default function Nav() {
           <Link href="/talks" className="my-4">
             Talks
           </Link>
-          <a
-            href="https://www.eventbrite.com/e/lextalktech-oct-12-2023-tickets-716404403857"
-            className="my-4 flex gap-2"
-          >
+          {ticketURL &&
+          <a href={ticketURL} className="my-4 flex gap-2">
             <FaArrowUpRightFromSquare className="text-xl" />
             Tickets
           </a>
+          }
           <Link href="/team" className="my-4">
             Team
           </Link>
@@ -79,13 +81,15 @@ export default function Nav() {
           >
             Talks
           </Link>
+          {ticketURL &&
           <a
-            href="https://www.eventbrite.com/e/lextalktech-oct-12-2023-tickets-716404403857"
+            href={ticketURL}
             className="flex gap-2 border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2"
           >
             <FaArrowUpRightFromSquare className="text-xl" />
             Tickets
           </a>
+          }
           <Link
             href="/team"
             className="border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2"
