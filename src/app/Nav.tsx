@@ -38,9 +38,9 @@ export default function Nav() {
           <Link href="/" className="my-4">
             Home
           </Link>
-          {/* <Link href="/about" className="my-4">
+          <Link href="/about" className="my-4">
             About
-          </Link> */}
+          </Link>
           <Link href="/talks" className="my-4">
             Talks
           </Link>
@@ -64,12 +64,12 @@ export default function Nav() {
           >
             Home
           </Link>
-          {/* <Link
+          <Link
             href="/about"
             className="mx-4 border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2"
           >
             About
-          </Link> */}
+          </Link>
           <Link
             href="/talks"
             className="mx-4 border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2"

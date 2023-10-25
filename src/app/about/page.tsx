@@ -27,7 +27,6 @@ export default function Past() {
           data-aos-duration="2000"
         >
           <div className="mx-auto w-3/4 md:w-1/2 bg-primary ring-secondary shadow-lg shadow-secondary rounded-lg ring p-10 leading-8">
-            {" "}
             Get ready for a tech-tastic good time at our quarterly conference!
           </div>
         </div>
@@ -52,10 +51,7 @@ export default function Past() {
           data-aos-duration="2000"
         >
           <div className="mx-auto w-3/4 md:w-1/2 bg-primary ring-secondary shadow-lg shadow-secondary rounded-lg ring p-10 leading-8">
-            {" "}
-            {"We've packed the agenda with a mix of lightning-fast 15-minute talks"}
-            {"and in-depth 30-minute sessions that will leave you feeling like a"}
-            {"tech pro"}
+           "We've packed the agenda with a mix of lightning-fast 15-minute talks and in-depth 30-minute sessions that will leave you feeling like a tech pro"
           </div>
         </div>
 
@@ -65,8 +61,7 @@ export default function Past() {
           data-aos-duration="2000"
         >
           <div className="mx-auto w-3/4 md:w-1/2 bg-primary ring-secondary shadow-lg shadow-secondary rounded-lg ring p-10 leading-8">
-            {" "}
-            {"But don't worry, we're all about keeping it casual and fun"}
+            "But don't worry, we're all about keeping it casual and fun"
           </div>
         </div>
         <div
@@ -89,9 +84,7 @@ export default function Past() {
           data-aos-duration="2000"
         >
           <div className="mx-auto w-3/4 md:w-1/2 bg-primary ring-secondary shadow-lg shadow-secondary rounded-lg ring p-10 leading-8">
-            {" "}
-            {"Expect a lively atmosphere, lots of laughs, and plenty of"}
-            {"opportunities to connect with fellow tech enthusiasts"}
+  "Expect a lively atmosphere, lots of laughs, and plenty of opportunities to connect with fellow tech enthusiasts"
           </div>
         </div>
 
@@ -115,9 +108,7 @@ export default function Past() {
           data-aos-duration="2000"
         >
           <div className="mx-auto w-3/4 md:w-1/2 bg-primary ring-secondary shadow-lg shadow-secondary rounded-lg ring p-10 leading-8">
-            {" "}
-            {"Whether you're a tech novice or a seasoned pro, you'll find"}
-            {"something to love at our conference"}
+            "Whether you're a tech novice or a seasoned pro, you'll find something to love at our conference"
           </div>
         </div>
 
@@ -127,8 +118,7 @@ export default function Past() {
           data-aos-duration="2000"
         >
           <div className="mx-auto w-3/4 md:w-1/2 bg-primary ring-secondary shadow-lg shadow-secondary rounded-lg ring p-10 leading-8">
-            {" "}
-            {"Don't miss out on this wild ride of technology and good vibes!"}
+           "Don't miss out on this wild ride of technology and good vibes!"
           </div>
         </div>
 
@@ -138,8 +128,8 @@ export default function Past() {
           data-aos-duration="2000"
         >
           <div className="mx-auto w-3/4 md:w-1/2 bg-primary ring-secondary shadow-lg shadow-secondary rounded-lg ring p-10 leading-8">
-            {" "}
-            October 12th 2023
+         
+            January 25, 2024
           </div>
         </div>
 
