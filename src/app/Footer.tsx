@@ -13,13 +13,12 @@ export default function Footer() {
             >
               Home
             </Link>
-            {/* <Link
             <Link
               href="/about"
               className="my-2 w-48 text-center transition duration-150 hover:text-white hover:scale-110"
             >
               About
-            </Link> */}
+            </Link>
             <Link
               href="/Talks"
               className="my-2 w-48 text-center transition duration-150 hover:text-white hover:scale-110"
