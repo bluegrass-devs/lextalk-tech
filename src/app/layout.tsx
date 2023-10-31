@@ -31,11 +31,11 @@ export default function RootLayout({
       className={`bg-accent text-text ${montserrat.variable} ${cabin.variable}`}
     >
       <head>
-        <link rel="icon" href="./favicon.ico" />
+        <link rel="icon" href="/images/favicon.ico" />
       </head>
       <body className="bg-background flex flex-col">
         <Nav />
-        {children}
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>

@@ -128,7 +128,6 @@ export default function Past() {
           data-aos-duration="2000"
         >
           <div className="mx-auto w-3/4 md:w-1/2 bg-primary ring-secondary shadow-lg shadow-secondary rounded-lg ring p-10 leading-8">
-         
             January 25, 2024
           </div>
         </div>

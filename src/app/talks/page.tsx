@@ -12,42 +12,42 @@ export default function Talks() {
       },
       {
         time: "6:00pm",
-        title: "LexTalk - Tech Intro",
+        title: "LexTalk - Tech Welcome 👋🤠",
         info: "This will be a welcome and introduction to what LexTalk Tech is and what we hope to bring to the community.",
         presenter: "Joe Kratzat",
       },
       {
         time: "6:15pm",
-        title: "Ham Radio: Where Even Experts are Amateurs",
-        info: "A brief introduction into the Amateur Radio Service and how hams operate.",
-        presenter: "Todd Willey",
+        title: "TBD",
+        info: "",
+        presenter: "TBD",
       },
       {
         time: "6:30pm",
-        title: "Things I hate about developers ",
+        title: "TBD",
         info: "",
-        presenter: "Davis St. Aubin",
+        presenter: "TBD",
         resources: "",
       },
       {
         time: "6:45pm",
-        title: "Introduction to Vue.js",
+        title: "TBD",
         info: "",
-        presenter: "Craig Geil",
+        presenter: "TBD",
         resources: "",
       },
       {
         time: "7:00pm",
-        title: "ASM R you serious",
+        title: "TBD",
         info: "",
-        presenter: "John Martinez",
+        presenter: "TBD",
         resources: "",
       },
       {
         time: "7:30pm",
-        title: "LLMs throughout the lifecycle of Generative AI Projects",
-        info: "Focused more on demystifying some keywords people vaguely understand about customizing language models for specific use cases.",
-        presenter: "Lee Park",
+        title: "TBD",
+        info: "",
+        presenter: "TBD",
         resources: "",
       },
       {
@@ -59,7 +59,7 @@ export default function Talks() {
       },
       {
         time: "8:00pm - 10:00pm",
-        title: "Pizza and beer afterward",
+        title: "Food and drinks afterward",
         info: "Within Cornerstone there is Ethereal brewing and Rolling oven Pizza.",
         presenter: "",
         resources: "",
@@ -76,15 +76,13 @@ export default function Talks() {
 
   return (
     <>
-      <div className="mx-auto">
-        <div className="text-center my-10 bg-accent w-fit mx-4 p-5 ring ring-primary rounded-lg drop-shadow-2xl">
-          <h1 className="text-5xl font-bold font-montserrat text-center">
-            Talks
-          </h1>
-          <span className="text-xl">
-            This is the schedule for LexTalk on {formattedDate}
-          </span>
-        </div>
+      <div className="text-center my-10 bg-accent w-fit p-4 ring ring-primary rounded-lg drop-shadow-2xl mx-auto">
+        <h1 className="text-5xl font-bold font-montserrat text-center">
+          Talks
+        </h1>
+        <span className="text-xl">
+          This is the schedule for LexTalk on {formattedDate}
+        </span>
       </div>
 
       {talkData.schedule.map((talk, index) => (
