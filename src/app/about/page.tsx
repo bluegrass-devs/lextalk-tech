@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
+import Image from "next/image";
 
 export default function Past() {
   useEffect(() => {
@@ -37,10 +38,12 @@ export default function Past() {
           data-aos-duration="2000"
         >
           <div className="mx-auto w-3/4 md:w-1/2 bg-primary ring-secondary shadow-lg shadow-secondary rounded-lg ring p-10">
-            <img
+            <Image
               className="object-contain rounded-lg"
               src="/images/Conference.JPG"
               alt="Image description"
+              width={800}
+      height={500}
             />
           </div>
         </div>
@@ -70,10 +73,12 @@ export default function Past() {
           data-aos-duration="2000"
         >
           <div className="mx-auto w-3/4 md:w-1/2 bg-primary ring-secondary shadow-lg shadow-secondary rounded-lg ring p-10">
-            <img
+            <Image
               className="object-contain rounded-lg"
               src="/images/Conference2.JPG"
               alt="Image description"
+              width={800}
+      height={500}
             />
           </div>
         </div>
@@ -94,10 +99,12 @@ export default function Past() {
           data-aos-duration="2000"
         >
           <div className="mx-auto w-3/4 md:w-1/2 bg-primary ring-secondary shadow-lg shadow-secondary rounded-lg ring p-10">
-            <img
+            <Image
               className="object-contain rounded-lg"
               src="/images/Conference3.JPG"
               alt="Image description"
+              width={800}
+      height={500}
             />
           </div>
         </div>
