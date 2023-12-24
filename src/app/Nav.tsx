@@ -14,7 +14,7 @@ export default function Nav() {
   };
 
   // having this blank hides the link
-  const ticketURL = "";
+  const ticketURL = "https://www.affinna.com/event/f8142beea26e11ee8fae7facffad2127";
 
   return (
     <nav className="bg-accent z-20">
