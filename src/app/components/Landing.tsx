@@ -35,13 +35,12 @@ export const Landing: React.FC<LandingProps> = ({ date }: LandingProps) => {
               <span>A quarterly tech conference in the bluegrass</span>
               <span className="font-thin my-2 lg:my-4">{formattedDate}</span>
             </div>
-            Tickets available once schedule is set
-            {/* <Link
-              href="https://www.eventbrite.com/e/lextalktech-oct-12-2023-tickets-716404403857"
+            <Link
+              href="https://www.affinna.com/event/f8142beea26e11ee8fae7facffad2127"
               className="text-2xl lg:text-3xl bg-primary/50 py-3 px-6 rounded-full border border-white/25 shadow-xl backdrop-blur-sm border-b-2 duration-150 hover:scale-110 hover:border-text hover:-translate-y-2"
             >
               Tickets
-            </Link> */}
+            </Link>
           </div>
         </div>
       </div>
