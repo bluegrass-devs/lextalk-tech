@@ -30,7 +30,7 @@ export default function Talks() {
       },
       {
         time: "6:45pm",
-        title: "cyber security",
+        title: "Cybersecurity – Building a proactive security strategy for 2024",
         presenter: "Justin Perron",
         info: "",
         resources: "",

@@ -29,7 +29,7 @@ export default function Home() {
       },
       {
         time: "6:45pm",
-        topic: "Cyber Security",
+        topic: "Cybersecurity",
         presenter: "Justin Perron",
       },
       {
