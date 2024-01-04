@@ -2,6 +2,7 @@ import { Talk } from "./components/Talk";
 
 export default function Talks() {
   const talkData = {
+    date: new Date(2023, 0, 25),
     schedule: [
       {
         time: "5:30pm",
@@ -64,7 +65,6 @@ export default function Talks() {
         resources: "",
       },
     ],
-    date: new Date(2023, 9, 12),
   };
 
   const formattedDate = talkData.date.toLocaleDateString("en-US", {
