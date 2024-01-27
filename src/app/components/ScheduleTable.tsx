@@ -23,25 +23,25 @@ export const ScheduleTable: React.FC<ScheduleTableProps> = ({ data }) => {
         </thead>
         <tbody>
           {data.map((line, index) => (
-            <tr key={index} className="hover:scale-110 duration-100">
+            <tr key={index} className="duration-100 hover:scale-110">
               <td
                 className={`${
                   index % 2 == 0 ? "bg-accent" : "bg-background"
-                } 'm-3 font-bold'`}
+                } 'p-3 py-4 font-bold'`}
               >
                 <time>{line.time}</time>
               </td>
               <td
                 className={`${
                   index % 2 == 0 ? "bg-accent" : "bg-background"
-                } 'm-3 font-bold'`}
+                } 'p-3 py-4 font-bold'`}
               >
                 {line.topic}
               </td>
               <td
                 className={`${
                   index % 2 == 0 ? "bg-accent" : "bg-background"
-                } 'm-3 font-bold'`}
+                } 'p-3 py-4 font-bold'`}
               >
                 {line.presenter}
               </td>

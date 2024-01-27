@@ -4,48 +4,48 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <>
-      <footer className="text-text bg-accent font-montserrat text-sm py-2 ">
-        <div className="md:w-1/3 mx-auto flex flex-col flex-shrink">
-          <div className="flex flex-col md:flex-row justify-center items-center gap-4">
+      <footer className="py-2 text-sm text-text bg-accent font-montserrat ">
+        <div className="flex flex-col flex-shrink mx-auto md:w-1/3">
+          <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
             <Link
               href="/"
-              className="my-2 w-48 text-center transition duration-150 hover:text-white hover:scale-110"
+              className="w-48 my-2 text-center transition duration-150 hover:text-white hover:scale-110"
             >
               Home
             </Link>
             <Link
               href="/about"
-              className="my-2 w-48 text-center transition duration-150 hover:text-white hover:scale-110"
+              className="w-48 my-2 text-center transition duration-150 hover:text-white hover:scale-110"
             >
               About
             </Link>
             <Link
               href="/Talks"
-              className="my-2 w-48 text-center transition duration-150 hover:text-white hover:scale-110"
+              className="w-48 my-2 text-center transition duration-150 hover:text-white hover:scale-110"
             >
               Talks
             </Link>
-            <a
-              href="https://www.eventbrite.com/e/lextalktech-oct-12-2023-tickets-716404403857"
-              className="my-2 w-48 text-center transition duration-150 hover:text-white hover:scale-110"
-            >
-              Tickets
-            </a>
             <Link
-              className="my-2 w-48 text-center whitespace-nowrap transition duration-150 hover:text-white hover:scale-110"
+              className="w-48 my-2 text-center transition duration-150 whitespace-nowrap hover:text-white hover:scale-110"
               href="/team"
             >
               Team
             </Link>
             <Link
               href="/past"
-              className="my-2 w-48 text-center whitespace-nowrap transition duration-150 hover:text-white hover:scale-110"
+              className="w-48 my-2 text-center transition duration-150 whitespace-nowrap hover:text-white hover:scale-110"
             >
               Past Talks
             </Link>
+            <a
+              href="https://www.eventbrite.com/e/lextalktech-oct-12-2023-tickets-716404403857"
+              className="w-48 my-2 text-center transition duration-150 hover:text-white hover:scale-110"
+            >
+              Tickets
+            </a>
           </div>
           <div className="flex flex-col items-center">
-            <div className="flex w-1/2 md:w-1/4 justify-center text-2xl my-2 gap-4">
+            <div className="flex justify-center w-1/2 gap-4 my-2 text-2xl md:w-1/4">
               <a
                 className="transition duration-150 hover:text-white hover:scale-110"
                 href="https://www.meetup.com/The-Bluegrass-Developers-Guild/"
