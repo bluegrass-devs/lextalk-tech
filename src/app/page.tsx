@@ -61,23 +61,24 @@ export default function Home() {
     <>
       <div className="font-montserrat text-text">
         <Landing date={data.date} />
-        <div className="my-12 mx-auto max-w-screen-xl px-4">
-          <div className="flex items-center w-1/3 justify-between my-8">
+        <div className="max-w-screen-xl px-4 mx-auto my-12">
+          <div className="flex items-center justify-between w-1/3 my-8">
             <h2 className="text-3xl">Schedule</h2>
             <Link
               href="/talks"
-              className="text-3xl bg-primary/50 py-3 px-6 rounded-full border border-white/25 backdrop-blur-sm border-b-2 duration-150 hover:scale-110 hover:border-text hover:-translate-y-2"
+              className="px-6 py-3 text-3xl duration-150 border border-b-2 rounded-full bg-primary/50 border-white/25 backdrop-blur-sm hover:scale-110 hover:border-text hover:-translate-y-2"
             >
               Talks
             </Link>
           </div>
           <ScheduleTable data={data.schedule} />
         </div>
-        <div className="w-screen h-screen relative">
+        <div className="relative w-screen h-screen">
           <Image
             className="absolute"
             alt="Presentation at Lex Talk Tech conference"
             src={joeTalk}
+            placeholder="blur"
             layout="fill"
             objectFit="cover"
           />
