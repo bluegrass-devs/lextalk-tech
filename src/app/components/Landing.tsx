@@ -34,14 +34,21 @@ export const Landing: React.FC<LandingProps> = ({ date }: LandingProps) => {
             </h1>
             <div className="flex flex-col text-2xl text-center lg:text-3xl lg:my-8">
               <span>A quarterly tech conference in the bluegrass</span>
-              <span className="my-2 font-thin lg:my-4">{formattedDate}</span>
+              {/* <span className="my-2 font-thin lg:my-4">{formattedDate}</span> */}
+              <span className="my-2 font-thin lg:my-4">Date TBD (check back soon)</span>
             </div>
-            <Link
+            {/* <Link
               href="https://www.affinna.com/event/f8142beea26e11ee8fae7facffad2127"
               className="px-6 py-3 text-2xl duration-150 border border-b-2 rounded-full shadow-xl lg:text-3xl bg-primary/50 border-white/25 backdrop-blur-sm hover:scale-110 hover:border-text hover:-translate-y-2"
             >
               Tickets
-            </Link>
+            </Link> */}
+            <Link
+                href="/past"
+                className="px-6 py-3 text-2xl duration-150 border border-b-2 rounded-full shadow-xl lg:text-3xl bg-primary/50 border-white/25 backdrop-blur-sm hover:scale-110 hover:border-text hover:-translate-y-2"
+              >
+                Past Talks
+              </Link>
           </div>
         </div>
       </div>

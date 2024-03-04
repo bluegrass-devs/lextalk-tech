@@ -13,39 +13,8 @@ export default function Home() {
         topic: "Check-in",
       },
       {
-        time: "6:00pm",
-        topic: "Library tech",
-        presenter: "John Blyberg",
-      },
-      {
-        time: "6:15pm",
-        topic: "T-SQL",
-        presenter: "Jeff Foushee",
-      },
-      {
-        time: "6:30pm",
-        topic: "IoT",
-        presenter: "Will Bates",
-      },
-      {
-        time: "6:45pm",
-        topic: "Cybersecurity",
-        presenter: "Justin Perron",
-      },
-      {
-        time: "7:00pm",
-        topic: "Govtech",
-        presenter: "Nick Lyell, Angela Langston",
-      },
-      {
-        time: "7:30pm",
-        topic: "LLMs",
-        presenter: "Lee Park",
-      },
-      {
         time: "8:00pm",
         topic: "Wrap up",
-        presenter: "",
       },
       {
         time: "8:00pm - 10:00pm",
@@ -62,14 +31,14 @@ export default function Home() {
       <div className="font-montserrat text-text">
         <Landing date={data.date} />
         <div className="max-w-screen-xl px-4 mx-auto my-12">
-          <div className="flex items-center justify-between w-1/3 my-8">
+          <div className="flex items-center justify-between w-2/3 my-8">
             <h2 className="text-3xl">Schedule</h2>
-            <Link
-              href="/talks"
-              className="px-6 py-3 text-3xl duration-150 border border-b-2 rounded-full bg-primary/50 border-white/25 backdrop-blur-sm hover:scale-110 hover:border-text hover:-translate-y-2"
-            >
-              Talks
-            </Link>
+              <Link
+                href="/talks"
+                className="px-6 py-3 text-3xl duration-150 border border-b-2 rounded-full bg-primary/50 border-white/25 backdrop-blur-sm hover:scale-110 hover:border-text hover:-translate-y-2"
+              >
+                Talks
+              </Link>
           </div>
           <ScheduleTable data={data.schedule} />
         </div>

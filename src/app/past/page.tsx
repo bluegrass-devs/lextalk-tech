@@ -11,6 +11,9 @@ export default function Past() {
               <td className="font-bold ">
                 <ul className="">
                   <li className="py-2 transition duration-150 hover:scale-110 w-fit">
+                    <Link href="/past/2024-01-25">2024-01-25</Link>
+                  </li>
+                  <li className="py-2 transition duration-150 hover:scale-110 w-fit">
                     <Link href="/past/2023-05-18">2023-05-18</Link>
                   </li>
                   <li className="py-2 transition duration-150 hover:scale-110 w-fit">
