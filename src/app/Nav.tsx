@@ -130,7 +130,7 @@ export default function Nav() {
               </li>
             </ul>
           </div>
-          {ticketURL && (
+          {/* {ticketURL && (
             <a
               href={ticketURL}
               className="flex gap-2 duration-150 border-b-2 border-transparent hover:scale-110 hover:border-text hover:-translate-y-2"
@@ -138,7 +138,14 @@ export default function Nav() {
               <FaArrowUpRightFromSquare className="text-xl" />
               Tickets
             </a>
-          )}
+          )} */}
+          <a
+              href="#"
+              className="flex gap-2 duration-150 border-b-2 border-transparent hover:scale-110 hover:border-text hover:-translate-y-2"
+            >
+              <FaArrowUpRightFromSquare className="text-xl" />
+              Tickets
+            </a>
         </div>
       </div>
     </nav>
