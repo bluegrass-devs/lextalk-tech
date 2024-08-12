@@ -4,6 +4,11 @@ import joeTalk from "../../public/images/joeTalk.jpg";
 import { AddressMap } from "./components/AddressMap";
 import { Landing } from "./components/Landing";
 import { ScheduleTable } from "./components/ScheduleTable";
+import {
+  ticketsUrl,
+  conferenceDate,
+  formattedDateConferenceDate,
+} from "../app/layout";
 
 export default function Home() {
   const data = {
@@ -42,23 +47,25 @@ export default function Home() {
         presenter: "",
       },
     ],
-    // Dates are 0 indexed in JavaScript, so October = 9
-    date: new Date(2024, 0, 25, 18),
+    date: conferenceDate,
   };
-
   return (
     <>
       <div className="font-montserrat text-text">
-        <Landing date={data.date} />
+        <Landing
+          date={data.date}
+          ticketsUrl={ticketsUrl}
+          formattedDateConferenceDate={formattedDateConferenceDate}
+        />
         <div className="max-w-screen-xl px-4 mx-auto my-12">
           <div className="flex items-center justify-between w-2/3 my-8">
             <h2 className="text-3xl">Schedule</h2>
-              <Link
-                href="/talks"
-                className="px-6 py-3 text-3xl duration-150 border border-b-2 rounded-full bg-primary/50 border-white/25 backdrop-blur-sm hover:scale-110 hover:border-text hover:-translate-y-2"
-              >
-                Talks
-              </Link>
+            <Link
+              href="/talks"
+              className="px-6 py-3 text-3xl duration-150 border border-b-2 rounded-full bg-primary/50 border-white/25 backdrop-blur-sm hover:scale-110 hover:border-text hover:-translate-y-2"
+            >
+              Talks
+            </Link>
           </div>
           <ScheduleTable data={data.schedule} />
         </div>

@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import Image from "next/image";
+import { formattedDateConferenceDate } from '../layout';
 
 export default function Past() {
   useEffect(() => {
@@ -135,7 +136,7 @@ export default function Past() {
           data-aos-duration="2000"
         >
           <div className="mx-auto w-3/4 md:w-1/2 bg-primary ring-secondary shadow-lg shadow-secondary rounded-lg ring p-10 leading-8">
-            January 25, 2024
+            {formattedDateConferenceDate}
           </div>
         </div>
 
