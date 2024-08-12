@@ -15,10 +15,10 @@ const cabin = Cabin({
   variable: "--font-cabin",
 });
 
-export const metadata = {
-  title: "LexTalk Tech",
-  description: "A quarterly tech conference in the bluegrass",
-};
+// export const metadata = {
+//     title: "LexTalk Tech",
+//     description: "A quarterly tech conference in the bluegrass",
+// };
 
 export default function RootLayout({
   children,
