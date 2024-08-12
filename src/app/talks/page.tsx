@@ -1,8 +1,9 @@
 import { Talk } from "./components/Talk";
+import { formattedDateConferenceDate, conferenceDate } from "../layout";
 
 export default function Talks() {
   const talkData = {
-    date: new Date(2023, 0, 25),
+    date: conferenceDate,
     schedule: [
       {
         time: "5:30pm",
@@ -67,12 +68,6 @@ export default function Talks() {
     ],
   };
 
-  const formattedDate = talkData.date.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-
   return (
     <>
       <div className="text-center my-10 bg-accent w-fit p-4 ring ring-primary rounded-lg drop-shadow-2xl mx-auto">
@@ -80,7 +75,7 @@ export default function Talks() {
           Talks
         </h1>
         <span className="text-xl">
-          This is the schedule for LexTalk on {formattedDate}
+          This is the schedule for LexTalk on {formattedDateConferenceDate}
         </span>
       </div>
 

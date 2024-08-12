@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa6";
 import { useState } from "react";
 
-export default function Nav() {
+export default function Nav({ ticketsUrl='' }) {
   const [menu, setMenu] = useState(false);
   const [aboutMenu, setAboutMenu] = useState(false);
 
@@ -21,10 +21,6 @@ export default function Nav() {
   const flipMenu = () => {
     setAboutMenu(!aboutMenu);
   };
-
-  // having this blank hides the link
-  const ticketURL =
-    "https://www.affinna.com/event/f8142beea26e11ee8fae7facffad2127";
 
   return (
     <nav className="z-20 bg-accent">
@@ -63,8 +59,8 @@ export default function Nav() {
           <Link href="/past" className="my-4">
             Past Talks
           </Link>
-          {ticketURL && (
-            <a href={ticketURL} className="flex gap-2 my-4">
+          {ticketsUrl && (
+            <a href={ticketsUrl} className="flex gap-2 my-4">
               <FaArrowUpRightFromSquare className="text-xl" />
               Tickets
             </a>
@@ -72,7 +68,7 @@ export default function Nav() {
         </div>
 
         {/* Desktop */}
-        <div className="justify-end hidden w-full gap-8 px-4 lg:flex">
+        <div className="hidden w-full gap-8 px-8 lg:flex">
           <Link
             href="/"
             className="duration-150 border-b-2 border-transparent hover:scale-110 hover:border-text hover:-translate-y-2"
@@ -130,22 +126,15 @@ export default function Nav() {
               </li>
             </ul>
           </div>
-          {/* {ticketURL && (
+          {ticketsUrl && (
             <a
-              href={ticketURL}
+              href={ticketsUrl}
               className="flex gap-2 duration-150 border-b-2 border-transparent hover:scale-110 hover:border-text hover:-translate-y-2"
             >
               <FaArrowUpRightFromSquare className="text-xl" />
               Tickets
             </a>
-          )} */}
-          <a
-              href="#"
-              className="flex gap-2 duration-150 border-b-2 border-transparent hover:scale-110 hover:border-text hover:-translate-y-2"
-            >
-              <FaArrowUpRightFromSquare className="text-xl" />
-              Tickets
-            </a>
+          )}
         </div>
       </div>
     </nav>

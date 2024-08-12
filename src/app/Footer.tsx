@@ -1,7 +1,7 @@
 import { FaMeetup, FaCode, FaGithub } from "react-icons/fa6";
 import Link from "next/link";
 
-export default function Footer() {
+export default function Footer({ ticketsUrl = "" }) {
   return (
     <>
       <footer className="py-2 text-sm text-text bg-accent font-montserrat ">
@@ -37,12 +37,14 @@ export default function Footer() {
             >
               Past Talks
             </Link>
-            <a
-              href="https://www.eventbrite.com/e/lextalktech-oct-12-2023-tickets-716404403857"
-              className="w-48 my-2 text-center transition duration-150 hover:text-white hover:scale-110"
-            >
-              Tickets
-            </a>
+            {ticketsUrl && (
+              <Link
+                href={ticketsUrl}
+                className="w-48 my-2 text-center transition duration-150 whitespace-nowrap hover:text-white hover:scale-110"
+              >
+                Tickets
+              </Link>
+            )}
           </div>
           <div className="flex flex-col items-center">
             <div className="flex justify-center w-1/2 gap-4 my-2 text-2xl md:w-1/4">
