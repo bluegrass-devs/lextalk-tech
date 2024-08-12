@@ -66,7 +66,7 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          <span className="text-center">© Copyright 2023</span>
+          <span className="text-center">© Copyright 2024</span>
         </div>
       </footer>
     </>
