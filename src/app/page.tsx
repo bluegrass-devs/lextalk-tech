@@ -13,6 +13,26 @@ export default function Home() {
         topic: "Check-in",
       },
       {
+        time: "6:00pm",
+        topic: "First Presentaion",
+      },
+      {
+        time: "6:15pm",
+        topic: "Second Presentaion",
+      },
+      {
+        time: "6:30pm",
+        topic: "Thrid Presentaion",
+      },
+      {
+        time: "6:45pm",
+        topic: "Fourth Presentaion",
+      },
+      {
+        time: "7:00pm",
+        topic: "Round Table Discussion and Q&A",
+      },
+      {
         time: "8:00pm",
         topic: "Wrap up",
       },
