@@ -35,7 +35,7 @@ export const Landing: React.FC<LandingProps> = ({ date }: LandingProps) => {
             <div className="flex flex-col text-2xl text-center lg:text-3xl lg:my-8">
               <span>A quarterly tech conference in the bluegrass</span>
               {/* <span className="my-2 font-thin lg:my-4">{formattedDate}</span> */}
-              <span className="my-2 font-thin lg:my-4">Date TBD (check back soon)</span>
+              <span className="my-2 font-thin lg:my-4">November 7th 2024</span>
             </div>
             {/* <Link
               href="https://www.affinna.com/event/f8142beea26e11ee8fae7facffad2127"
