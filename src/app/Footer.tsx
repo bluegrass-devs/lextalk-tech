@@ -20,7 +20,7 @@ export default function Footer() {
               About
             </Link>
             <Link
-              href="/Talks"
+              href="/talks"
               className="w-48 my-2 text-center transition duration-150 hover:text-white hover:scale-110"
             >
               Talks
