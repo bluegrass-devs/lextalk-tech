@@ -68,7 +68,7 @@ export default function Nav({ ticketsUrl='' }) {
         </div>
 
         {/* Desktop */}
-        <div className="hidden w-full gap-8 px-8 lg:flex">
+        <div className={`${ticketsUrl ? 'justify-end ': ''}hidden w-full gap-8 px-8 lg:flex`}>
           <Link
             href="/"
             className="duration-150 border-b-2 border-transparent hover:scale-110 hover:border-text hover:-translate-y-2"
