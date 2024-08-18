@@ -15,16 +15,27 @@ const cabin = Cabin({
   variable: "--font-cabin",
 });
 
-export const metadata = {
-  title: "LexTalk Tech",
-  description: "A quarterly tech conference in the bluegrass",
-};
+// export const metadata = {
+//   title: "LexTalk Tech",
+//   description: "A quarterly tech conference in the bluegrass",
+// };
+
+// old ticket URL -> "https://www.affinna.com/event/f8142beea26e11ee8fae7facffad2127";
+// if ticketURL is empty string then Ticket's links will not show
+export const ticketsUrl = '';
+export const conferenceDate = new Date(2024, 10, 7, 18);
+export const formattedDateConferenceDate = conferenceDate.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const props = {ticketsUrl, conferenceDate, formattedDateConferenceDate}
   return (
     <html
       lang="en"
@@ -34,9 +45,9 @@ export default function RootLayout({
         <link rel="icon" href="/images/favicon.ico" />
       </head>
       <body className="bg-background flex flex-col">
-        <Nav />
+        <Nav {...props} />
         <main className="min-h-screen">{children}</main>
-        <Footer />
+        <Footer {...props} />
       </body>
     </html>
   );
