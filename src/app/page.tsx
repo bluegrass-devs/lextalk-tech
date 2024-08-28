@@ -19,19 +19,19 @@ export default function Home() {
       },
       {
         time: "6:00pm",
-        topic: "First Presentaion",
+        topic: "First Presentation",
       },
       {
         time: "6:15pm",
-        topic: "Second Presentaion",
+        topic: "Second Presentation",
       },
       {
         time: "6:30pm",
-        topic: "Thrid Presentaion",
+        topic: "Third Presentation",
       },
       {
         time: "6:45pm",
-        topic: "Fourth Presentaion",
+        topic: "Fourth Presentation",
       },
       {
         time: "7:00pm",
