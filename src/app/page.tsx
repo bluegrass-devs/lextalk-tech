@@ -29,7 +29,7 @@ export default function Home() {
       },
       {
         time: "6:30pm",
-        topic: "Free cores by using eBPF and AF_XDP Accepted",
+        topic: "Free cores by using eBPF and AF_XDP",
         presenter: "Brian Smith",
       },
       {
