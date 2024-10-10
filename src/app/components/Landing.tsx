@@ -46,12 +46,14 @@ export const Landing: React.FC<LandingProps> = ({
                 Tickets
               </Link>
             )}
+            {!ticketsUrl && (
             <Link
               href="/past"
               className="px-6 py-3 text-2xl duration-150 border border-b-2 rounded-full shadow-xl lg:text-3xl bg-primary/50 border-white/25 backdrop-blur-sm hover:scale-110 hover:border-text hover:-translate-y-2"
             >
               Past Talks
             </Link>
+            )}
           </div>
         </div>
       </div>
