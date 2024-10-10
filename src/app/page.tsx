@@ -19,19 +19,18 @@ export default function Home() {
       },
       {
         time: "6:00pm",
-        topic: "First Presentation",
+        topic: "Tech Association of the Bluegrass",
+        presenter: "Mackenzie Hanes",
       },
       {
         time: "6:15pm",
-        topic: "Second Presentation",
+        topic: "The Next Generation of Keyboards",
+        presenter: "Troy Fletcher",
       },
       {
         time: "6:30pm",
-        topic: "Third Presentation",
-      },
-      {
-        time: "6:45pm",
-        topic: "Fourth Presentation",
+        topic: "Free cores by using eBPF and AF_XDP Accepted",
+        presenter: "Brian Smith",
       },
       {
         time: "7:00pm",
