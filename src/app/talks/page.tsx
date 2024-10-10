@@ -25,7 +25,7 @@ export default function Talks() {
       },
       {
         time: "6:30pm",
-        title: "Free cores by using eBPF and AF_XDP Accepted",
+        title: "Free cores by using eBPF and AF_XDP",
         presenter: "Brian Smith",
         info: "",
         resources: "",
