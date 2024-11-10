@@ -1,4 +1,4 @@
-import { Talk } from "./components/Talk";
+import { Talk } from "../../app/components/shared/Talk";
 
 export default function Talks() {
   const talkData = {
