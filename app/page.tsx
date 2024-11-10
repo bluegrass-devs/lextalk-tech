@@ -38,7 +38,7 @@ export default async function Home() {
         <Landing
           date={data.date}
           ticketsUrl={ticketsUrl}
-          formattedDateConferenceDate={data.date}
+          formattedDate={data.date}
         />
         <div className="relative max-w-screen-xl px-4 mx-auto my-12">
           <div className="flex items-center justify-between w-2/3 my-8">
