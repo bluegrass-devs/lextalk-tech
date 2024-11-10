@@ -9,7 +9,7 @@ import {
   conferenceDate,
   formattedDateConferenceDate,
 } from "./layout";
-import Layout from "./layout"
+
 export default function Home() {
   const data = {
     schedule: [

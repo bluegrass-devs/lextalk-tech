@@ -22,6 +22,7 @@ const cabin = Cabin({
 
 // old ticket URL -> "https://www.affinna.com/event/f8142beea26e11ee8fae7facffad2127";
 // if ticketURL is empty string then Ticket's links will not show
+
 export const ticketsUrl = 'https://www.eventbrite.com/e/lextalk-tech-nov-7th-tickets-1000967299137';
 export const conferenceDate = new Date(2024, 10, 7, 18);
 export const formattedDateConferenceDate = conferenceDate.toLocaleDateString("en-US", {
