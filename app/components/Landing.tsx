@@ -4,13 +4,13 @@ import conferenceTalk from "/public/images/conferenceTalk.jpg";
 
 type LandingProps = {
   date: Date;
-  formattedDateConferenceDate: string;
+  formattedDate: string;
   ticketsUrl: string;
 };
 
 export const Landing: React.FC<LandingProps> = ({
   date,
-  formattedDateConferenceDate,
+  formattedDate,
   ticketsUrl,
 }: LandingProps) => {
   return (
@@ -33,7 +33,7 @@ export const Landing: React.FC<LandingProps> = ({
             <div className="flex flex-col text-2xl text-center lg:text-3xl lg:my-8">
               <span>A quarterly tech conference in the bluegrass</span>
               <span className="my-2 font-thin lg:my-4">
-                {formattedDateConferenceDate}
+                {formattedDate}
               </span>
             </div>
             {ticketsUrl && (

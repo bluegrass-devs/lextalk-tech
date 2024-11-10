@@ -1,60 +1,44 @@
+import fs from 'fs';
+import path from 'path';
+
 import Image from "next/image";
 import Link from "next/link";
 import joeTalk from "/public/images/joeTalk.jpg";
-import { AddressMap } from "./components/AddressMap";
+import AddressMap from "./components/AddressMap";
 import { Landing } from "./components/Landing";
 import { ScheduleTable } from "./components/ScheduleTable";
-import {
-  ticketsUrl,
-  conferenceDate,
-  formattedDateConferenceDate,
-} from "./layout";
+import { ticketsUrl } from "./layout";
 
-export default function Home() {
-  const data = {
-    schedule: [
-      {
-        time: "5:30pm",
-        topic: "Check-in",
-      },
-      {
-        time: "6:00pm",
-        topic: "Tech Association of the Bluegrass",
-        presenter: "Mackenzie Hanes",
-      },
-      {
-        time: "6:15pm",
-        topic: "The Next Generation of Keyboards",
-        presenter: "Troy Fletcher",
-      },
-      {
-        time: "6:30pm",
-        topic: "Free cores by using eBPF and AF_XDP",
-        presenter: "Brian Smith",
-      },
-      {
-        time: "7:00pm",
-        topic: "Round Table Discussion and Q&A",
-      },
-      {
-        time: "8:00pm",
-        topic: "Wrap up",
-      },
-      {
-        time: "8:00pm - 10:00pm",
-        topic: "Food and drinks afterward",
-        presenter: "",
-      },
-    ],
-    date: conferenceDate,
-  };
+async function getCurrentTalk() {
+  // Generate dynamically by looking at the json file in public/data/current
+  const dataDir = path.join(process.cwd(), 'public/data/current');
+  const files = fs.readdirSync(dataDir);
+  const file = files[0];
+
+  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/data/current/${file}`);
+  const data = await response.json();
+
+  return data
+}
+
+
+export default async function Home() {
+  const data = await getCurrentTalk();
+  const formattedDate = new Date(data.date + 'T00:00:00Z').toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC"
+  });
+
+
   return (
     <>
       <div className="font-montserrat text-text">
         <Landing
           date={data.date}
           ticketsUrl={ticketsUrl}
-          formattedDateConferenceDate={formattedDateConferenceDate}
+          formattedDateConferenceDate={data.date}
         />
         <div className="relative max-w-screen-xl px-4 mx-auto my-12">
           <div className="flex items-center justify-between w-2/3 my-8">
@@ -76,7 +60,7 @@ export default function Home() {
             placeholder="blur"
           />
         </div>
-        <AddressMap date={data.date} />
+        <AddressMap date={formattedDate} />
       </div>
     </>
   );

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 interface ScheduleEntry {
-  topic: string;
+  title: string;
   time: string;
   presenter?: string;
 }
@@ -36,14 +36,14 @@ export const ScheduleTable: React.FC<ScheduleTableProps> = ({ data }) => {
                   index % 2 == 0 ? "bg-accent" : "bg-background"
                 } 'p-3 py-4 font-bold'`}
               >
-                {line.topic}
+                {line.title}
               </td>
               <td
                 className={`${
                   index % 2 == 0 ? "bg-accent" : "bg-background"
                 } 'p-3 py-4 font-bold'`}
               >
-                {line.presenter}
+                {line.presenter ? line.presenter : "N/a"}
               </td>
             </tr>
           ))}

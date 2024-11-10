@@ -1,58 +1,28 @@
-import { Talk } from "./components/Talk";
-import { formattedDateConferenceDate, conferenceDate } from "../layout";
+import fs from 'fs';
+import path from 'path';
 
-export default function Talks() {
-  const talkData = {
-    date: conferenceDate,
-    schedule: [
-      {
-        time: "5:30pm",
-        title: "Check-in",
-      },
-      {
-        time: "6:00pm",
-        title: "Tech Association of the Bluegrass",
-        presenter: "Mackenzie Hanes",
-        info: "",
-        resources: "",
-      },
-      {
-        time: "6:15pm",
-        title: "The Next Generation of Keyboards",
-        presenter: "Troy Fletcher",
-        info: "",
-        resources: "",
-      },
-      {
-        time: "6:30pm",
-        title: "Free cores by using eBPF and AF_XDP",
-        presenter: "Brian Smith",
-        info: "",
-        resources: "",
-      },
-      {
-        time: "7:00pm",
-        title: "Round Table Discussion and Q&A",
-        presenter: "",
-        info: "This will be a panel discussion with an open Q&A focus. We will discuss the state of tech, where we are going and how AI might change the landscape.",
-        resources: "",
-      },
-      {
-        time: "8:00pm",
-        title: "Wrap up",
-        presenter: "",
-        info: "",
-        resources: "",
-      },
-      {
-        time: "8:00pm - 10:00pm",
-        title: "Food and drinks afterward",
-        presenter: "",
-        info: "Within Cornerstone there is Ethereal Brewing and Rolling Oven Pizza.",
-        resources: "",
-      },
-    ],
-  };
+import { Talk } from "../components/shared/Talk";
+
+export async function getCurrentTalk(){
+  // Generate dynamically by looking at the file in /public/data/current
+  const dataDir = path.join(process.cwd(), 'public/data/current');
+  const files = fs.readdirSync(dataDir);
+  const file = files[0]
+  return file
+}
+
+export default async function Talks() {
+  const file = await getCurrentTalk()
+  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/data/current/${file}`);
+  const data = await response.json();
+
+  const formattedDate = new Date(data.date + 'T00:00:00Z').toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC"
+  });
+
 
   return (
     <>
@@ -61,11 +31,11 @@ export default function Talks() {
           Talks
         </h1>
         <span className="text-xl">
-          This is the schedule for LexTalk on {formattedDateConferenceDate}
+          This is the schedule for LexTalk on {formattedDate}
         </span>
       </div>
 
-      {talkData.schedule.map((talk, index) => (
+      {data.schedule.map((talk: any, index: any) => (
         <Talk key={index} talk={talk} />
       ))}
     </>

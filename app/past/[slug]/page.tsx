@@ -1,3 +1,6 @@
+import fs from 'fs';
+import path from 'path';
+
 import { Talk } from "@/components/shared/Talk";
 
 type Props = {
@@ -7,21 +10,29 @@ type Props = {
 };
 
 export async function generateStaticParams(){
-    return [
-        { slug: "2023-05-18" },
-        { slug: "2023-10-12" },
-        { slug: "2023-01-25" }
-    ];
+    // Generate dynamically by looking at all the json files in data
+    const dataDir = path.join(process.cwd(), 'public/data/past');
+    const files = fs.readdirSync(dataDir);
+
+    const slugs = files.filter(file=> file.endsWith('.json')).map(file => ({
+        slug: file.replace('.json', '')
+    }))
+
+    return slugs;
 }
 
 async function Page({ params }: Props) {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/data/${params.slug}.json`)
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/data/past/${params.slug}.json`)
     const data = await response.json();
 
-    const formattedDate = new Date(data.date).toLocaleDateString("en-US", {
+    const date = params.slug;
+
+    // Set UTC to fix any errors with current timezone
+    const formattedDate = new Date(date + 'T00:00:00Z').toLocaleDateString("en-US", {
         year: "numeric",
         month: "long",
         day: "numeric",
+        timeZone: "UTC"
       });
 
     return (
@@ -31,7 +42,7 @@ async function Page({ params }: Props) {
                 Talks
                 </h1>
                 <span className="text-xl">
-                This LexTalk was on {formattedDate}
+                    This LexTalk was on {formattedDate}
                 </span>
             </div>
         
