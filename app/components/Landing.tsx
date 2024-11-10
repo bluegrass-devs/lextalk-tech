@@ -1,8 +1,6 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import conferenceTalk from "../../../public/images/conferenceTalk.jpg";
+import conferenceTalk from "/public/images/conferenceTalk.jpg";
 
 type LandingProps = {
   date: Date;

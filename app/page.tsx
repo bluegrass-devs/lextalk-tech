@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import joeTalk from "../../public/images/joeTalk.jpg";
+import joeTalk from "/public/images/joeTalk.jpg";
 import { AddressMap } from "./components/AddressMap";
 import { Landing } from "./components/Landing";
 import { ScheduleTable } from "./components/ScheduleTable";
@@ -8,8 +8,8 @@ import {
   ticketsUrl,
   conferenceDate,
   formattedDateConferenceDate,
-} from "../app/layout";
-
+} from "./layout";
+import Layout from "./layout"
 export default function Home() {
   const data = {
     schedule: [
