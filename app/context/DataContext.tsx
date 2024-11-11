@@ -1,3 +1,5 @@
+"use client";
+
 import fs from 'fs';
 import path from 'path';
 import { createContext, useContext, useEffect, useState } from 'react';
