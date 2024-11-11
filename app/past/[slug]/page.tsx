@@ -9,6 +9,10 @@ type Props = {
     };
 };
 
+type ScheduleData = {
+    schedule: { title: string; speaker: string; time: string; }[]; // Adjust fields based on your data structure
+};
+
 export async function generateStaticParams(){
     // Generate dynamically by looking at all the json files in data
     const dataDir = path.join(process.cwd(), 'public/data/past');
@@ -23,7 +27,7 @@ export async function generateStaticParams(){
 
 async function Page({ params }: Props) {
     const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/data/past/${params.slug}.json`)
-    const data = await response.json();
+    const data: ScheduleData = await response.json();
 
     const date = params.slug;
 

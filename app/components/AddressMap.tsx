@@ -1,4 +1,4 @@
-export default function AddressMap({ date }: { date: string }){
+export default function AddressMap({ date }: { date?: string }){
   return (
     <div className="my-12 mx-auto max-w-screen-xl px-4">
       <h2 className="text-3xl">Location:</h2>
@@ -17,7 +17,7 @@ export default function AddressMap({ date }: { date: string }){
           <div>401 South Limestone</div>
           <div>Lexington, KY 40508</div>
           <div>6PM - 8PM</div>
-          <div>{date}</div>
+          <div>{date ? date : "TBD"}</div>
         </div>
       </div>
     </div>

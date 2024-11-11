@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import logoTransparent from "/public/images/logoTransparent.png";
@@ -8,9 +6,10 @@ import {
   FaArrowUpRightFromSquare,
   FaAngleRight,
 } from "react-icons/fa6";
+import { useData } from "@/context/DataContext";
 import { useState } from "react";
 
-export default function Nav({ ticketsUrl='' }) {
+export default function Nav() {
   const [menu, setMenu] = useState(false);
   const [aboutMenu, setAboutMenu] = useState(false);
 
@@ -21,6 +20,9 @@ export default function Nav({ ticketsUrl='' }) {
   const flipMenu = () => {
     setAboutMenu(!aboutMenu);
   };
+
+  const data = useData();
+  const ticketsUrl = data?.ticketLink;
 
   return (
     <nav className="z-20 bg-accent">
@@ -97,7 +99,7 @@ export default function Nav({ ticketsUrl='' }) {
                   href="/about"
                   className="duration-150 border-b-2 border-transparent hover:scale-110 hover:border-text hover:-translate-y-2"
                 >
-                  Conference
+                  About
                 </Link>
               </li>
               <li>

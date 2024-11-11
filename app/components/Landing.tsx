@@ -3,16 +3,24 @@ import Link from "next/link";
 import conferenceTalk from "/public/images/conferenceTalk.jpg";
 
 type LandingProps = {
-  date: Date;
-  formattedDate: string;
-  ticketsUrl: string;
+  date?: string;
+  formattedDate?: string;
+  ticketsUrl?: string;
 };
+
 
 export const Landing: React.FC<LandingProps> = ({
   date,
-  formattedDate,
   ticketsUrl,
 }: LandingProps) => {
+
+  const formattedDate = new Date(date + 'T00:00:00Z').toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC"
+  });
+
   return (
     <div className="w-screen h-screen-minus-nav ">
       <Image
@@ -33,7 +41,7 @@ export const Landing: React.FC<LandingProps> = ({
             <div className="flex flex-col text-2xl text-center lg:text-3xl lg:my-8">
               <span>A quarterly tech conference in the bluegrass</span>
               <span className="my-2 font-thin lg:my-4">
-                {formattedDate}
+                {formattedDate ? formattedDate : "TBD"}
               </span>
             </div>
             {ticketsUrl && (

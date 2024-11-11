@@ -7,38 +7,17 @@ import joeTalk from "/public/images/joeTalk.jpg";
 import AddressMap from "./components/AddressMap";
 import { Landing } from "./components/Landing";
 import { ScheduleTable } from "./components/ScheduleTable";
-import { ticketsUrl } from "./layout";
-
-async function getCurrentTalk() {
-  // Generate dynamically by looking at the json file in public/data/current
-  const dataDir = path.join(process.cwd(), 'public/data/current');
-  const files = fs.readdirSync(dataDir);
-  const file = files[0];
-
-  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/data/current/${file}`);
-  const data = await response.json();
-
-  return data
-}
-
+import { useData } from "@/context/DataContext";
 
 export default async function Home() {
-  const data = await getCurrentTalk();
-  const formattedDate = new Date(data.date + 'T00:00:00Z').toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    timeZone: "UTC"
-  });
-
+  const data = useData();
 
   return (
     <>
       <div className="font-montserrat text-text">
         <Landing
           date={data.date}
-          ticketsUrl={ticketsUrl}
-          formattedDate={data.date}
+          ticketsUrl={data.ticketLink}
         />
         <div className="relative max-w-screen-xl px-4 mx-auto my-12">
           <div className="flex items-center justify-between w-2/3 my-8">
@@ -60,7 +39,7 @@ export default async function Home() {
             placeholder="blur"
           />
         </div>
-        <AddressMap date={formattedDate} />
+        <AddressMap date={data.date} />
       </div>
     </>
   );
