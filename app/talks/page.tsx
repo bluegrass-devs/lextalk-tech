@@ -1,20 +1,8 @@
-import fs from 'fs';
-import path from 'path';
-
 import { Talk } from "../components/shared/Talk";
-
-export async function getCurrentTalk(){
-  // Generate dynamically by looking at the file in /public/data/current
-  const dataDir = path.join(process.cwd(), 'public/data/current');
-  const files = fs.readdirSync(dataDir);
-  const file = files[0]
-  return file
-}
+import { getData } from "../lib/data";
 
 export default async function Talks() {
-  const file = await getCurrentTalk()
-  const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/data/current/${file}`);
-  const data = await response.json();
+  const data = await getData()
 
   const formattedDate = new Date(data.date + 'T00:00:00Z').toLocaleDateString("en-US", {
     year: "numeric",
@@ -34,7 +22,6 @@ export default async function Talks() {
           This is the schedule for LexTalk on {formattedDate}
         </span>
       </div>
-
       {data.schedule.map((talk: any, index: any) => (
         <Talk key={index} talk={talk} />
       ))}

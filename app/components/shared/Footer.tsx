@@ -1,7 +1,11 @@
 import { FaMeetup, FaCode, FaGithub } from "react-icons/fa6";
 import Link from "next/link";
+import { useData } from "@/context/DataContext";
 
-export default function Footer({ ticketsUrl = "" }) {
+export default function Footer() {
+  const data = useData()
+  const ticketsUrl = data.ticketLink
+
   return (
     <footer className="py-2 text-sm text-text bg-accent font-montserrat ">
       <div className="flex flex-col flex-shrink mx-auto md:w-1/3">

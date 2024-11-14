@@ -8,10 +8,9 @@ import {
   FaArrowUpRightFromSquare,
   FaAngleRight,
 } from "react-icons/fa6";
-import { useData } from "@/context/DataContext";
 import { useState } from "react";
 
-export default function Nav() {
+export default function Nav({ ticketsUrl }: { ticketsUrl?: string }) {
   const [menu, setMenu] = useState(false);
   const [aboutMenu, setAboutMenu] = useState(false);
 
@@ -22,9 +21,6 @@ export default function Nav() {
   const flipMenu = () => {
     setAboutMenu(!aboutMenu);
   };
-
-  const data = useData();
-  const ticketsUrl = data?.ticketLink;
 
   return (
     <nav className="z-20 bg-accent">

@@ -3,14 +3,13 @@ import path from 'path';
 
 import { Talk } from "@/components/shared/Talk";
 
-type Props = {
-    params: {
-        slug: string;
-    };
-};
-
 type ScheduleData = {
-    schedule: { title: string; speaker: string; time: string; }[]; // Adjust fields based on your data structure
+    schedule: { 
+        time: string;
+        title: string; 
+        presenter: string; 
+        link: string;
+    }[];
 };
 
 export async function generateStaticParams(){
@@ -18,18 +17,25 @@ export async function generateStaticParams(){
     const dataDir = path.join(process.cwd(), 'public/data/past');
     const files = fs.readdirSync(dataDir);
 
-    const slugs = files.filter(file=> file.endsWith('.json')).map(file => ({
-        slug: file.replace('.json', '')
-    }))
+    const slugs = files
+        .filter(file=> file.endsWith('.json'))
+        .map(file => ({
+            slug: file.replace('.json', '')
+        }))
 
     return slugs;
 }
 
-async function Page({ params }: Props) {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/data/past/${params.slug}.json`)
+interface PageProps {
+    params: Promise<{ slug: string }>;
+}
+
+export default async function Page({ params }: PageProps ) {
+    const resolvedParams = await params;
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/data/past/${resolvedParams.slug}`, { next: { revalidate: false }})
     const data: ScheduleData = await response.json();
 
-    const date = params.slug;
+    const date = resolvedParams.slug;
 
     // Set UTC to fix any errors with current timezone
     const formattedDate = new Date(date + 'T00:00:00Z').toLocaleDateString("en-US", {
@@ -57,5 +63,3 @@ async function Page({ params }: Props) {
     )
 
 }
-
-export default Page;

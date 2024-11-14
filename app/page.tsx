@@ -1,16 +1,13 @@
-import fs from 'fs';
-import path from 'path';
-
 import Image from "next/image";
 import Link from "next/link";
 import joeTalk from "/public/images/joeTalk.jpg";
 import AddressMap from "./components/AddressMap";
 import { Landing } from "./components/Landing";
 import { ScheduleTable } from "./components/ScheduleTable";
-import { useData } from "@/context/DataContext";
+import { getData } from "./lib/data";
 
 export default async function Home() {
-  const data = useData();
+  const data = await getData();
 
   return (
     <>
