@@ -1,5 +1,4 @@
-"use server"
-import { readdir } from 'fs/promises';
+import { readdirSync, readFileSync } from 'fs';
 import path from 'path';
 
 export type ScheduleItem = {
@@ -17,22 +16,12 @@ export type DataType = {
 };
 
 export async function getData(): Promise<DataType> {
-    const dataDir = path.join(process.cwd(), 'public/data/current');
-
-    try {
-        const files = await readdir(dataDir);
-        const jsonFile = files.filter(file=> file.endsWith('.json'))[0]
-        const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/data/current/${jsonFile}`,
-            { next: { revalidate: false } }
-        )
-        if(!response.ok) {
-            throw new Error(`Error with JSON Fetch: ${response.status}`)
-        }
+    return new Promise((resolve) => {
+        const dataDir = path.join(process.cwd(), 'public/data/current');
+        const files = readdirSync(dataDir);
+        const jsonFile = files.filter(file => file.endsWith('.json'))[0];
         
-        const data = await response.json();
-        return data
-    } catch (error) {
-        console.error("Error reading JSON for current:", error);
-        throw new Error("Failed to fetch current JSON")
-    }
+        const rawData = readFileSync(path.join(dataDir, jsonFile), 'utf8');
+        resolve(JSON.parse(rawData));
+    });
 }

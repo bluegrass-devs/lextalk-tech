@@ -4,10 +4,26 @@ import joeTalk from "/public/images/joeTalk.jpg";
 import AddressMap from "./components/AddressMap";
 import { Landing } from "./components/Landing";
 import { ScheduleTable } from "./components/ScheduleTable";
-import { getData } from "./lib/data";
+import path from 'path'
+import { readdirSync, readFileSync } from "fs";
 
-export default async function Home() {
-  const data = await getData();
+export async function generateStaticParams() {
+  const dataDir = path.join(process.cwd(), 'public/data/current');
+  const file = readdirSync(dataDir)[0];
+  return [{ id: file.replace('.json', '') }];
+}
+
+function getData() {
+  const dataDir = path.join(process.cwd(), 'public/data/current');
+  const file = readdirSync(dataDir)[0];
+  const fullPath = path.join(dataDir, file);
+  const fileContents = readFileSync(fullPath, 'utf8');
+  return JSON.parse(fileContents);
+}
+
+
+export default function Home() {
+  const data = getData()
 
   return (
     <>

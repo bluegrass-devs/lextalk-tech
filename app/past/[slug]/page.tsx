@@ -1,55 +1,40 @@
 import fs from 'fs';
 import path from 'path';
-
 import { Talk } from "@/components/shared/Talk";
+export const dynamic = 'force-static';
 
-type ScheduleData = {
-    schedule: { 
-        time: string;
-        title: string; 
-        presenter: string; 
-        link: string;
-    }[];
-};
-
-export async function generateStaticParams(){
-    // Generate dynamically by looking at all the json files in data
+export async function generateStaticParams() {
     const dataDir = path.join(process.cwd(), 'public/data/past');
     const files = fs.readdirSync(dataDir);
 
-    const slugs = files
-        .filter(file=> file.endsWith('.json'))
+    return files
+        .filter(file => file.endsWith('.json'))
         .map(file => ({
             slug: file.replace('.json', '')
-        }))
-
-    return slugs;
+        }));
 }
 
-interface PageProps {
-    params: Promise<{ slug: string }>;
+function getData(slug: any) {
+    const dataPath = path.join(process.cwd(), 'public/data/past', `${slug}.json`);
+    const fileContents = fs.readFileSync(dataPath, 'utf8');
+    return JSON.parse(fileContents);
 }
 
-export default async function Page({ params }: PageProps ) {
-    const resolvedParams = await params;
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/data/past/${resolvedParams.slug}`, { next: { revalidate: false }})
-    const data: ScheduleData = await response.json();
-
-    const date = resolvedParams.slug;
-
-    // Set UTC to fix any errors with current timezone
-    const formattedDate = new Date(date + 'T00:00:00Z').toLocaleDateString("en-US", {
+export default async function Page({ params }: any) {
+    const data = getData(params.slug);
+    
+    const formattedDate = new Date(`${params.slug}T00:00:00Z`).toLocaleDateString("en-US", {
         year: "numeric",
         month: "long",
         day: "numeric",
         timeZone: "UTC"
-      });
+    });
 
     return (
         <div>
             <div className="text-center my-10 bg-accent w-fit mx-auto p-5 ring ring-primary rounded-lg drop-shadow-2xl">
                 <h1 className="text-5xl font-bold font-montserrat text-center">
-                Talks
+                    Talks
                 </h1>
                 <span className="text-xl">
                     This LexTalk was on {formattedDate}
@@ -60,6 +45,5 @@ export default async function Page({ params }: PageProps ) {
                 <Talk key={index} talk={talk} />
             ))}
         </div>
-    )
-
+    );
 }

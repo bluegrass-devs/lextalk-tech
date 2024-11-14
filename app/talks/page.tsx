@@ -1,4 +1,4 @@
-import { Talk } from "../components/shared/Talk";
+import { Talk } from "../components/shared/Talk"
 import { getData } from "../lib/data";
 
 export default async function Talks() {

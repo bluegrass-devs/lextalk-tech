@@ -1,9 +1,26 @@
+import { readdirSync, readFileSync } from 'fs'
+import path from 'path';
 import { FaMeetup, FaCode, FaGithub } from "react-icons/fa6";
 import Link from "next/link";
-import { useData } from "@/context/DataContext";
+
+export async function generateStaticParams() {
+  const dataDir = path.join(process.cwd(), 'public/data/current');
+  const file = readdirSync(dataDir)[0];
+  return [{ id: file.replace('.json', '') }];
+}
+
+function getData() {
+  const dataDir = path.join(process.cwd(), 'public/data/current');
+  const file = readdirSync(dataDir)[0];
+  const fullPath = path.join(dataDir, file);
+  const fileContents = readFileSync(fullPath, 'utf8');
+  return JSON.parse(fileContents);
+}
+
 
 export default function Footer() {
-  const data = useData()
+  const data = getData()
+
   const ticketsUrl = data.ticketLink
 
   return (

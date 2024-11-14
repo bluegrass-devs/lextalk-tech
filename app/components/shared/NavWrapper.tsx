@@ -1,4 +1,4 @@
-import { getData } from "../../lib/data";
+import { getData } from "@/lib/data";
 import Nav from "./Nav";
 
 export default async function NavWrapper() {
