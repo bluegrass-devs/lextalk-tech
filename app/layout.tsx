@@ -1,5 +1,5 @@
 import { Montserrat, Cabin } from "next/font/google";
-import Nav from "./components/shared/Nav";
+import NavWrapper from "./components/shared/NavWrapper";
 import Footer from "./components/shared/Footer"
 import "./globals.css";
 import { DataProvider } from "./context/DataContext";
@@ -39,7 +39,7 @@ export default function RootLayout({
       </head>
         <body className="bg-background flex flex-col">
           <DataProvider>
-              <Nav />
+              <NavWrapper />
                 <main className="min-h-screen">{children}</main>
               <Footer/>
           </DataProvider>
