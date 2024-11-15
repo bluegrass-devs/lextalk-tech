@@ -18,9 +18,12 @@ function getData() {
   const file = readdirSync(dataDir)[0];
   const fullPath = path.join(dataDir, file);
   const fileContents = readFileSync(fullPath, 'utf8');
-  return JSON.parse(fileContents);
-}
+  console.log(file.replace('.json', ''))
 
+  const data = JSON.parse(fileContents);
+  data.date = file.replace('.json', '');
+  return data
+}
 
 export default function Home() {
   const data = getData()

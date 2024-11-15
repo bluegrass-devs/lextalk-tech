@@ -4,7 +4,6 @@ import conferenceTalk from "/public/images/conferenceTalk.jpg";
 
 type LandingProps = {
   date?: string;
-  formattedDate?: string;
   ticketsUrl?: string;
 };
 
