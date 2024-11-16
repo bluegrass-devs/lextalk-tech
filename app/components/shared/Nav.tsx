@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import logoTransparent from "../../public/images/logoTransparent.png";
+import logoTransparent from "/public/images/logoTransparent.png";
 import {
   FaBars,
   FaArrowUpRightFromSquare,
@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa6";
 import { useState } from "react";
 
-export default function Nav({ ticketsUrl='' }) {
+export default function Nav({ ticketsUrl }: { ticketsUrl?: string }) {
   const [menu, setMenu] = useState(false);
   const [aboutMenu, setAboutMenu] = useState(false);
 
@@ -24,7 +24,7 @@ export default function Nav({ ticketsUrl='' }) {
 
   return (
     <nav className="z-20 bg-accent">
-      <div className="flex flex-col h-24 text-3xl font-thin lg:flex-row lg:items-center lg:justify-end font-montserrat">
+      <div className="flex flex-col h-24 text-3xl font-thin lg:flex-row lg:items-center font-montserrat">
         {/* Left Side  */}
         <div className="flex items-center h-full ml-8 w-fit">
           <FaBars className="lg:hidden" onClick={toggleMenu} />
@@ -68,7 +68,7 @@ export default function Nav({ ticketsUrl='' }) {
         </div>
 
         {/* Desktop */}
-        <div className={`${ticketsUrl ? 'justify-end ': ''}hidden w-full gap-8 px-8 lg:flex`}>
+        <div className={`${ticketsUrl ? 'justify-end': ''} hidden w-full gap-8 px-8 lg:flex justify-end`}>
           <Link
             href="/"
             className="duration-150 border-b-2 border-transparent hover:scale-110 hover:border-text hover:-translate-y-2"
@@ -77,9 +77,9 @@ export default function Nav({ ticketsUrl='' }) {
           </Link>
           <div
             onClick={flipMenu}
-            className="duration-150 border-b-2 border-transparent hover:scale-110 "
+            className="duration-150 border-b-2 border-transparent"
           >
-            <div className="relative flex items-center">
+            <div className="relative flex items-center duration-150 border-b-2 border-transparent hover:border-text hover:-translate-y-2">
               About
               <FaAngleRight
                 className={`h-6 ${
@@ -88,22 +88,22 @@ export default function Nav({ ticketsUrl='' }) {
               />
             </div>
             <ul
-              className={`absolute bg-primary ring ring-secondary rounded-xl p-4 ${
+              className={`absolute bg-primary ring ring-secondary rounded-xl px-8 py-6 ${
                 aboutMenu ? "flex flex-col" : "hidden"
               }`}
             >
               <li>
                 <Link
                   href="/about"
-                  className="duration-150 border-b-2 border-transparent hover:scale-110 hover:border-text hover:-translate-y-2"
+                  className="duration-150 border-b-2 border-transparent hover:border-text"
                 >
-                  Conference
+                  About
                 </Link>
               </li>
               <li>
                 <Link
                   href="/talks"
-                  className="duration-150 border-b-2 border-transparent hover:scale-110 hover:border-text hover:-translate-y-2"
+                  className="duration-150 border-b-2 border-transparent hover:border-text"
                 >
                   Talks
                 </Link>
@@ -111,7 +111,7 @@ export default function Nav({ ticketsUrl='' }) {
               <li>
                 <Link
                   href="/team"
-                  className="duration-150 border-b-2 border-transparent hover:scale-110 hover:border-text hover:-translate-y-2"
+                  className="duration-150 border-b-2 border-transparent hover:border-text"
                 >
                   Team
                 </Link>
@@ -119,7 +119,7 @@ export default function Nav({ ticketsUrl='' }) {
               <li>
                 <Link
                   href="/past"
-                  className="duration-150 border-b-2 border-transparent hover:scale-110 hover:border-text hover:-translate-y-2"
+                  className="duration-150 border-b-2 border-transparent hover:scale-110 hover:border-text"
                 >
                   Past Talks
                 </Link>
@@ -129,7 +129,7 @@ export default function Nav({ ticketsUrl='' }) {
           {ticketsUrl && (
             <a
               href={ticketsUrl}
-              className="flex gap-2 duration-150 border-b-2 border-transparent hover:scale-110 hover:border-text hover:-translate-y-2"
+              className="flex gap-2 duration-150 border-b-2 border-transparent hover:scale-110 hover:-translate-y-2"
             >
               <FaArrowUpRightFromSquare className="text-xl" />
               Tickets

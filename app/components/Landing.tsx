@@ -1,20 +1,25 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import conferenceTalk from "../../../public/images/conferenceTalk.jpg";
+import conferenceTalk from "/public/images/conferenceTalk.jpg";
 
 type LandingProps = {
-  date: Date;
-  formattedDateConferenceDate: string;
-  ticketsUrl: string;
+  date?: string;
+  ticketsUrl?: string;
 };
+
 
 export const Landing: React.FC<LandingProps> = ({
   date,
-  formattedDateConferenceDate,
   ticketsUrl,
 }: LandingProps) => {
+
+  const formattedDate = new Date(date + 'T00:00:00Z').toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "UTC"
+  });
+
   return (
     <div className="w-screen h-screen-minus-nav ">
       <Image
@@ -35,7 +40,7 @@ export const Landing: React.FC<LandingProps> = ({
             <div className="flex flex-col text-2xl text-center lg:text-3xl lg:my-8">
               <span>A quarterly tech conference in the bluegrass</span>
               <span className="my-2 font-thin lg:my-4">
-                {formattedDateConferenceDate}
+                {formattedDate ? formattedDate : "TBD"}
               </span>
             </div>
             {ticketsUrl && (

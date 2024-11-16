@@ -1,3 +1,7 @@
+# Usage
+You must generate talks as a json file. Each json file will live in either "/public/data/current" or "/public/data/past" depending on if it's a current or past talk. The UI will generate dates based off the name of the file, which you should name "YYYY-MM-DD.json".
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

@@ -1,13 +1,4 @@
-interface DateProps {
-  date: Date;
-}
-
-export const AddressMap: React.FC<DateProps> = ({ date }) => {
-  let dateLong = date.toLocaleString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "2-digit",
-  });
+export default function AddressMap({ date }: { date?: string }){
   return (
     <div className="my-12 mx-auto max-w-screen-xl px-4">
       <h2 className="text-3xl">Location:</h2>
@@ -26,7 +17,7 @@ export const AddressMap: React.FC<DateProps> = ({ date }) => {
           <div>401 South Limestone</div>
           <div>Lexington, KY 40508</div>
           <div>6PM - 8PM</div>
-          <div>{dateLong}</div>
+          <div>{date ? date : "TBD"}</div>
         </div>
       </div>
     </div>
