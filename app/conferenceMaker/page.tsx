@@ -1,7 +1,8 @@
 'use client';
 import React, { useState } from "react";
+import Talk from "./components/Talk";
 
-interface ScheduleItem {
+export interface ScheduleItem {
   time: string;
   title: string;
   presenter: string;
@@ -49,7 +50,7 @@ const ScheduleBuilder: React.FC = () => {
   };
 
   return (
-    <div className="p-8 flex flex-col gap-4">
+    <div className="p-8 flex flex-col gap-4 max-w-screen-md">
       <h1 className="text-xl font-bold">Schedule Builder</h1>
       <div className="flex gap-4">
         <label>Ticket Link</label>
@@ -60,54 +61,19 @@ const ScheduleBuilder: React.FC = () => {
           placeholder="Enter ticket link"
         />
       </div>
-      <div>
-        <h2 className="text-xl font-bold">Schedule</h2>
-        {schedule.map((item, index) => (
-          <div className="flex flex-col gap-1" key={index}>
-            <input
-              type="text"
-              placeholder="Time"
-              value={item.time}
-              onChange={(e) =>
-                handleScheduleChange(index, "time", e.target.value)
-              }
-            />
-            <input
-              type="text"
-              placeholder="Title"
-              value={item.title}
-              onChange={(e) =>
-                handleScheduleChange(index, "title", e.target.value)
-              }
-            />
-            <input
-              type="text"
-              placeholder="Presenter"
-              value={item.presenter}
-              onChange={(e) =>
-                handleScheduleChange(index, "presenter", e.target.value)
-              }
-            />
-            <input
-              type="text"
-              placeholder="Info"
-              value={item.info}
-              onChange={(e) =>
-                handleScheduleChange(index, "info", e.target.value)
-              }
-            />
-            <input
-              type="text"
-              placeholder="Resources"
-              value={item.resources}
-              onChange={(e) =>
-                handleScheduleChange(index, "resources", e.target.value)
-              }
-            />
-            <button className="py-2 px-4 rounded-xl text-background bg-text hover:text-text hover:bg-background hover:ring-2 ring-text" onClick={addScheduleItem}>Add Talk</button>
-            <button className="py-2 px-4 rounded-xl text-background bg-text hover:text-text hover:bg-background hover:ring-2 ring-text w-fit" onClick={() => removeScheduleItem(index)}>Remove</button>
-          </div>
-        ))}
+      <div className="flex flex-col gap-4">
+        <h2>Schedule</h2>
+          {schedule.map((item, index) => (
+            <div className="flex flex-col gap-2 py-4 ring-2 ring-text px-4 rounded-xl bg-accent" key={index}>
+              <Talk inputType="time" label="time" handleScheduleChange={handleScheduleChange} index={index} item={item}/>
+              <Talk inputType="text" label="title" handleScheduleChange={handleScheduleChange} index={index} item={item}/>
+              <Talk inputType="text" label="presenter" handleScheduleChange={handleScheduleChange} index={index} item={item}/> 
+              <Talk inputType="text" label="info" handleScheduleChange={handleScheduleChange} index={index} item={item}/>
+              <Talk inputType="text" label="resources" handleScheduleChange={handleScheduleChange} index={index} item={item}/>
+              <button className="py-2 px-4 rounded-xl text-background bg-text hover:text-text hover:bg-background hover:ring-2 ring-text w-fit" onClick={() => removeScheduleItem(index)}>Remove</button>
+            </div>
+          ))}
+        <button className="py-2 px-4 rounded-xl text-background bg-text hover:text-text hover:bg-background hover:ring-2 ring-text" onClick={addScheduleItem}>Add Talk</button>
       </div>
       <button
         className="py-2 px-4 rounded-xl text-background bg-text hover:text-text hover:bg-background hover:ring-2 ring-text"
