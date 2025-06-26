@@ -1,0 +1,51 @@
+{
+  "ticketLink": "https://www.eventbrite.com/e/lex-talk-tech-tickets-1400239848079",
+  "schedule": [
+    {
+      "time": "5:30pm",
+      "title": "Check-in"
+    },
+    {
+      "time": "6:00pm",
+      "title": "Introductions",
+      "presenter": "",
+      "info": "",
+      "resources": ""
+    },
+    {
+      "time": "6:15pm",
+      "title": "TBD",
+      "presenter": "TBD",
+      "info": "",
+      "resources": ""
+    },
+    {
+      "time": "6:30pm",
+      "title": "TBD",
+      "presenter": "TBD",
+      "info": "",
+      "resources": ""
+    },
+    {
+      "time": "7:00pm",
+      "title": "TBD",
+      "presenter": "",
+      "info": "TBD",
+      "resources": ""
+    },
+    {
+      "time": "8:00pm",
+      "title": "Wrap up",
+      "presenter": "",
+      "info": "",
+      "resources": ""
+    },
+    {
+      "time": "8:00pm - 10:00pm",
+      "title": "Food and drinks afterward",
+      "presenter": "",
+      "info": "Within Cornerstone there is Ethereal Brewing and Rolling Oven Pizza.",
+      "resources": ""
+    }
+  ]
+}
