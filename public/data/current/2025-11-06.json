@@ -7,36 +7,43 @@
     },
     {
       "time": "6:00pm",
-      "title": "Introductions",
-      "presenter": "",
+      "title": "Welcome and Introductions",
+      "presenter": "Mackenzie Hanes, Joe Kratzat and Ember Borja",
       "info": "",
       "resources": ""
     },
     {
       "time": "6:15pm",
-      "title": "TBD",
-      "presenter": "TBD",
+      "title": "Observability: How to save your nights and weekends from debugging prod",
+      "presenter": "Alijah Travascio-Green",
       "info": "",
       "resources": ""
     },
     {
       "time": "6:30pm",
-      "title": "TBD",
-      "presenter": "TBD",
+      "title": "Exploring Real-Time Horizons with Microsoft Fabric ",
+      "presenter": "Kristyna Ferris",
+      "info": "",
+      "resources": ""
+    },
+    {
+      "time": "6:45pm",
+      "title": "A visual approach to building Laravel apps",
+      "presenter": "Ronald Northrip",
       "info": "",
       "resources": ""
     },
     {
       "time": "7:00pm",
-      "title": "TBD",
-      "presenter": "",
-      "info": "TBD",
+      "title": "The Secret to Secrets Management",
+      "presenter": "Chris Dotson",
+      "info": "",
       "resources": ""
     },
     {
-      "time": "8:00pm",
-      "title": "Wrap up",
-      "presenter": "",
+      "time": "7:30pm",
+      "title": "Writing Prose as Code",
+      "presenter": "Joseph Louthan",
       "info": "",
       "resources": ""
     },
