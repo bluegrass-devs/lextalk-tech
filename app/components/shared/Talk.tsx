@@ -30,7 +30,7 @@ interface TalkProps {
             {talk.link &&
             <p>
                 <a href={talk.link}
-            className="mx-4 border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2">
+            className="border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2">
                 <span className="font-bold">Resources: </span>
                     {talk.link}
                 </a>
