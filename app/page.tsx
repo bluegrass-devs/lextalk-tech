@@ -7,7 +7,7 @@ import { ScheduleTable } from "./components/ScheduleTable";
 import path from 'path'
 import { readdirSync, readFileSync } from "fs";
 import { getData, getDateFromFilename } from "./lib/data";
-import { formattedDate } from "./lib/FormattedDate.ts";
+import { formattedDate } from "./lib/FormattedDate";
 
 export async function generateStaticParams() {
   const dataDir = path.join(process.cwd(), 'public/data/current');
