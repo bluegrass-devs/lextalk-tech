@@ -13,13 +13,6 @@ export const Landing: React.FC<LandingProps> = ({
   ticketsUrl,
 }: LandingProps) => {
 
-  const formattedDate = new Date(date + 'T00:00:00Z').toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    timeZone: "UTC"
-  });
-
   return (
     <div className="h-screen-minus-nav">
       <Image
@@ -40,7 +33,7 @@ export const Landing: React.FC<LandingProps> = ({
             <div className="flex flex-col text-2xl text-center lg:text-3xl lg:my-8">
               <span>A quarterly tech conference in the bluegrass</span>
               <span className="my-2 font-thin lg:my-4">
-                {formattedDate ? formattedDate : "TBD"}
+                {date ? date : "TBD"}
               </span>
             </div>
             {ticketsUrl && (
