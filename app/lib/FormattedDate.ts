@@ -1,4 +1,4 @@
-export function formattedDate(date: Date): string{
+export function formattedDate(date: Date | null): string {
     if (!date) return "TBD";
 
     return date.toLocaleDateString("en-US", {
