@@ -40,3 +40,12 @@ export function getDateFromFilename(filename: string): Date | null {
     if (!Y || !M || !D) return null;
     return new Date(Date.UTC(Y, M - 1, D));
 }
+
+export function getFilenames(directory: string): string[] {
+	const dataDir = path.join(process.cwd(), directory);
+	const files = readdirSync(dataDir)
+	    .filter((file) => file.endsWith(".json"))
+	    .map((file) => file.replace(/\.json$/i, ""));
+
+	return files;
+}

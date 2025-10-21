@@ -1,32 +1,20 @@
 import Link from "next/link";
+import { getFilenames } from "../lib/data";
 
 export default function Past() {
+  const pastTalks = getFilenames("public/data/past").reverse();
+
   return (
     <>
       <div className="max-w-screen-xl px-4 mx-auto my-12">
         <h1 className="text-5xl font-bold font-cabin">Past LexTalks</h1>
-        <table className="w-full text-xl md:text-3xl">
-          <tbody>
-            <tr key="1" className="">
-              <td className="font-bold ">
-                <ul className="">
-                  <li className="py-2 transition duration-150 hover:scale-110 w-fit">
-                    <Link href="/past/2024-11-07">2024-11-07</Link>
-                  </li>
-                  <li className="py-2 transition duration-150 hover:scale-110 w-fit">
-                    <Link href="/past/2024-01-25">2024-01-25</Link>
-                  </li>
-                  <li className="py-2 transition duration-150 hover:scale-110 w-fit">
-                    <Link href="/past/2023-05-18">2023-05-18</Link>
-                  </li>
-                  <li className="py-2 transition duration-150 hover:scale-110 w-fit">
-                    <Link href="/past/2023-10-12">2023-10-12</Link>
-                  </li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+		<ul className="text-xl md:text-3xl">
+			{pastTalks.map((date) => (
+				<li key={date} className="py-2 transition duration-150 hover:scale-1109 w-fit">
+					<Link href={`/past/${date}`}>{date}</Link>
+				</li>
+			))}
+		</ul>
       </div>
     </>
   );
