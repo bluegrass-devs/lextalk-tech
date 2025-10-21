@@ -21,7 +21,7 @@ export const Landing: React.FC<LandingProps> = ({
   });
 
   return (
-    <div className="w-screen h-screen-minus-nav ">
+    <div className="h-screen-minus-nav">
       <Image
         className="absolute"
         alt="Presentation at Lex Talk Tech conference"

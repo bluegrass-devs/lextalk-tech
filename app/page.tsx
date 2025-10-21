@@ -30,12 +30,12 @@ export default function Home() {
 
   return (
     <>
-      <div className="font-montserrat text-text">
+      <div className="text-text font-montserrat flex flex-col mx-auto gap-4 max-w-screen-xl">
         <Landing
           date={data.date}
           ticketsUrl={data.ticketLink}
         />
-        <div className="relative max-w-screen-xl px-4 mx-auto my-12">
+        <div className="relative max-w-screen-xl">
           <div className="flex items-center justify-between w-2/3 my-8">
             <h2 className="text-3xl">Schedule</h2>
             <Link
@@ -47,7 +47,7 @@ export default function Home() {
           </div>
           <ScheduleTable data={data.schedule} />
         </div>
-        <div className="">
+        <div className="w-screen self-center">
           <Image
             className=""
             alt="Presentation at Lex Talk Tech conference"
