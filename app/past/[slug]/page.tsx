@@ -22,7 +22,7 @@ function getData(slug: any) {
 
 export default async function Page({ params }: any) {
     const data = getData(params.slug);
-    
+
     const formattedDate = new Date(`${params.slug}T00:00:00Z`).toLocaleDateString("en-US", {
         year: "numeric",
         month: "long",
@@ -40,7 +40,7 @@ export default async function Page({ params }: any) {
                     This LexTalk was on {formattedDate}
                 </span>
             </div>
-        
+
             {data.schedule.map((talk: any, index: any) => (
                 <Talk key={index} talk={talk} />
             ))}

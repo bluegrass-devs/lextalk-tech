@@ -6,6 +6,8 @@ import { Landing } from "./components/Landing";
 import { ScheduleTable } from "./components/ScheduleTable";
 import path from 'path'
 import { readdirSync, readFileSync } from "fs";
+import { getData, getDateFromFilename } from "./lib/data";
+import { formattedDate } from "./lib/FormattedDate";
 
 export async function generateStaticParams() {
   const dataDir = path.join(process.cwd(), 'public/data/current');
@@ -13,29 +15,18 @@ export async function generateStaticParams() {
   return [{ id: file.replace('.json', '') }];
 }
 
-function getData() {
-  const dataDir = path.join(process.cwd(), 'public/data/current');
-  const file = readdirSync(dataDir)[0];
-  const fullPath = path.join(dataDir, file);
-  const fileContents = readFileSync(fullPath, 'utf8');
-  console.log(file.replace('.json', ''))
-
-  const data = JSON.parse(fileContents);
-  data.date = file.replace('.json', '');
-  return data
-}
-
 export default function Home() {
-  const data = getData()
+  const data = getData();
+  const date = formattedDate(getDateFromFilename(data.filename));
 
   return (
     <>
-      <div className="font-montserrat text-text">
+      <div className="text-text font-montserrat flex flex-col mx-auto gap-4 max-w-screen-xl">
         <Landing
-          date={data.date}
+          date={date}
           ticketsUrl={data.ticketLink}
         />
-        <div className="relative max-w-screen-xl px-4 mx-auto my-12">
+        <div className="relative max-w-screen-xl">
           <div className="flex items-center justify-between w-2/3 my-8">
             <h2 className="text-3xl">Schedule</h2>
             <Link
@@ -47,7 +38,7 @@ export default function Home() {
           </div>
           <ScheduleTable data={data.schedule} />
         </div>
-        <div className="">
+        <div className="w-screen self-center">
           <Image
             className=""
             alt="Presentation at Lex Talk Tech conference"
@@ -55,7 +46,7 @@ export default function Home() {
             placeholder="blur"
           />
         </div>
-        <AddressMap date={data.date} />
+        <AddressMap date={date} />
       </div>
     </>
   );

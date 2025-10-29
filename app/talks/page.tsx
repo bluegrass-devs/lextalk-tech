@@ -1,16 +1,10 @@
 import { Talk } from "../components/shared/Talk"
-import { getData } from "../lib/data";
+import { getData, getDateFromFilename } from "../lib/data";
+import { formattedDate } from "../lib/FormattedDate";
 
 export default async function Talks() {
-  const data = await getData()
-
-  const formattedDate = new Date(data.date + 'T00:00:00Z').toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    timeZone: "UTC"
-  });
-
+  const data = getData();
+  const date = formattedDate(getDateFromFilename(data.filename));
 
   return (
     <>
@@ -19,7 +13,7 @@ export default async function Talks() {
           Talks
         </h1>
         <span className="text-xl">
-          This is the schedule for LexTalk on {formattedDate}
+          This is the schedule for LexTalk on {date}
         </span>
       </div>
       {data.schedule.map((talk: any, index: any) => (
