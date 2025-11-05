@@ -18,7 +18,7 @@ const cabin = Cabin({
 
 // export const metadata = {
 //   title: "LexTalk Tech",
-//   description: "A quarterly tech conference in the bluegrass",
+//   description: "A tech conference in the bluegrass",
 // };
 
 // old ticket URL -> "https://www.affinna.com/event/f8142beea26e11ee8fae7facffad2127";
