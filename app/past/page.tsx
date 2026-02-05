@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { getFilenames } from "../lib/data";
+import { getPastEventFilenames } from "../lib/data";
 
 export default function Past() {
-  const pastTalks = getFilenames("public/data/past").reverse();
+  const pastTalks = getPastEventFilenames().reverse();
 
   return (
     <>

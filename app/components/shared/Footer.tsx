@@ -1,27 +1,11 @@
-import { readdirSync, readFileSync } from 'fs'
-import path from 'path';
 import { FaMeetup, FaCode, FaGithub } from "react-icons/fa6";
 import Link from "next/link";
-
-export async function generateStaticParams() {
-  const dataDir = path.join(process.cwd(), 'public/data/current');
-  const file = readdirSync(dataDir)[0];
-  return [{ id: file.replace('.json', '') }];
-}
-
-function getData() {
-  const dataDir = path.join(process.cwd(), 'public/data/current');
-  const file = readdirSync(dataDir)[0];
-  const fullPath = path.join(dataDir, file);
-  const fileContents = readFileSync(fullPath, 'utf8');
-  return JSON.parse(fileContents);
-}
-
+import { getCurrentEvent } from "@/lib/data";
 
 export default function Footer() {
-  const data = getData()
+  const data = getCurrentEvent()
 
-  const ticketsUrl = data.ticketLink
+  const ticketsUrl = data?.ticketLink
 
   return (
     <footer className="py-2 text-sm text-text bg-accent font-montserrat ">

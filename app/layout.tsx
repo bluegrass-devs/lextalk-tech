@@ -2,7 +2,7 @@ import { Montserrat, Cabin } from "next/font/google";
 import NavWrapper from "./components/shared/NavWrapper";
 import Footer from "./components/shared/Footer"
 import "./globals.css";
-import { DataProvider } from "./context/DataContext";
+
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -38,11 +38,9 @@ export default function RootLayout({
         <link rel="icon" href="/images/favicon.ico" />
       </head>
         <body className="bg-background flex flex-col">
-          <DataProvider>
               <NavWrapper />
                 <main className="min-h-screen">{children}</main>
               <Footer/>
-          </DataProvider>
         </body>
     </html>
   );

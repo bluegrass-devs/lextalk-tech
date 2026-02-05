@@ -17,28 +17,32 @@
       "title": "Observability: How to save your nights and weekends from debugging prod",
       "presenter": "Alijah Travascio-Green",
       "info": "",
-      "resources": ""
+      "resources": "",
+      "tags": ["observability", "devops", "debugging"]
     },
     {
       "time": "6:30pm",
       "title": "Exploring Real-Time Horizons with Microsoft Fabric ",
       "presenter": "Kristyna Ferris",
       "info": "",
-      "resources": ""
+      "resources": "",
+      "tags": ["data", "microsoft", "analytics"]
     },
     {
       "time": "6:45pm",
       "title": "A visual approach to building Laravel apps",
       "presenter": "Ronald Northrip",
       "info": "",
-      "resources": ""
+      "resources": "",
+      "tags": ["laravel", "php", "web"]
     },
     {
       "time": "7:00pm",
       "title": "The Secret to Secrets Management",
       "presenter": "Chris Dotson",
       "info": "",
-      "resources": ""
+      "resources": "",
+      "tags": ["security", "devops"]
     },
     {
       "time": "7:30pm",
