@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import joeTalk from "/public/images/joeTalk.jpg";
+import AboutSummary from "./components/AboutSummary";
 import AddressMap from "./components/AddressMap";
 import { Landing } from "./components/Landing";
 import { ScheduleTable } from "./components/ScheduleTable";
@@ -18,7 +19,8 @@ export default function Home() {
           date={date}
           ticketsUrl={data?.ticketLink ?? ""}
         />
-        {data && (
+        <AboutSummary />
+        {data && data.schedule.length > 0 && (
           <div className="relative max-w-screen-xl">
             <div className="flex items-center justify-between w-2/3 my-8">
               <h2 className="text-3xl">Schedule</h2>

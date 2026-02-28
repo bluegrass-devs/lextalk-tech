@@ -16,10 +16,10 @@ const cabin = Cabin({
   variable: "--font-cabin",
 });
 
-// export const metadata = {
-//   title: "LexTalk Tech",
-//   description: "A tech conference in the bluegrass",
-// };
+export const metadata = {
+  title: "LexTalk Tech",
+  description: "A quarterly tech conference in the bluegrass",
+};
 
 // old ticket URL -> "https://www.affinna.com/event/f8142beea26e11ee8fae7facffad2127";
 // if ticketURL is empty string then Ticket's links will not show

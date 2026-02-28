@@ -8,7 +8,7 @@ export default function AddressMap({ date }: { date?: string }){
 				<h3 className="font-bold">The Cornerstone</h3>
 				<div>401 South Limestone</div>
 				<div>Lexington, KY 40508</div>
-				<div>6PM - 8PM</div>
+				<div>6PM - 10PM</div>
 				<div>{date ? date : "TBD"}</div>
 			 </a>
     	</div>

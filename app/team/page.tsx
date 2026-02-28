@@ -12,7 +12,7 @@ export default function Team() {
       name: "Neal Powers",
       image: "/images/Neal.JPG",
       alt: "Neal over the Seattle skyline",
-      bio: "My name is Neal Powers. I'm a freelance developer from Lexington, Kentucky looking for my first role at a company! I have a varied background in music and photography and love all things JavaScript!",
+      bio: "My name is Neal Powers. I'm a web developer in Lexington, Kentucky. I'm about the CLI, bebop, and making art with my camera!",
     },
     {
       name: "Mariola Hullings",

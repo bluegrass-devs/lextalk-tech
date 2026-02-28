@@ -56,23 +56,26 @@ export default function Footer() {
               className="transition duration-150 hover:text-white hover:scale-110"
               href="https://www.meetup.com/The-Bluegrass-Developers-Guild/"
             >
+              <span className="sr-only">Bluegrass Developer's Guild Meetups</span>
               <FaMeetup />
             </a>
             <a
               className="transition duration-150 hover:text-white hover:scale-110"
               href="https://www.bluegrassdevs.org/"
             >
+              <span className="sr-only">Bluegrass Developer's Guild Website</span>
               <FaCode />
             </a>
             <a
               className="transition duration-150 hover:text-white hover:scale-110"
               href="https://github.com/bluegrass-devs/lextalk-tech"
             >
+              <span className="sr-only">Source code for this website</span>
               <FaGithub />
             </a>
           </div>
         </div>
-        <span className="text-center">© Copyright 2024</span>
+        <span className="text-center">© Copyright 2026</span>
       </div>
     </footer>
   );
