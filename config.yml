@@ -8,7 +8,7 @@ GoogleAnalytics: ""
 params:
   # Conference info
   Name: "LexTalk - Tech"
-  Description: "A quarterly technology conference held in Lexington KY"
+  Description: "A technology conference held in Lexington KY"
   Date: "Oct 12th 2023"
   Venue: "The Cornerstone"
   VenueURL: "https://cornerstone.uky.edu/"
