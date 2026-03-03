@@ -1,0 +1,62 @@
+{
+  "ticketLink": "https://www.eventbrite.com/e/lex-talk-tech-tickets-1400239848079",
+  "schedule": [
+    {
+      "time": "5:30pm",
+      "title": "Check-in"
+    },
+    {
+      "time": "6:00pm",
+      "title": "Welcome and Introductions",
+      "presenter": "Mackenzie Hanes, Joe Kratzat and Ember Borja",
+      "info": "",
+      "resources": ""
+    },
+    {
+      "time": "6:15pm",
+      "title": "Observability: How to save your nights and weekends from debugging prod",
+      "presenter": "Alijah Travascio-Green",
+      "info": "",
+      "resources": "",
+      "tags": ["observability", "devops", "debugging"]
+    },
+    {
+      "time": "6:30pm",
+      "title": "Exploring Real-Time Horizons with Microsoft Fabric ",
+      "presenter": "Kristyna Ferris",
+      "info": "",
+      "resources": "",
+      "tags": ["data", "microsoft", "analytics"]
+    },
+    {
+      "time": "6:45pm",
+      "title": "Writing Prose as Code",
+      "presenter": "Joseph Louthan",
+      "info": "",
+      "resources": "",
+      "tags": ["laravel", "php", "web"]
+    },
+    {
+      "time": "7:00pm",
+      "title": "The Secret to Secrets Management",
+      "presenter": "Chris Dotson",
+      "info": "",
+      "resources": "",
+      "tags": ["security", "devops"]
+    },
+    {
+      "time": "7:30pm",
+      "title": "A visual approach to building Laravel apps",
+      "presenter": "Ronald Northrip",
+      "info": "",
+      "resources": ""
+    },
+    {
+      "time": "8:00pm - 10:00pm",
+      "title": "Food and drinks afterward",
+      "presenter": "",
+      "info": "Within Cornerstone there is Ethereal Brewing and Rolling Oven Pizza.",
+      "resources": ""
+    }
+  ]
+}

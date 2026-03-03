@@ -8,6 +8,7 @@ export interface ScheduleItem {
   presenter: string;
   info: string;
   resources: string;
+  tags: string;
 }
 
 const ScheduleBuilder: React.FC = () => {
@@ -17,7 +18,7 @@ const ScheduleBuilder: React.FC = () => {
   const addScheduleItem = () => {
     setSchedule([
       ...schedule,
-      { time: "", title: "", presenter: "", info: "", resources: "" },
+      { time: "", title: "", presenter: "", info: "", resources: "", tags: "" },
     ]);
   };
 
@@ -36,7 +37,14 @@ const ScheduleBuilder: React.FC = () => {
   };
 
   const handleDownload = () => {
-    const jsonData = JSON.stringify({ ticketLink, schedule }, null, 2);
+    const outputSchedule = schedule.map(({ tags, ...rest }) => ({
+      ...rest,
+      tags: tags
+        .split(",")
+        .map((t) => t.trim())
+        .filter((t) => t !== ""),
+    }));
+    const jsonData = JSON.stringify({ ticketLink, schedule: outputSchedule }, null, 2);
     const blob = new Blob([jsonData], { type: "application/json" });
     const url = URL.createObjectURL(blob);
 
@@ -70,6 +78,7 @@ const ScheduleBuilder: React.FC = () => {
               <Talk inputType="text" label="presenter" handleScheduleChange={handleScheduleChange} index={index} item={item}/> 
               <Talk inputType="text" label="info" handleScheduleChange={handleScheduleChange} index={index} item={item}/>
               <Talk inputType="text" label="resources" handleScheduleChange={handleScheduleChange} index={index} item={item}/>
+              <Talk inputType="text" label="tags" handleScheduleChange={handleScheduleChange} index={index} item={item}/>
               <button className="py-2 px-4 rounded-xl text-background bg-text hover:text-text hover:bg-background hover:ring-2 ring-text w-fit" onClick={() => removeScheduleItem(index)}>Remove</button>
             </div>
           ))}

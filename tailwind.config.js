@@ -17,7 +17,7 @@ module.exports = {
         'primary': '#52796F',
         'secondary': '#84A98C',
         'accent': '#354F52'
-      },      
+      },
       height: {
         'screen-minus-nav': 'calc(100vh - 6rem)',
       },

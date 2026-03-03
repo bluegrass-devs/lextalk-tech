@@ -2,7 +2,7 @@ import { Montserrat, Cabin } from "next/font/google";
 import NavWrapper from "./components/shared/NavWrapper";
 import Footer from "./components/shared/Footer"
 import "./globals.css";
-import { DataProvider } from "./context/DataContext";
+
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -16,10 +16,10 @@ const cabin = Cabin({
   variable: "--font-cabin",
 });
 
-// export const metadata = {
-//   title: "LexTalk Tech",
-//   description: "A tech conference in the bluegrass",
-// };
+export const metadata = {
+  title: "LexTalk Tech",
+  description: "A quarterly tech conference in the bluegrass",
+};
 
 // old ticket URL -> "https://www.affinna.com/event/f8142beea26e11ee8fae7facffad2127";
 // if ticketURL is empty string then Ticket's links will not show
@@ -38,11 +38,9 @@ export default function RootLayout({
         <link rel="icon" href="/images/favicon.ico" />
       </head>
         <body className="bg-background flex flex-col">
-          <DataProvider>
               <NavWrapper />
                 <main className="min-h-screen">{children}</main>
               <Footer/>
-          </DataProvider>
         </body>
     </html>
   );

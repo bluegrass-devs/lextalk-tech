@@ -7,30 +7,55 @@ export type ScheduleItem = {
     presenter?: string;
     info?: string;
     resources?: string;
+    tags?: string[];
 };
 
 export type DataType = {
-    ticketLink: string;
+    ticketLink?: string;
     schedule: ScheduleItem[];
-    date?: string;
 };
 
-export function getData() {
-    const dataDir = path.join(process.cwd(), 'public/data/current');
-    const files = readdirSync(dataDir);
-    const jsonFile = files.filter(file => file.endsWith('.json'))[0];
+const EVENTS_DIR = path.join(process.cwd(), 'data/events');
 
-    if (!jsonFile) {
-        throw new Error("No JSON file found in current data dir");
+export function getAllEventFilenames(): string[] {
+    return readdirSync(EVENTS_DIR)
+        .filter((file) => file.endsWith('.json'))
+        .map((file) => file.replace(/\.json$/i, ''))
+        .sort();
+}
+
+export function getPastEventFilenames(): string[] {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    return getAllEventFilenames().filter((slug) => {
+        const date = getDateFromFilename(slug + '.json');
+        return date !== null && date < today;
+    });
+}
+
+export function getEventData(slug: string): DataType {
+    const filePath = path.join(EVENTS_DIR, `${slug}.json`);
+    const rawData = readFileSync(filePath, 'utf8');
+    return JSON.parse(rawData);
+}
+
+export function getCurrentEvent(): (DataType & { filename: string }) | null {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const allSlugs = getAllEventFilenames();
+    const upcoming = allSlugs.find((slug) => {
+        const date = getDateFromFilename(slug + '.json');
+        return date !== null && date >= today;
+    });
+
+    if (!upcoming) {
+        return null;
     }
 
-    const rawData = readFileSync(path.join(dataDir, jsonFile), 'utf8');
-    const parsed = JSON.parse(rawData);
-
-    return {
-        ...parsed,
-        filename: jsonFile
-    };
+    const data = getEventData(upcoming);
+    return { ...data, filename: upcoming + '.json' };
 }
 
 export function getDateFromFilename(filename: string): Date | null {
@@ -39,13 +64,4 @@ export function getDateFromFilename(filename: string): Date | null {
 
     if (!Y || !M || !D) return null;
     return new Date(Date.UTC(Y, M - 1, D));
-}
-
-export function getFilenames(directory: string): string[] {
-	const dataDir = path.join(process.cwd(), directory);
-	const files = readdirSync(dataDir)
-	    .filter((file) => file.endsWith(".json"))
-	    .map((file) => file.replace(/\.json$/i, ""));
-
-	return files;
 }

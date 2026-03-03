@@ -1,27 +1,11 @@
-import { readdirSync, readFileSync } from 'fs'
-import path from 'path';
 import { FaMeetup, FaCode, FaGithub } from "react-icons/fa6";
 import Link from "next/link";
-
-export async function generateStaticParams() {
-  const dataDir = path.join(process.cwd(), 'public/data/current');
-  const file = readdirSync(dataDir)[0];
-  return [{ id: file.replace('.json', '') }];
-}
-
-function getData() {
-  const dataDir = path.join(process.cwd(), 'public/data/current');
-  const file = readdirSync(dataDir)[0];
-  const fullPath = path.join(dataDir, file);
-  const fileContents = readFileSync(fullPath, 'utf8');
-  return JSON.parse(fileContents);
-}
-
+import { getCurrentEvent } from "@/lib/data";
 
 export default function Footer() {
-  const data = getData()
+  const data = getCurrentEvent()
 
-  const ticketsUrl = data.ticketLink
+  const ticketsUrl = data?.ticketLink
 
   return (
     <footer className="py-2 text-sm text-text bg-accent font-montserrat ">
@@ -72,23 +56,26 @@ export default function Footer() {
               className="transition duration-150 hover:text-white hover:scale-110"
               href="https://www.meetup.com/The-Bluegrass-Developers-Guild/"
             >
+              <span className="sr-only">Bluegrass Developer's Guild Meetups</span>
               <FaMeetup />
             </a>
             <a
               className="transition duration-150 hover:text-white hover:scale-110"
               href="https://www.bluegrassdevs.org/"
             >
+              <span className="sr-only">Bluegrass Developer's Guild Website</span>
               <FaCode />
             </a>
             <a
               className="transition duration-150 hover:text-white hover:scale-110"
               href="https://github.com/bluegrass-devs/lextalk-tech"
             >
+              <span className="sr-only">Source code for this website</span>
               <FaGithub />
             </a>
           </div>
         </div>
-        <span className="text-center">© Copyright 2024</span>
+        <span className="text-center">© Copyright 2026</span>
       </div>
     </footer>
   );

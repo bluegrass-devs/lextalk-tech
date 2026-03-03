@@ -1,9 +1,22 @@
+import Link from "next/link";
 import { Talk } from "../components/shared/Talk"
-import { getData, getDateFromFilename } from "../lib/data";
+import { getCurrentEvent, getDateFromFilename } from "../lib/data";
 import { formattedDate } from "../lib/FormattedDate";
 
 export default async function Talks() {
-  const data = getData();
+  const data = getCurrentEvent();
+
+  if (!data) {
+    return (
+      <div className="text-center my-10">
+        <h1 className="text-5xl font-bold font-montserrat">No Upcoming Event</h1>
+        <p className="text-xl mt-4">
+          Check out our <Link href="/past" className="underline">past talks</Link>.
+        </p>
+      </div>
+    );
+  }
+
   const date = formattedDate(getDateFromFilename(data.filename));
 
   return (

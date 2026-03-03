@@ -1,5 +1,5 @@
 {
-  "ticketLink": "https://www.eventbrite.com/e/lex-talk-tech-tickets-1400239848079",
+  "ticketLink": "https://www.eventbrite.com/e/lex-talk-tech-tickets-1982202706655",
   "schedule": [
     {
       "time": "5:30pm",
@@ -14,36 +14,38 @@
     },
     {
       "time": "6:15pm",
-      "title": "Observability: How to save your nights and weekends from debugging prod",
-      "presenter": "Alijah Travascio-Green",
+      "title": "TBD",
+      "presenter": "TBD",
       "info": "",
       "resources": ""
     },
     {
       "time": "6:30pm",
-      "title": "Exploring Real-Time Horizons with Microsoft Fabric ",
-      "presenter": "Kristyna Ferris",
+      "title": "Turning Trash Into Treasure: E-Waste Restoration",
+      "presenter": "Liza Hofer",
       "info": "",
-      "resources": ""
+      "resources": "",
+      "tags": ["environment", "tinkering"]
     },
     {
       "time": "6:45pm",
-      "title": "Writing Prose as Code",
-      "presenter": "Joseph Louthan",
+      "title": "TBD",
+      "presenter": "TBD",
       "info": "",
       "resources": ""
     },
     {
       "time": "7:00pm",
-      "title": "The Secret to Secrets Management",
-      "presenter": "Chris Dotson",
+      "title": "SOLID & You: Making The Change Easy",
+      "presenter": "Andrew Carpenter",
       "info": "",
-      "resources": ""
+      "resources": "",
+      "tags": ["engineering", "best practices"]
     },
     {
       "time": "7:30pm",
-      "title": "A visual approach to building Laravel apps",
-      "presenter": "Ronald Northrip",
+      "title": "TBD",
+      "presenter": "TBD",
       "info": "",
       "resources": ""
     },

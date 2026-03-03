@@ -4,11 +4,14 @@ interface TalkProps {
       title: string;
       info?: string;
       presenter?: string;
-      link?: string;
+      resources?: string;
+      tags?: string[];
     };
   }
-  
+
   export const Talk: React.FC<TalkProps> = ({ talk }) => {
+    const tags = talk.tags?.filter((t) => t.trim() !== "") ?? [];
+
     return (
       <>
         <div className="flex flex-col items-center text-xl my-8 px-4 max-w-screen-lg mx-auto w-full">
@@ -21,18 +24,30 @@ interface TalkProps {
               {talk.presenter}
             </p>
             }
+            {tags.length > 0 &&
+            <div className="flex flex-wrap gap-2 mt-2">
+              {tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="px-3 py-1 text-sm rounded-full bg-primary text-text"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+            }
             {talk.info &&
             <p>
               <span className="font-bold">Info: </span>
               {talk.info}
             </p>
             }
-            {talk.link &&
+            {talk.resources &&
             <p>
-                <a href={talk.link}
+                <a href={talk.resources}
             className="border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2">
                 <span className="font-bold">Resources: </span>
-                    {talk.link}
+                    {talk.resources}
                 </a>
             </p>
             }
@@ -41,4 +56,3 @@ interface TalkProps {
       </>
     );
   };
-  

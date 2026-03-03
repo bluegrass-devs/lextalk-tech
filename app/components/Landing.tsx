@@ -17,7 +17,7 @@ export const Landing: React.FC<LandingProps> = ({
     <div className="h-screen-minus-nav">
       <Image
         className="absolute"
-        alt="Presentation at Lex Talk Tech conference"
+        alt="Presenter at the LexTalk Tech conference. Crowd visible."
         src={conferenceTalk}
         placeholder="blur"
         layout="fill"
