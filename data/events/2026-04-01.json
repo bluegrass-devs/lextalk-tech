@@ -23,30 +23,30 @@
       "time": "6:30pm",
       "title": "Turning Trash Into Treasure: E-Waste Restoration",
       "presenter": "Liza Hofer",
-      "info": "",
+      "info": "E-Waste is a growing problem. With the rate of advances in technology, many machines previously considered powerful become obsolete quickly. One of the best ways to turn these machines into useful tools again is to install various versions of linux on them giving them a range of use cases. I will discuss how I unlock and revive fascinating tech like the CF-31 Toughbook.",
       "resources": "",
       "tags": ["environment", "tinkering"]
     },
     {
       "time": "6:45pm",
-      "title": "TBD",
-      "presenter": "TBD",
-      "info": "",
+      "title": "Horse Tech",
+      "presenter": "Craig Geil",
+      "info": "Since we live in the middle of the horse capital of the world, I will describe some of the technology that goes into horse training",
       "resources": ""
     },
     {
       "time": "7:00pm",
       "title": "SOLID & You: Making The Change Easy",
       "presenter": "Andrew Carpenter",
-      "info": "",
+      "info": "A session covering the SOLID principles, and how the audience can leverage them to help ensure their code’s as maintainable as possible",
       "resources": "",
       "tags": ["engineering", "best practices"]
     },
     {
       "time": "7:30pm",
-      "title": "TBD",
-      "presenter": "TBD",
-      "info": "",
+      "title": "Effects of Project Time Compression In Safety-Critical Design",
+      "presenter": "Russell Mitchell",
+      "info": "In programs that employ high 'IQ' staff to perform safety-critical design, program timeline changes may effectively reduce the 'effective IQ' of the design team. This IQ depression would be expected to drive higher error rates for the team. When the team also includes design safety and quality engineers equally time-constrained, their effectiveness will also be expected to drop. Their normal output might be considered an error capture rate. Also operating with a depressed IQ, these quality and system safety engineers' output would be expected to drop, resulting in fewer errors captured, even though more errors are present. To the program managers, this might seem like the team has fewer identified errors when working under time pressure. The gap between performance and reporting enables the potential for an increased risk margin due to escapes that are not identified. This presentation will unpack the underconsidered influence of timeline compression on development and then examine the commonalities in other environmental factors that also induce performance degradation.",
       "resources": ""
     },
     {
