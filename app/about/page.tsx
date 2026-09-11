@@ -27,6 +27,7 @@ const pillars = [
 export default function About() {
   const data = getCurrentEvent();
   const date = data ? formattedDate(getDateFromFilename(data.filename)) : "TBD";
+  const time = data?.time ?? "TBD";
 
   return (
     <div className="flex flex-col gap-20 py-16 px-4 max-w-screen-xl mx-auto text-text font-montserrat">
@@ -109,9 +110,20 @@ export default function About() {
             <h3 className="text-2xl font-bold mb-4">The Cornerstone</h3>
             <p>401 South Limestone</p>
             <p>Lexington, KY 40508</p>
-            <p className="mt-4">6PM - 10PM</p>
-            <p className="mt-2 font-bold">{date}</p>
           </a>
+          <p className="mt-4">{time}</p>
+          <p className="mt-2 font-bold">{date}</p>
+          <ul className="mt-6 flex flex-col gap-2 text-left mx-auto w-fit">
+            <li>
+              <span className="font-bold">2 - 5PM</span> &mdash; Sessions
+            </li>
+            <li>
+              <span className="font-bold">5PM</span> &mdash; Dinner
+            </li>
+            <li>
+              <span className="font-bold">After dinner</span> &mdash; Networking
+            </li>
+          </ul>
         </div>
       </section>
     </div>

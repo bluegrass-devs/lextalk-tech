@@ -1,4 +1,4 @@
-export default function AddressMap({ date }: { date?: string }){
+export default function AddressMap({ date, time }: { date?: string; time?: string }){
   return (
     <div className="text-3xl max-w-screen-xl flex flex-col gap-4 mb-8">
       <h2 className="my-8" id="location">Location</h2>
@@ -8,7 +8,7 @@ export default function AddressMap({ date }: { date?: string }){
 				<h3 className="font-bold">The Cornerstone</h3>
 				<div>401 South Limestone</div>
 				<div>Lexington, KY 40508</div>
-				<div>6PM - 10PM</div>
+				<div>{time ? time : "TBD"}</div>
 				<div>{date ? date : "TBD"}</div>
 			 </a>
     	</div>

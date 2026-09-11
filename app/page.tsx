@@ -18,6 +18,7 @@ export default function Home() {
         <Landing
           date={date}
           ticketsUrl={data?.ticketLink ?? ""}
+          speakersUrl={data?.speakerLink ?? ""}
         />
         <AboutSummary />
         {data && data.schedule.length > 0 && (
@@ -42,7 +43,7 @@ export default function Home() {
             placeholder="blur"
           />
         </div>
-        <AddressMap date={date} />
+        <AddressMap date={date} time={data?.time} />
       </div>
     </>
   );

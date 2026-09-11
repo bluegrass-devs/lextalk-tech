@@ -5,12 +5,16 @@ import conferenceTalk from "/public/images/conferenceTalk.jpg";
 type LandingProps = {
   date?: string;
   ticketsUrl?: string;
+  speakersUrl?: string;
 };
 
+const buttonStyles =
+  "px-6 py-3 text-2xl duration-150 border border-b-2 rounded-full shadow-xl lg:text-3xl bg-primary/50 border-white/25 backdrop-blur-sm hover:scale-110 hover:border-text hover:-translate-y-2";
 
 export const Landing: React.FC<LandingProps> = ({
   date,
   ticketsUrl,
+  speakersUrl,
 }: LandingProps) => {
 
   return (
@@ -36,22 +40,23 @@ export const Landing: React.FC<LandingProps> = ({
                 {date ? date : "TBD"}
               </span>
             </div>
-            {ticketsUrl && (
-              <Link
-                href={ticketsUrl}
-                className="px-6 py-3 text-2xl duration-150 border border-b-2 rounded-full shadow-xl lg:text-3xl bg-primary/50 border-white/25 backdrop-blur-sm hover:scale-110 hover:border-text hover:-translate-y-2"
-              >
-                Tickets
-              </Link>
-            )}
-            {!ticketsUrl && (
-            <Link
-              href="/past"
-              className="px-6 py-3 text-2xl duration-150 border border-b-2 rounded-full shadow-xl lg:text-3xl bg-primary/50 border-white/25 backdrop-blur-sm hover:scale-110 hover:border-text hover:-translate-y-2"
-            >
-              Past Talks
-            </Link>
-            )}
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              {ticketsUrl && (
+                <Link href={ticketsUrl} className={buttonStyles}>
+                  Tickets
+                </Link>
+              )}
+              {speakersUrl && (
+                <Link href={speakersUrl} className={buttonStyles}>
+                  Call for Speakers
+                </Link>
+              )}
+              {!ticketsUrl && !speakersUrl && (
+                <Link href="/past" className={buttonStyles}>
+                  Past Talks
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       </div>
