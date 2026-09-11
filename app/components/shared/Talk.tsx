@@ -43,13 +43,14 @@ interface TalkProps {
             </p>
             }
             {talk.resources &&
-            <p>
-                <a href={talk.resources}
-            className="border-b-2 border-transparent duration-150 hover:scale-110 hover:border-text hover:-translate-y-2">
-                <span className="font-bold">Resources: </span>
-                    {talk.resources}
-                </a>
-            </p>
+            <a
+              href={talk.resources}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-lg bg-secondary text-background font-bold transition duration-150 hover:brightness-110 hover:-translate-y-1"
+            >
+              ▶ Watch Recording
+            </a>
             }
           </div>
         </div>

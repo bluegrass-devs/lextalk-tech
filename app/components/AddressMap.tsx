@@ -9,7 +9,6 @@ export default function AddressMap({ date, time }: { date?: string; time?: strin
 				<div>401 South Limestone</div>
 				<div>Lexington, KY 40508</div>
 				<div>{time ? time : "TBD"}</div>
-				<div>{date ? date : "TBD"}</div>
 			 </a>
     	</div>
        <div className="w-full md:col-span-2 h-96">
