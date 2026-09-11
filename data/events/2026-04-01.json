@@ -2,24 +2,6 @@
   "ticketLink": "https://www.eventbrite.com/e/lex-talk-tech-tickets-1982202706655",
   "schedule": [
     {
-      "time": "5:30pm",
-      "title": "Check-in"
-    },
-    {
-      "time": "6:00pm",
-      "title": "Welcome and Introductions",
-      "presenter": "Mackenzie Hanes, Joe Kratzat and Ember Borja",
-      "info": "",
-      "resources": ""
-    },
-    {
-      "time": "6:15pm",
-      "title": "TBD",
-      "presenter": "TBD",
-      "info": "",
-      "resources": ""
-    },
-    {
       "time": "6:30pm",
       "title": "Turning Trash Into Treasure: E-Waste Restoration",
       "presenter": "Liza Hofer",
@@ -48,13 +30,6 @@
       "presenter": "Russell Mitchell",
       "info": "In programs that employ high 'IQ' staff to perform safety-critical design, program timeline changes may effectively reduce the 'effective IQ' of the design team. This IQ depression would be expected to drive higher error rates for the team. When the team also includes design safety and quality engineers equally time-constrained, their effectiveness will also be expected to drop. Their normal output might be considered an error capture rate. Also operating with a depressed IQ, these quality and system safety engineers' output would be expected to drop, resulting in fewer errors captured, even though more errors are present. To the program managers, this might seem like the team has fewer identified errors when working under time pressure. The gap between performance and reporting enables the potential for an increased risk margin due to escapes that are not identified. This presentation will unpack the underconsidered influence of timeline compression on development and then examine the commonalities in other environmental factors that also induce performance degradation.",
       "resources": "https://youtu.be/Lvwl874edH0"
-    },
-    {
-      "time": "8:00pm - 10:00pm",
-      "title": "Food and drinks afterward",
-      "presenter": "",
-      "info": "Within Cornerstone there is Ethereal Brewing and Rolling Oven Pizza.",
-      "resources": ""
     }
   ]
 }
