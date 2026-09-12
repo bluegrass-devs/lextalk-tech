@@ -36,7 +36,7 @@ export default function About() {
         <div className="flex flex-col md:flex-row gap-10 items-center">
           <div className="md:w-1/2 text-lg leading-relaxed flex flex-col gap-4">
             <p>
-              LexTalk Tech is a quarterly conference in Lexington, KY that
+              LexTalk Tech is a conference in Lexington, KY that
               brings together tech professionals, innovators, students, and
               community leaders for an evening of cutting-edge discussions and
               local connections.
