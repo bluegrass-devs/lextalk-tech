@@ -23,22 +23,18 @@ export default function Home() {
         />
         {data?.scheduleOverview && data.scheduleOverview.length > 0 && (
           <section aria-labelledby="schedule-overview" className="px-4 pt-12 md:pt-16">
-            <div className="mx-auto max-w-5xl border-b border-text/15 pb-12 md:pb-16">
-              <h2 id="schedule-overview" className="text-3xl text-center mb-10 md:mb-12">
+            <div className="mx-auto max-w-3xl rounded-lg bg-accent p-6 shadow-md sm:p-8">
+              <h2 id="schedule-overview" className="text-3xl text-center mb-6">
                 Schedule at a glance
               </h2>
-              <ol className="grid md:auto-cols-fr md:grid-flow-col">
+              <ol className="mx-auto max-w-2xl divide-y divide-text/15">
                 {data.scheduleOverview.map((item) => (
                   <li
                     key={item.title}
-                    className="relative ml-2 border-l border-secondary/40 pb-8 pl-8 last:pb-0 md:ml-0 md:border-l-0 md:border-t md:pb-0 md:pl-0 md:pr-8 md:pt-8"
+                    className="flex flex-col gap-1 py-5 sm:flex-row sm:items-baseline sm:gap-8"
                   >
-                    <span
-                      aria-hidden="true"
-                      className="absolute -left-1.5 top-1.5 h-3 w-3 rounded-full bg-secondary ring-4 ring-background md:-top-1.5 md:left-0"
-                    />
-                    <h3 className="text-xl mb-2">{item.title}</h3>
-                    <p className="text-base leading-relaxed text-text/80">{item.time}</p>
+                    <p className="text-lg font-semibold leading-relaxed sm:w-60 sm:shrink-0">{item.time}</p>
+                    <h3 className="text-xl">{item.title}</h3>
                   </li>
                 ))}
               </ol>
