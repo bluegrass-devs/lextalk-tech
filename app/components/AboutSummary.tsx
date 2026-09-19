@@ -25,7 +25,7 @@ export default function AboutSummary() {
       <h2 className="text-3xl mb-6 text-center">What is LexTalk Tech?</h2>
       <p className="text-lg text-center max-w-3xl mx-auto mb-12 leading-relaxed">
         LexTalk Tech brings together tech professionals, innovators, students,
-        and community leaders for an evening of cutting-edge discussions and
+        and community leaders for an afternoon and evening of cutting-edge discussions and
         local connections.
       </p>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">

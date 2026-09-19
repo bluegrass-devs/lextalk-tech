@@ -14,6 +14,7 @@ export type DataType = {
     time?: string;
     ticketLink?: string;
     speakerLink?: string;
+    scheduleOverview?: { title: string; time: string }[];
     schedule: ScheduleItem[];
 };
 
