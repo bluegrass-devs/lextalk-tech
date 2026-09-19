@@ -17,9 +17,30 @@ export default function Home() {
       <div className="text-text font-montserrat flex flex-col mx-auto gap-4 max-w-screen-xl">
         <Landing
           date={date}
+          time={data?.time}
           ticketsUrl={data?.ticketLink ?? ""}
           speakersUrl={data?.speakerLink ?? ""}
         />
+        {data?.scheduleOverview && data.scheduleOverview.length > 0 && (
+          <section aria-labelledby="schedule-overview" className="px-4 pt-12 md:pt-16">
+            <div className="mx-auto max-w-3xl rounded-lg bg-accent p-6 shadow-md sm:p-8">
+              <h2 id="schedule-overview" className="text-3xl text-center mb-6">
+                Schedule at a glance
+              </h2>
+              <ol className="mx-auto max-w-2xl divide-y divide-text/15">
+                {data.scheduleOverview.map((item) => (
+                  <li
+                    key={item.title}
+                    className="flex flex-col gap-1 py-5 sm:flex-row sm:items-baseline sm:gap-8"
+                  >
+                    <p className="text-lg font-semibold leading-relaxed sm:w-60 sm:shrink-0">{item.time}</p>
+                    <h3 className="text-xl">{item.title}</h3>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </section>
+        )}
         <AboutSummary />
         {data && data.schedule.length > 0 && (
           <div className="relative max-w-screen-xl">

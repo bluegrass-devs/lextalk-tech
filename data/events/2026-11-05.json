@@ -1,6 +1,10 @@
 {
-  "time": "2PM - 8:30PM",
+  "time": "2 PM – 10 PM",
   "ticketLink": "https://www.eventbrite.com/e/lex-talk-tech-fall-2026-tickets-1992571441821",
   "speakerLink": "https://sessionize.com/lextalk-tech-fall-2026/",
+  "scheduleOverview": [
+    { "title": "Conference", "time": "2 PM – 8:30 PM" },
+    { "title": "Social", "time": "8:30 PM – 10 PM" }
+  ],
   "schedule": []
 }

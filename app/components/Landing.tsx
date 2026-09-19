@@ -4,6 +4,7 @@ import conferenceTalk from "/public/images/conferenceTalk.jpg";
 
 type LandingProps = {
   date?: string;
+  time?: string;
   ticketsUrl?: string;
   speakersUrl?: string;
 };
@@ -13,6 +14,7 @@ const buttonStyles =
 
 export const Landing: React.FC<LandingProps> = ({
   date,
+  time,
   ticketsUrl,
   speakersUrl,
 }: LandingProps) => {
@@ -39,6 +41,7 @@ export const Landing: React.FC<LandingProps> = ({
               <span className="my-2 font-thin lg:my-4">
                 {date ? date : "TBD"}
               </span>
+              {time && <span className="mb-4 font-thin">{time}</span>}
             </div>
             <div className="flex flex-wrap items-center justify-center gap-4">
               {ticketsUrl && (
