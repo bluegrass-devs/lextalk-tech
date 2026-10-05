@@ -59,6 +59,9 @@ export default function Nav({ ticketsUrl }: { ticketsUrl?: string }) {
           <Link href="/past" className="my-4">
             Past Talks
           </Link>
+          <Link href="/spotlight" className="my-4">
+            Spotlight
+          </Link>
           {ticketsUrl && (
             <a href={ticketsUrl} className="flex gap-2 my-4">
               <FaArrowUpRightFromSquare className="text-xl" />
@@ -122,6 +125,14 @@ export default function Nav({ ticketsUrl }: { ticketsUrl?: string }) {
                   className="duration-150 border-b-2 border-transparent hover:scale-110 hover:border-text"
                 >
                   Past Talks
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/spotlight"
+                  className="duration-150 border-b-2 border-transparent hover:border-text"
+                >
+                  Spotlight
                 </Link>
               </li>
             </ul>
