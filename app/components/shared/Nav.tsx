@@ -44,26 +44,30 @@ export default function Nav({ ticketsUrl }: { ticketsUrl?: string }) {
             menu ? "" : "hidden"
           } lg:hidden z-20 bg-accent/90 flex flex-col w-full items-center`}
         >
-          <Link href="/" className="my-4">
+          <Link href="/" className="my-4" onClick={() => setMenu(false)}>
             Home
           </Link>
-          <Link href="/about" className="my-4">
+          <Link href="/about" className="my-4" onClick={() => setMenu(false)}>
             About
           </Link>
-          <Link href="/talks" className="my-4">
+          <Link href="/talks" className="my-4" onClick={() => setMenu(false)}>
             Talks
           </Link>
-          <Link href="/team" className="my-4">
+          <Link href="/team" className="my-4" onClick={() => setMenu(false)}>
             Team
           </Link>
-          <Link href="/past" className="my-4">
+          <Link href="/past" className="my-4" onClick={() => setMenu(false)}>
             Past Talks
           </Link>
           <Link href="/spotlight" className="my-4">
             Spotlight
           </Link>
           {ticketsUrl && (
-            <a href={ticketsUrl} className="flex gap-2 my-4">
+            <a
+              href={ticketsUrl}
+              className="flex gap-2 my-4"
+              onClick={() => setMenu(false)}
+            >
               <FaArrowUpRightFromSquare className="text-xl" />
               Tickets
             </a>
