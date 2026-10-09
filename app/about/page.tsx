@@ -113,17 +113,16 @@ export default function About() {
           </a>
           <p className="mt-4">{time}</p>
           <p className="mt-2 font-bold">{date}</p>
-          <ul className="mt-6 flex flex-col gap-2 text-left mx-auto w-fit">
-            <li>
-              <span className="font-bold">2 - 5PM</span> &mdash; Sessions
-            </li>
-            <li>
-              <span className="font-bold">5PM</span> &mdash; Dinner
-            </li>
-            <li>
-              <span className="font-bold">After dinner</span> &mdash; Networking
-            </li>
-          </ul>
+          {data?.scheduleOverview && data.scheduleOverview.length > 0 && (
+            <ul className="mt-6 pt-6 border-t border-text/15 grid grid-cols-[auto_auto] justify-center gap-x-6 gap-y-2 text-left">
+              {data.scheduleOverview.map((item) => (
+                <li key={item.title} className="contents">
+                  <span className="font-bold">{item.time}</span>
+                  <span>{item.title}</span>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </section>
     </div>
