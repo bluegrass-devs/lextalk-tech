@@ -3,10 +3,94 @@
   "ticketLink": "https://www.eventbrite.com/e/lex-talk-tech-fall-2026-tickets-1992571441821",
   "speakerLink": "https://sessionize.com/lextalk-tech-fall-2026/",
   "scheduleOverview": [
-    { "title": "AI Sessions", "time": "2 PM – 5 PM" },
-    { "title": "Dinner", "time": "5 PM – 6 PM" },
-    { "title": "Lightning Talks", "time": "6 PM – 8 PM" },
-    { "title": "Social & Networking", "time": "8:30 PM – 10 PM" }
+    {
+      "title": "AI Sessions",
+      "time": "2 PM – 5 PM"
+    },
+    {
+      "title": "Dinner",
+      "time": "5 PM – 6 PM"
+    },
+    {
+      "title": "Lightning Talks",
+      "time": "6 PM – 8 PM"
+    },
+    {
+      "title": "Social & Networking",
+      "time": "8:30 PM – 10 PM"
+    }
   ],
-  "schedule": []
+  "schedule": [
+    {
+      "time": "2:00 PM",
+      "title": "AI for Non-Developers",
+      "presenter": "Nick Such",
+      "group": "AI Sessions"
+    },
+    {
+      "time": "2:00 PM",
+      "title": "Title to be announced",
+      "presenter": "Nick Vinson",
+      "group": "AI Sessions"
+    },
+    {
+      "time": "3:00 PM",
+      "title": "AI Optimization",
+      "presenter": "Kara Riney",
+      "group": "AI Sessions"
+    },
+    {
+      "time": "3:00 PM",
+      "title": "Title to be announced",
+      "presenter": "Courtland Leer",
+      "group": "AI Sessions"
+    },
+    {
+      "time": "4:00 PM",
+      "title": "UX for AI",
+      "presenter": "Luke Gurgel",
+      "group": "AI Sessions"
+    },
+    {
+      "time": "4:00 PM",
+      "title": "AI Can Just Do Things",
+      "presenter": "Lucas Cockerham",
+      "group": "AI Sessions"
+    },
+    {
+      "time": "6:15 PM",
+      "title": "Tech FOMO",
+      "presenter": "Tommy Treadway",
+      "group": "Evening Sessions",
+      "format": "Lightning"
+    },
+    {
+      "time": "6:30 PM",
+      "title": "Making Art with Code: Processing and the AxiDraw",
+      "presenter": "Summer Smith",
+      "group": "Evening Sessions",
+      "format": "Deep Dive"
+    },
+    {
+      "time": "7:00 PM",
+      "title": "Impact Scoring for AI Optimization",
+      "presenter": "Zach Moscow",
+      "group": "Evening Sessions",
+      "format": "Lightning"
+    },
+    {
+      "time": "7:15 PM",
+      "title": "Getting AI to Say \"I Don't Know\"",
+      "presenter": "Ryan Rudd",
+      "group": "Evening Sessions",
+      "format": "Deep Dive"
+    },
+    {
+      "time": "7:45 PM",
+      "title": "The Joys of Cheap Electronics: Why Adafruit is a Dangerous Site to Browse",
+      "presenter": "Will Bates",
+      "group": "Evening Sessions",
+      "format": "Lightning"
+    }
+  ]
 }
