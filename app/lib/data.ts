@@ -8,6 +8,8 @@ export type ScheduleItem = {
     info?: string;
     resources?: string;
     tags?: string[];
+    group?: string;
+    format?: string;
 };
 
 export type DataType = {

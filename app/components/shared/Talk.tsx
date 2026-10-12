@@ -6,17 +6,26 @@ interface TalkProps {
       presenter?: string;
       resources?: string;
       tags?: string[];
+      format?: string;
     };
+    hideTime?: boolean;
   }
 
-  export const Talk: React.FC<TalkProps> = ({ talk }) => {
+  export const Talk: React.FC<TalkProps> = ({ talk, hideTime }) => {
     const tags = talk.tags?.filter((t) => t.trim() !== "") ?? [];
 
     return (
       <>
-        <div className="flex flex-col items-center text-xl my-8 px-4 max-w-screen-lg mx-auto w-full">
-          <p className="border-b-2 border-text w-full text-3xl">{talk.time}</p>
+        <div className={`flex flex-col items-center text-xl px-4 max-w-screen-lg mx-auto w-full ${hideTime ? "mt-2 mb-8" : "my-8"}`}>
+          {!hideTime && (
+            <p className="border-b-2 border-text w-full text-3xl">{talk.time}</p>
+          )}
           <div className="w-full">
+            {talk.format && (
+              <span className="inline-block px-3 py-1 mb-1 text-sm font-bold tracking-wide uppercase rounded-full bg-secondary text-background">
+                {talk.format}
+              </span>
+            )}
             <h2 className="text-3xl font-bold text-left">{talk.title}</h2>
             {talk.presenter &&
             <p>

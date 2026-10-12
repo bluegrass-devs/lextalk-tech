@@ -59,7 +59,7 @@ export default function Nav({ ticketsUrl }: { ticketsUrl?: string }) {
           <Link href="/past" className="my-4" onClick={() => setMenu(false)}>
             Past Talks
           </Link>
-          <Link href="/spotlight" className="my-4">
+          <Link href="/spotlight" className="my-4" onClick={() => setMenu(false)}>
             Spotlight
           </Link>
           {ticketsUrl && (
