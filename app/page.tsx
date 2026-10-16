@@ -4,7 +4,6 @@ import joeTalk from "/public/images/joeTalk.jpg";
 import AboutSummary from "./components/AboutSummary";
 import AddressMap from "./components/AddressMap";
 import { Landing } from "./components/Landing";
-import { ScheduleTable } from "./components/ScheduleTable";
 import { getCurrentEvent, getDateFromFilename } from "./lib/data";
 import { formattedDate } from "./lib/FormattedDate";
 
@@ -38,24 +37,18 @@ export default function Home() {
                   </li>
                 ))}
               </ol>
+              <div className="flex justify-center mt-6">
+                <Link
+                  href="/talks"
+                  className="px-6 py-3 text-2xl duration-150 border border-b-2 rounded-full shadow-xl bg-primary/50 border-white/25 backdrop-blur-sm hover:scale-110 hover:border-text hover:-translate-y-2"
+                >
+                  Full Schedule
+                </Link>
+              </div>
             </div>
           </section>
         )}
         <AboutSummary />
-        {data && data.schedule.length > 0 && (
-          <div className="relative max-w-screen-xl">
-            <div className="flex items-center justify-between w-2/3 my-8">
-              <h2 className="text-3xl">Schedule</h2>
-              <Link
-                href="/talks"
-                className="px-6 py-3 text-3xl duration-150 border border-b-2 rounded-full bg-primary/50 border-white/25 backdrop-blur-sm hover:scale-110 hover:border-text hover:-translate-y-2"
-              >
-                Talks
-              </Link>
-            </div>
-            <ScheduleTable data={data.schedule} />
-          </div>
-        )}
         <div className="w-screen self-center">
           <Image
             className=""
