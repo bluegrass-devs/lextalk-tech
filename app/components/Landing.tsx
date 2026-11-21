@@ -7,6 +7,7 @@ type LandingProps = {
   time?: string;
   ticketsUrl?: string;
   speakersUrl?: string;
+  latestPastSlug?: string;
 };
 
 const buttonStyles =
@@ -17,6 +18,7 @@ export const Landing: React.FC<LandingProps> = ({
   time,
   ticketsUrl,
   speakersUrl,
+  latestPastSlug,
 }: LandingProps) => {
 
   return (
@@ -38,10 +40,20 @@ export const Landing: React.FC<LandingProps> = ({
             </h1>
             <div className="flex flex-col text-2xl text-center lg:text-3xl lg:my-8">
               <span>A tech conference in the bluegrass</span>
-              <span className="my-2 font-thin lg:my-4">
-                {date ? date : "TBD"}
-              </span>
-              {time && <span className="mb-4 font-thin">{time}</span>}
+              {date ? (
+                <>
+                  <span className="my-2 font-thin lg:my-4">{date}</span>
+                  {time && <span className="mb-4 font-thin">{time}</span>}
+                </>
+              ) : (
+                <>
+                  <span className="my-2 font-thin lg:my-4">2027 &middot; Date TBD</span>
+                  <span className="max-w-2xl mb-4 text-xl italic font-thin lg:text-2xl">
+                    We asked an AI to pick the date. It&apos;s still &ldquo;thinking.&rdquo;
+                    Stay tuned &mdash; it&apos;ll be worth the wait.
+                  </span>
+                </>
+              )}
             </div>
             <div className="flex flex-wrap items-center justify-center gap-4">
               {ticketsUrl && (
@@ -55,8 +67,11 @@ export const Landing: React.FC<LandingProps> = ({
                 </Link>
               )}
               {!ticketsUrl && !speakersUrl && (
-                <Link href="/past" className={buttonStyles}>
-                  Past Talks
+                <Link
+                  href={latestPastSlug ? `/past/${latestPastSlug}` : "/past"}
+                  className={buttonStyles}
+                >
+                  {latestPastSlug ? "Watch Past Talks" : "Past Talks"}
                 </Link>
               )}
             </div>

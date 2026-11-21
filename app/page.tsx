@@ -4,12 +4,13 @@ import joeTalk from "/public/images/joeTalk.jpg";
 import AboutSummary from "./components/AboutSummary";
 import AddressMap from "./components/AddressMap";
 import { Landing } from "./components/Landing";
-import { getCurrentEvent, getDateFromFilename } from "./lib/data";
+import { getCurrentEvent, getDateFromFilename, getPastEventFilenames } from "./lib/data";
 import { formattedDate } from "./lib/FormattedDate";
 
 export default function Home() {
   const data = getCurrentEvent();
-  const date = data ? formattedDate(getDateFromFilename(data.filename)) : "TBD";
+  const date = data ? formattedDate(getDateFromFilename(data.filename)) : undefined;
+  const latestPastSlug = getPastEventFilenames().at(-1);
 
   return (
     <>
@@ -19,6 +20,7 @@ export default function Home() {
           time={data?.time}
           ticketsUrl={data?.ticketLink ?? ""}
           speakersUrl={data?.speakerLink ?? ""}
+          latestPastSlug={latestPastSlug}
         />
         {data?.scheduleOverview && data.scheduleOverview.length > 0 && (
           <section aria-labelledby="schedule-overview" className="px-4 pt-12 md:pt-16">

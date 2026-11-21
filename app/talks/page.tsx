@@ -1,18 +1,26 @@
 import { Fragment } from "react";
 import Link from "next/link";
 import { Talk } from "../components/shared/Talk"
-import { getCurrentEvent, getDateFromFilename } from "../lib/data";
+import { getCurrentEvent, getDateFromFilename, getPastEventFilenames } from "../lib/data";
 import { formattedDate } from "../lib/FormattedDate";
 
 export default async function Talks() {
   const data = getCurrentEvent();
 
   if (!data) {
+    const latestPastSlug = getPastEventFilenames().at(-1);
     return (
       <div className="text-center my-10">
-        <h1 className="text-5xl font-bold font-montserrat">No Upcoming Event</h1>
+        <h1 className="text-5xl font-bold font-montserrat">LexTalk 2027: Coming Soon</h1>
+        <p className="text-xl mt-4 italic">
+          The schedule is still compiling. We&apos;d give you an ETA, but you know how estimates go.
+        </p>
         <p className="text-xl mt-4">
-          Check out our <Link href="/past" className="underline">past talks</Link>.
+          In the meantime, catch up on our{" "}
+          <Link href={latestPastSlug ? `/past/${latestPastSlug}` : "/past"} className="underline">
+            latest talks
+          </Link>{" "}
+          or browse <Link href="/past" className="underline">all past events</Link>.
         </p>
       </div>
     );
