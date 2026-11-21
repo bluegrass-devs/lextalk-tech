@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Talk } from "@/components/shared/Talk";
 import { getPastEventFilenames, getEventData } from "@/lib/data";
 export const dynamic = 'force-static';
@@ -28,9 +29,21 @@ export default async function Page({ params }: any) {
                 </span>
             </div>
 
-            {data.schedule.map((talk: any, index: any) => (
-                <Talk key={index} talk={talk} />
-            ))}
+            {data.schedule.map((talk, index) => {
+                const prev = data.schedule[index - 1];
+                const newGroup = talk.group && talk.group !== prev?.group;
+                const sameSlot = !newGroup && prev?.time === talk.time;
+                return (
+                    <Fragment key={index}>
+                        {newGroup && (
+                            <h2 className="max-w-screen-lg px-4 mx-auto mt-12 text-4xl font-bold text-center font-montserrat">
+                                {talk.group}
+                            </h2>
+                        )}
+                        <Talk talk={talk} hideTime={sameSlot} />
+                    </Fragment>
+                );
+            })}
         </div>
     );
 }

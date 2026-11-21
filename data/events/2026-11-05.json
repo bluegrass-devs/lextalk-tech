@@ -49,7 +49,8 @@
       "time": "4:00 PM",
       "title": "UX for AI",
       "presenter": "Luke Gurgel",
-      "group": "AI Sessions"
+      "group": "AI Sessions",
+      "resources": "https://www.youtube.com/watch?v=bcZcHt5B1zk"
     },
     {
       "time": "4:00 PM",
@@ -62,14 +63,16 @@
       "title": "Tech FOMO",
       "presenter": "Tommy Treadway",
       "group": "Evening Sessions",
-      "format": "Lightning"
+      "format": "Lightning",
+      "resources": "https://www.youtube.com/watch?v=apa58VHQmpE"
     },
     {
       "time": "6:30 PM",
       "title": "Making Art with Code: Processing and the AxiDraw",
       "presenter": "Summer Smith",
       "group": "Evening Sessions",
-      "format": "Deep Dive"
+      "format": "Deep Dive",
+      "resources": "https://www.youtube.com/watch?v=IqDtnKkPffg"
     },
     {
       "time": "7:00 PM",
@@ -83,14 +86,16 @@
       "title": "Getting AI to Say \"I Don't Know\"",
       "presenter": "Ryan Rudd",
       "group": "Evening Sessions",
-      "format": "Deep Dive"
+      "format": "Deep Dive",
+      "resources": "https://www.youtube.com/watch?v=PIG8VIxHsBQ"
     },
     {
       "time": "7:45 PM",
       "title": "The Joys of Cheap Electronics: Why Adafruit is a Dangerous Site to Browse",
       "presenter": "Will Bates",
       "group": "Evening Sessions",
-      "format": "Lightning"
+      "format": "Lightning",
+      "resources": "https://www.youtube.com/watch?v=fV-lx1ODhGo"
     }
   ]
 }
